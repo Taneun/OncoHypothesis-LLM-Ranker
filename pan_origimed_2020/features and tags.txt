@@ -5,6 +5,9 @@ PATIENT_ID "SEX", "DIAGNOSIS AGE", "SMOKE STATUS", "TMB (nonsynonymous)",
 "Tumor_Seq_Allele1", "Tumor_Seq_Allele2", "Protein_position", "Codons", 
 "Exon_Number","VAR_TYPE_SX", "Site1_Hugo_Symbol", "Site2_Hugo_Symbol","Event_Info”
 
+features changes:
+"Reference_Allele" + "Tumor_Seq_Allele2" -> SNP event
+
 tags:
 Cancer Type
 Cancer Type Detailed
@@ -12,6 +15,7 @@ Tumor Stage
 Sample Type
 
 features dropped:
+Tumor_Seq_Allele1
 SAMPLE_ID
 #Patient Identifier
 Specimen Type

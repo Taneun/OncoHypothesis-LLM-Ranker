@@ -15,7 +15,9 @@ def load_and_split_data(filepath):
     features_to_drop = ['Cancer Type', 'Cancer Type Detailed', 'Tumor Stage', 'Sample Type', 'PATIENT_ID']
     data = pd.read_csv(filepath)
     X = data.drop(features_to_drop, axis=1)
-    y = data['Cancer Type']
+    y, uniques = pd.factorize(data['Cancer Type'])
+    # Create a dictionary mapping from cancer type to label
+    # label_dict = {cancer: idx for idx, cancer in enumerate(uniques)}
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=42)
     return X_train, X_val, X_test, y_train, y_val, y_test

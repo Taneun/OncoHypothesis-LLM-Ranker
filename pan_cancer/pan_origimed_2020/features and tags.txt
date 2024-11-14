@@ -1,12 +1,17 @@
 features chosen:
 PATIENT_ID "SEX", "DIAGNOSIS AGE", "SMOKE STATUS", "TMB (nonsynonymous)",
 "Hugo_Symbol", "Entrez_Gene_Id", "Chromosome", "Start_Position", "End_Position",
-"Consequence", "Variant_Classification", "Variant_Type", "Protein_position", "Codons", 
+"Consequence", "Variant_Type", "Protein_position", "Codons",
 "Exon_Number","VAR_TYPE_SX", "Site1_Hugo_Symbol", "Site2_Hugo_Symbol","Event_Info”
 SNP event
 
 features changes:
 "Reference_Allele" + "Tumor_Seq_Allele2" -> SNP event
+"SMOKE STATUS" -> dummies, smoker and non-smoker. unknown dropped
+"SEX" -> dummies
+"Chromosome" -> dummies
+"VAR_TYPE_SX" -> dummies
+"Variant_Type" -> dummies
 
 tags:
 Cancer Type
@@ -15,6 +20,7 @@ Tumor Stage
 Sample Type
 
 features dropped:
+Variant_Classification
 Tumor_Seq_Allele1
 SAMPLE_ID
 #Patient Identifier

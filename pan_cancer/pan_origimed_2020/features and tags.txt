@@ -1,6 +1,6 @@
 features chosen:
 PATIENT_ID "SEX", "DIAGNOSIS AGE", "SMOKE STATUS", "TMB (nonsynonymous)",
-"Hugo_Symbol", "Entrez_Gene_Id", "Chromosome", "Start_Position", "End_Position",
+"Hugo_Symbol", "Chromosome", "Start_Position", "End_Position",
 "Consequence", "Variant_Type", "Protein_position", "Codons",
 "Exon_Number","VAR_TYPE_SX", "Site1_Hugo_Symbol", "Site2_Hugo_Symbol","Event_Info”
 SNP event
@@ -20,6 +20,7 @@ Tumor Stage
 Sample Type
 
 features dropped:
+Entrez_Gene_Id
 Variant_Classification
 Tumor_Seq_Allele1
 SAMPLE_ID

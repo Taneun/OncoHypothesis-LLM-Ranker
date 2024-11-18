@@ -3,10 +3,13 @@ XGBoost model for pan-cancer classification
 """
 
 import pandas as pd
+import numpy as np
 from matplotlib import pyplot as plt
 from sklearn.model_selection import train_test_split
 import xgboost as xgb
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, roc_curve, auc
+from sklearn.preprocessing import label_binarize
+
 
 def load_and_split_data(filepath):
     """
@@ -36,13 +39,39 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val):
                                    tree_method='hist', enable_categorical=True)
     xtra_cheese.fit(X_train, y_train)
     y_pred = xtra_cheese.predict(X_val)
-    # Get feature importances
-    importance = xtra_cheese.feature_importances_
-    # Create a dictionary mapping features to their importance
-    feature_importance_dict = dict(zip(X_train.columns, importance))
-    # Sort by importance
-    sorted_feature_importance = dict(sorted(feature_importance_dict.items(), key=lambda item: item[1], reverse=True))
-    print("Feature importances (sorted):", sorted_feature_importance)
+    # plot ROC curve and AUC
+    y_proba = xtra_cheese.predict_proba(X_val)
+
+    # Binarize the output labels for multiclass ROC computation
+    classes = np.unique(y_train)
+    y_val_bin = label_binarize(y_val, classes=classes)
+
+    # Plot ROC curve and calculate AUC for each class
+    plt.figure(figsize=(10, 8))
+    for i, class_label in enumerate(classes):
+        fpr, tpr, _ = roc_curve(y_val_bin[:, i], y_proba[:, i])
+        roc_auc = auc(fpr, tpr)
+        plt.plot(fpr, tpr, label=f'Class {class_label} (AUC = {roc_auc:.2f})')
+
+    # Plot the "chance" line
+    plt.plot([0, 1], [0, 1], 'k--', label='Chance')
+
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Multiclass ROC Curve - Validation')
+    plt.legend(loc='best')
+    plt.grid()
+    plt.show()
+
+
+    # # Get feature importances
+    # importance = xtra_cheese.feature_importances_
+    # # Create a dictionary mapping features to their importance
+    # feature_importance_dict = dict(zip(X_train.columns, importance))
+    # # Sort by importance
+    # sorted_feature_importance = dict(sorted(feature_importance_dict.items(), key=lambda item: item[1], reverse=True))
+    # print("Feature importances (sorted):", sorted_feature_importance)
+
     plt.figure(figsize=(20, 16))
     xgb.plot_importance(xtra_cheese, max_num_features=10)  # Adjust max_num_features as needed
     plt.show()

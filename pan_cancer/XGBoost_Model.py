@@ -113,11 +113,11 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict):
     fig_cm.update_xaxes(tickangle=45)
     fig_cm.show()
 
-    return accuracy_score(y_val, y_pred)
+    return accuracy_score(y_val, y_pred), xtra_cheese, y_pred
 
 
-if __name__ == "__main__":
-    filepath = "pan_cancer_data_for_model.csv"
-    X_train, X_val, X_test, y_train, y_val, y_test, label_dict = load_and_split_data(filepath)
-    accuracy = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict)
-    print(f"Validation Accuracy: {accuracy}")
+# if __name__ == "__main__":
+#     filepath = "pan_cancer_data_for_model.csv"
+#     X_train, X_val, X_test, y_train, y_val, y_test, label_dict = load_and_split_data(filepath)
+#     accuracy = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict)
+#     print(f"Validation Accuracy: {accuracy}")

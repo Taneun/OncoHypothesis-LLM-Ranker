@@ -2,12 +2,12 @@ import pandas as pd
 
 
 # reading all the data files
-data_clinical_patient = pd.read_csv('data_clinical_patient.txt', sep="\t")
-data_clinical_sample = pd.read_csv('data_clinical_sample.txt', sep="\t")
-data_cna_log2 = pd.read_csv('data_cna_log2.txt', sep="\t")
-data_cna = pd.read_csv('data_cna.txt', sep="\t")
-data_mutations = pd.read_csv('data_mutations.txt', sep="\t", header=2, dtype={"Exon_Number": "string"})
-data_sv = pd.read_csv('data_sv.txt', sep="\t")
+data_clinical_patient = pd.read_csv('pan_origimed_2020/data_clinical_patient.txt', sep="\t")
+data_clinical_sample = pd.read_csv('pan_origimed_2020/data_clinical_sample.txt', sep="\t")
+data_cna_log2 = pd.read_csv('pan_origimed_2020/data_cna_log2.txt', sep="\t")
+data_cna = pd.read_csv('pan_origimed_2020/data_cna.txt', sep="\t")
+data_mutations = pd.read_csv('pan_origimed_2020/data_mutations.txt', sep="\t", header=2, dtype={"Exon_Number": "string"})
+data_sv = pd.read_csv('pan_origimed_2020/data_sv.txt', sep="\t")
 
 # removing bad rows
 data_clinical_sample = data_clinical_sample[4:]

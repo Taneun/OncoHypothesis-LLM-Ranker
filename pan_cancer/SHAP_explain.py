@@ -1,78 +1,50 @@
 import shap
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+from matplotlib import pyplot as plt
 
 
-def analyze_shap_contributions_with_plots(model, X, y, predicted_classes, class_names):
+def shap_analysis(model, X_val, y_val, y_pred, label_dict):
     """
-    Analyze and visualize SHAP contributions for correct predictions, per class.
-
-    Parameters:
-    model : Trained XGBoost model
-        The trained multiclass classifier.
-    X : pandas.DataFrame
-        Feature dataset used for predictions.
-    y : array-like
-        True class labels corresponding to X.
-    class_names : list
-        List of class names corresponding to model outputs.
-
-    Returns:
-    contributions_summary : dict
-        A dictionary summarizing feature value contributions by class.
+    Perform SHAP analysis for a multiclass classification model.
     """
-    # Create a SHAP explainer
+    reversed_label_dict = {v: k for k, v in label_dict.items()}
+    # Initialize SHAP TreeExplainer
     explainer = shap.TreeExplainer(model)
-    shap_values = explainer.shap_values(X)  # Predicted class indices
 
-    # Track contributions per class
-    contributions_summary = {class_name: [] for class_name in class_names}
+    # Compute SHAP values for multiclass (shape: [n_samples, n_features, n_classes])
+    shap_values = explainer.shap_values(X_val)  # Already in (n_samples, n_features, n_classes)
 
-    # Iterate over each instance
-    for idx, (true_class, pred_class) in enumerate(zip(y, predicted_classes)):
-        if true_class == pred_class:  # Correct prediction
-            shap_contributions = shap_values[pred_class][idx]  # SHAP for predicted class
-            instance = X.iloc[idx]
+    if len(shap_values.shape) != 3:
+        raise ValueError("Expected SHAP values to have 3 dimensions (samples, features, classes).")
 
-            # Identify features with significant contributions
-            significant_features = [
-                (feature, value, shap_contributions[i])
-                for i, (feature, value) in enumerate(instance.items())
-                if abs(shap_contributions[i]) > 0.1  # Threshold for significance todo: IndexError: index 25 is out of bounds for axis 0 with size 25
-            ]
+    # Correct predictions
+    correct_indices = (y_val == y_pred)  # Boolean array of shape (n_samples,)
 
-            # Append significant feature values for this class
-            contributions_summary[class_names[pred_class]].extend(significant_features)
+    # Select only correct predictions
+    shap_values_correct = shap_values[correct_indices, :, :]  # Filter by correct samples
 
-    # Summarize contributions
-    summarized_contributions = {}
-    for class_name in class_names:
-        summary_df = pd.DataFrame(contributions_summary[class_name],
-                                  columns=["Feature", "Value", "Contribution"])
-        summarized = (
-            summary_df
-            .groupby(["Feature", "Value"])
-            .size()
-            .reset_index(name="Count")
-            .sort_values(by="Count", ascending=False)
-        )
-        summarized_contributions[class_name] = summarized
+    # Aggregate SHAP values across correct predictions
+    mean_shap_correct = np.mean(np.abs(shap_values_correct), axis=0)  # Mean across samples
+    mean_shap_features = np.mean(mean_shap_correct, axis=1)  # Mean across classes
 
-        # Plot top 10 feature-value pairs for this class
-        plt.figure(figsize=(10, 6))
-        sns.barplot(
-            data=summarized.head(10),
-            x="Count",
-            y=summarized["Feature"].astype(str) + " = " + summarized["Value"].astype(str),
-            palette="viridis"
-        )
-        plt.title(f"Top Feature Contributions for {class_name}")
-        plt.xlabel("Frequency of Contribution")
-        plt.ylabel("Feature = Value")
-        plt.tight_layout()
+    # Create a feature importance DataFrame
+    feature_importance_correct = pd.DataFrame({
+        'Feature': X_val.columns,
+        'Mean SHAP Value': mean_shap_features
+    }).sort_values(by='Mean SHAP Value', ascending=False)
+
+    print("Top features for correct predictions:")
+    print(feature_importance_correct.head(10))
+
+    # Generate a SHAP summary plot for each class
+    for i in range(shap_values.shape[2]):  # Iterate over classes
+        shap.summary_plot(shap_values[:, :, i], X_val, show=False)
+        plt.title(f"SHAP Summary for Class {reversed_label_dict[i]}")
         plt.show()
+        # plt.savefig(f"figures/shap_summary_class_{reversed_label_dict[i]}.png")
 
-    return summarized_contributions
+    return feature_importance_correct
+
+
 

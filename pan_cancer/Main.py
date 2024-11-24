@@ -8,27 +8,18 @@ from XGBoost_Model import *
 if __name__ == "__main__":
     # Load the data
     filepath = "pan_cancer_data_for_model.csv"
-    X_train, X_val, X_test, y_train, y_val, y_test, label_dict = load_and_split_data(filepath)
+    X, y, label_dict = load_data(filepath)
+    X_train, X_val, X_test, y_train, y_val, y_test, X_val_with_id = stratified_split_by_patient(X, y)
 
     # Fit and evaluate model
-    validation_accuracy, model, predictions = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict)
+    validation_accuracy, model, predictions = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plots=True)
 
-    y_val = np.array(y_val).flatten()  # Ensure 1D array
+    # Per Patient prediction
+    classify_patients(X_val_with_id, predictions, y_val, label_dict)
 
-    # Extract predicted class indices
-    # predicted_classes = np.argmax(predictions, axis=0)
-
-    # Map label dictionary to get class names
-    class_names = list(label_dict.values())
-
-    # Analyze SHAP contributions and plot
-    contributions_summary = analyze_shap_contributions_with_plots(
-        model, X_val, y_val, predictions, class_names
-    )
+    # Perform SHAP analysis
+    feature_importance = shap_analysis(model, X_val, y_val, predictions, label_dict)
 
     # Print results
     print(f"Validation Accuracy: {validation_accuracy}")
-    for class_name, summary in contributions_summary.items():
-        print(f"\nFor {class_name}, contributions:")
-        print(summary.head())
 

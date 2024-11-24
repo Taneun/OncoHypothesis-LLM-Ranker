@@ -87,7 +87,7 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict):
     fig_roc.show()
 
     # Confusion Matrix
-    cm = confusion_matrix(y_val, y_pred)
+    cm = confusion_matrix(y_val, y_pred, normalize='true')
 
     # Map numeric indices to cancer type names
     reversed_label_dict = {v: k for k, v in label_dict.items()}
@@ -99,7 +99,7 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict):
         x=display_labels,
         y=display_labels,
         colorscale='Blues',
-        colorbar=dict(title='Count'),
+        colorbar=dict(title='Normalized Count'),
     ))
 
     fig_cm.update_layout(

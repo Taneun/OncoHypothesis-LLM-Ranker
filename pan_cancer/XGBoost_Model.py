@@ -10,12 +10,14 @@ from sklearn.preprocessing import label_binarize
 
 
 def load_data(filepath):
-    features_to_drop = ['Cancer Type', 'Cancer Type Detailed', 'Tumor Stage', 'Sample Type']#, 'PATIENT_ID']
+    features_to_drop = ['Cancer Type', 'Cancer Type Detailed', 'Tumor Stage', 'Sample Type']
     data = pd.read_csv(filepath)
     cancer_types = data["Cancer Type"].unique()
-
+    mapping = {}
     # Convert object columns to categorical
     object_columns = data.select_dtypes(include='object').columns
+    for col in object_columns:
+        mapping[col] = dict(enumerate(data[col].astype('category').cat.categories))
     data[object_columns] = data[object_columns].astype('category')
 
     # Encode categorical columns using cat.codes
@@ -26,7 +28,25 @@ def load_data(filepath):
     X = data.drop(features_to_drop, axis=1)
     y, uniques = pd.factorize(data['Cancer Type'])
     label_dict = {cancer: idx for idx, cancer in enumerate(cancer_types)}
-    return X, y, label_dict
+    return X, y, label_dict, mapping
+
+
+def apply_category_mappings(data, mappings):
+    """
+    Apply saved mappings to translate codes back to original values.
+
+    Parameters:
+        data (DataFrame): DataFrame with encoded categorical columns.
+        mappings (dict): Mappings dictionary from save_category_mappings.
+
+    Returns:
+        DataFrame: DataFrame with original values restored.
+    """
+    for col in mappings.keys():
+        if col not in data.columns:
+            continue
+        data[col] = data[col].map(mappings[col])
+    return data
 
 
 def split_data(X, y):
@@ -188,7 +208,6 @@ def classify_patients(X, y_pred, y_true, label_dict):
             'True Cancer Type': 'first'  # Assume true label is the same for all entries
         }
     ).reset_index()
-    print(patient_predictions.head())
 
     # Map cancer types to integers for confusion matrix
     unique_cancer_types = list(reversed_label_dict.values())

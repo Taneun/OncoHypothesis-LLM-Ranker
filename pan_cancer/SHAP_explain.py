@@ -72,6 +72,7 @@ def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=3, min_s
     # Filter correct predictions
     correct_indices = y_pred == y_true
     correct_X = X[correct_indices]
+    print("correctX " + str(len(list(correct_X.columns))))
     correct_y = y_true[correct_indices]
 
     # Compute SHAP values for correct predictions
@@ -80,6 +81,7 @@ def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=3, min_s
 
     # Store hypotheses
     hypotheses = []
+    top_feat = set()
 
     # Iterate over correct predictions
     for i, sample_idx in enumerate(correct_X.index):
@@ -89,12 +91,19 @@ def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=3, min_s
         # Get top K features contributing to the prediction
         top_features_indices = sample_shap[correct_y[i]].argsort()[-top_k_features:][::-1]
         top_features = [(X.columns[idx], correct_X.iloc[i, idx]) for idx in top_features_indices]
+        for f in top_features:
+            top_feat.add(f[0])
 
         # Format hypothesis
         hypothesis = {f"{feature}": value for feature, value in top_features}
         hypothesis["cancer_type"] = cancer_type
         hypotheses.append(frozenset(hypothesis.items()))
-
+    # todo: remove all the debugging prints
+    print(len(top_feat))
+    print(top_feat)
+    columns_missing = [col for col in list(correct_X.columns) if col not in list(top_feat)]
+    print(f"columns missing: {columns_missing}")
+    print("hypo " + str(len(list(hypotheses[0]))))
     # Count occurrences of each hypothesis
     hypothesis_counts = Counter(hypotheses)
 

@@ -15,7 +15,7 @@ def load_data(filepath):
     cancer_types = data["Cancer Type"].unique()
     mapping = {}
     # Convert object columns to categorical
-    object_columns = data.select_dtypes(include='object').columns
+    object_columns = data.select_dtypes(include=['object', 'bool']).columns
     for col in object_columns:
         mapping[col] = dict(enumerate(data[col].astype('category').cat.categories))
     data[object_columns] = data[object_columns].astype('category')

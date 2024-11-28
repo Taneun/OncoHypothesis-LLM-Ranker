@@ -15,14 +15,17 @@ if __name__ == "__main__":
     validation_accuracy, model, predictions \
         = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plots=False)
 
-    # Per Patient prediction
-    classify_patients(X_val_with_id, predictions, y_val, label_dict)
-
-    # Perform SHAP analysis
-    feature_importance = shap_analysis(model, X_val, y_val, predictions, label_dict)
-
+    # # Per Patient prediction
+    # classify_patients(X_val_with_id, predictions, y_val, label_dict)
+    #
+    # # Perform SHAP analysis
+    # feature_importance = shap_analysis(model, X_val, y_val, predictions, label_dict)
+    temp_model = model
     # Generate hypotheses database
-    hypotheses = apply_category_mappings(generate_hypotheses_db(model, X_val, y_val, label_dict), mapping)
+    initial_db = generate_hypotheses_db(model, X_val, y_val, label_dict)
+    print("initial" + str(len(list(initial_db.columns))))
+    hypotheses = apply_category_mappings(initial_db, mapping)
+    print("hypotheses" + str(len(list(hypotheses.columns))))
 
     hypotheses.to_csv("hypotheses.csv", index=False)
     # Print results

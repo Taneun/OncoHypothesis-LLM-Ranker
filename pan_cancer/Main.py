@@ -12,13 +12,14 @@ if __name__ == "__main__":
     X_train, X_val, X_test, y_train, y_val, y_test, X_val_with_id = stratified_split_by_patient(X, y)
 
     # Fit and evaluate model
-    validation_accuracy, model, predictions = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plots=False)
+    validation_accuracy, model, predictions \
+        = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plots=True)
 
     # Per Patient prediction
-    # classify_patients(X_val_with_id, predictions, y_val, label_dict)
+    classify_patients(X_val_with_id, predictions, y_val, label_dict)
 
     # Perform SHAP analysis
-    # feature_importance = shap_analysis(model, X_val, y_val, predictions, label_dict)
+    feature_importance = shap_analysis(model, X_val, y_val, predictions, label_dict)
 
     # Generate hypotheses database
     hypotheses = generate_hypotheses_db(model, X_val, y_val, label_dict)

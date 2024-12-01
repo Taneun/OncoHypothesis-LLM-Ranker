@@ -25,30 +25,39 @@ def shap_analysis(model, X_val, y_val, y_pred, label_dict):
     # Select only correct predictions
     shap_values_correct = shap_values[correct_indices, :, :]  # Filter by correct samples
 
-    # Aggregate SHAP values across correct predictions
-    mean_shap_correct = np.mean(np.abs(shap_values_correct), axis=0)  # Mean across samples
-    mean_shap_features = np.mean(mean_shap_correct, axis=1)  # Mean across classes
-
-    # Create a feature importance DataFrame
-    feature_importance_correct = pd.DataFrame({
-        'Feature': X_val.columns,
-        'Mean SHAP Value': mean_shap_features
-    }).sort_values(by='Mean SHAP Value', ascending=False)
-
-    print("Top features for correct predictions:")
-    print(feature_importance_correct.head(10))
+    feature_importance_correct = extract_top_features(shap_values_correct, X_val[correct_indices], print_table=False)
 
     # Generate a SHAP summary plot for each class
-    for i in range(shap_values.shape[2]):  # Iterate over classes
-        shap.summary_plot(shap_values[:, :, i], X_val, show=False)
-        plt.title(f"SHAP Summary for Class {reversed_label_dict[i]}")
-        plt.show()
-        # plt.savefig(f"figures/shap_summary_class_{reversed_label_dict[i]}.png")
+    # for i in range(shap_values.shape[2]):  # Iterate over classes
+    #     shap.summary_plot(shap_values[:, :, i], X_val, show=False)
+    #     plt.title(f"SHAP Summary for Class {reversed_label_dict[i]}")
+    #     plt.show()
+    #     plt.savefig(f"figures/shap_summary_class_{reversed_label_dict[i]}.png")
 
     return feature_importance_correct
 
 
-def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=3, min_support=2):
+def extract_top_features(shap_values, correct_X, print_table=True, num_to_print=10):
+    """
+    Compute the top features for correct predictions based on SHAP values.
+    """
+    mean_shap_correct = np.mean(np.abs(shap_values), axis=0)  # Mean across samples
+    mean_shap_features = np.mean(mean_shap_correct, axis=1)  # Mean across classes
+
+    # Create a feature importance DataFrame
+    feature_importance_correct = pd.DataFrame({
+        'Feature': correct_X.columns,
+        'Mean SHAP Value': mean_shap_features
+    }).sort_values(by='Mean SHAP Value', ascending=False)
+
+    if print_table:
+        print("Top features for correct predictions:")
+        print(feature_importance_correct.head(num_to_print))
+
+    return feature_importance_correct
+
+
+def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=4, min_support=2):
     """
     Generate a hypotheses database from an XGBoost model's correct predictions.
 
@@ -78,6 +87,8 @@ def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=3, min_s
     # Compute SHAP values for correct predictions
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(correct_X)
+
+    extract_top_features(shap_values, correct_X)
 
     # Store hypotheses
     hypotheses = []
@@ -119,7 +130,3 @@ def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=3, min_s
     ]
 
     return hypotheses_db.sort_values(by="support", ascending=False)
-
-
-
-

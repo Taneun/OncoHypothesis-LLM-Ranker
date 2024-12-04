@@ -5,13 +5,13 @@ from matplotlib import pyplot as plt
 from collections import Counter
 
 
-def shap_analysis(model, X_val, y_val, y_pred, label_dict):
+def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
     """
     Perform SHAP analysis for a multiclass classification model.
     """
     reversed_label_dict = {v: k for k, v in label_dict.items()}
     # Initialize SHAP TreeExplainer
-    explainer = shap.TreeExplainer(model)
+    # explainer = shap.TreeExplainer(model)
 
     # Compute SHAP values for multiclass (shape: [n_samples, n_features, n_classes])
     shap_values = explainer.shap_values(X_val)  # Already in (n_samples, n_features, n_classes)
@@ -57,7 +57,7 @@ def extract_top_features(shap_values, correct_X, print_table=True, num_to_print=
     return feature_importance_correct
 
 
-def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=4, min_support=2):
+def generate_hypotheses_db(explainer, model, X, y_true, label_dict, min_features=2, relative_threshold_percent=10, min_support=3):
     """
     Generate a hypotheses database from an XGBoost model's correct predictions.
 
@@ -85,7 +85,7 @@ def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=4, min_s
     correct_y = y_true[correct_indices]
 
     # Compute SHAP values for correct predictions
-    explainer = shap.TreeExplainer(model)
+    # explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(correct_X)
 
     extract_top_features(shap_values, correct_X)
@@ -98,9 +98,19 @@ def generate_hypotheses_db(model, X, y_true, label_dict, top_k_features=4, min_s
     for i, sample_idx in enumerate(correct_X.index):
         cancer_type = reversed_label_dict[correct_y[i]]
         sample_shap = shap_values[i, :, :]  # Extract SHAP values for the i-th sample across all features and classes
+        sample_shap = sample_shap.transpose()[correct_y[i]]
+
+        total_contribution = np.sum(sample_shap)
+        contribution_cutoff = (relative_threshold_percent / 100) * total_contribution
+        significant_indices = np.where(sample_shap >= contribution_cutoff)[0]
+
+        if len(significant_indices) < min_features:
+            top_k_features = min_features
+        else:
+            top_k_features = len(significant_indices)
 
         # Get top K features contributing to the prediction
-        top_features_indices = sample_shap[correct_y[i]].argsort()[-top_k_features:][::-1]
+        top_features_indices = sample_shap.argsort()[-top_k_features:][::-1]
         top_features = [(X.columns[idx], correct_X.iloc[i, idx]) for idx in top_features_indices]
         for f in top_features:
             top_feat.add(f[0])

@@ -1,698 +1,376 @@
-Variant_Type,frameshift_variant,Diagnosis Age,cancer_type,NMD_transcript_variant,3_prime_UTR_variant,downstream_gene_variant,Protein_position,Event_Info,Site2_Hugo_Symbol,5_prime_UTR_variant,coding_sequence_variant,Exon_Number,SNP_event,Chromosome,VAR_TYPE_SX,Codons,inframe_insertion,Hugo_Symbol,Start_Position,TMB (nonsynonymous),Sex,Site1_Hugo_Symbol,intergenic_variant,End_Position,inframe_deletion,support
-,0.0,61-70,Colorectal Carcinoma,0.0,0.0,,,,,,,,,,,,,,,,,,,,,216
-SNP,0.0,61-70,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,179
-SNP,0.0,21-30,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,Male,,,,,154
-SNP,0.0,61-70,Colorectal Carcinoma,,0.0,,,,,,,,,,,,,,,,,,,,,82
-SNP,0.0,31-40,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,70
-,,51-60,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,53
-,,61-70,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,34
-,0.0,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,,,,,,,25
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.8,Male,,,,,23
-,,,Colorectal Carcinoma,,,,,,,,0.0,02/05,C>T,12,,,,,,,,,,,,21
-SNP,0.0,51-60,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,18
-SNP,,41-50,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,18
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.2,Male,,,,,16
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,0.133333333,,,,,,15
-SNP,,51-60,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,15
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,A>G,,,,,,,,,,,,,15
-,,,Breast Carcinoma,,,,,,,,,21/21,A>G,3,,,,PIK3CA,,,,,,,,14
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,0.1,,,,,,14
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.333333333,Male,,,,,14
-,0.0,61-70,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,13
-,,41-50,Intrahepatic Cholangiocarcinoma,,,,,,,,,,,,,,,,,1.966666667,,,0.0,,,12
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,C>T,5,,,,,,,,,,,,12
-,,,Non Small Cell Lung Cancer,,,,745.0,,,,,,GGAATTAAGAGAAGC>-,,,,,EGFR,55242465.0,,,,,,,12
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.233333333,Male,,,,,11
-,,,Non Small Cell Lung Cancer,,,,12.0,,,,,,C>A,,,,,KRAS,,,,,,,,11
-SNP,,,Gallbladder Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,0.0,11
-,0.0,,Non Small Cell Lung Cancer,,,,745.0,,,,,,GGAATTAAGAGAAGC>-,,,,,,55242465.0,,,,,,,11
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,C>A,,,,,,,,,,,,,11
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,0.066666667,,,,,,11
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,0.166666667,,,,,,10
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.366666667,Male,,,,,10
-,0.0,51-60,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,10
-SNP,,51-60,Gallbladder Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,10
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,0.2,,,,,,10
-,0.0,,Esophageal Carcinoma,,,,,,,,0.0,,,,,,,,,0.366666667,,,,,0.0,10
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,G>A,5,,,,,,,,,,,,10
-,0.0,51-60,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,10
-SNP,0.0,71-80,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,10
-,,,Colorectal Carcinoma,,,,,,,,0.0,02/05,C>T,,,,,,,,,,0.0,,,9
-,0.0,61-70,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,9
-,,,Colorectal Carcinoma,,,,,,,,0.0,02/05,C>A,12,,,,,,,,,,,,9
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,T>A,,,,,,,,,,,,,9
-,,41-50,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,9
-,,,Colorectal Carcinoma,,,,,,,,0.0,05/11,C>T,17,,,,,,,,,,,,9
-,,,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,,,Substitution/Indel,,,,,,,,,,0.0,9
-,,41-50,Intrahepatic Cholangiocarcinoma,,,,,,,,,,,,,,,,,1.433333333,,,0.0,,,9
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.266666667,Male,,,,,9
-SNP,,61-70,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,9
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,T>C,,,,,,,,,,,,,9
-SNP,,51-60,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,8
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,17,,,,,,,Male,,,,,8
-,,,Esophageal Carcinoma,,,,,,CAMTA1,,,,,,Substitution/Indel,,,,,,,,0.0,,0.0,8
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,G>A,,,,,,,,,,,,,8
-SNP,0.0,31-40,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,0.0,8
-SNP,,,Pancreatic Cancer,0.0,,,,,,,,,,,Substitution/Indel,,0.0,,,,,,,,,8
-,1.0,61-70,Colorectal Carcinoma,0.0,0.0,,,,,,,,,,,,,,,,,,,,,8
-,,,Pancreatic Cancer,0.0,0.0,,,,,,,,C>G,,,Ggt/Cgt,,,,,,,,,,8
-SNP,,31-40,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,8
-,,,Pancreatic Cancer,,,,,,,,0.0,,,,,gGt/gTt,0.0,,,0.133333333,,,,,,8
-,,,Esophageal Carcinoma,0.0,,0.0,,,MRPL3,0.0,,,,,,,,,,,,,,,,7
-,,,Non Small Cell Lung Cancer,,,0.0,,,,0.0,,,,,Truncation,,,,,,,,,,,7
-,,,Pancreatic Cancer,,0.0,,,,,,,,C>G,,Substitution/Indel,Ggt/Cgt,,,,,,,,,,7
-SNP,0.0,21-30,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,7
-,0.0,21-30,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,Male,,,,,7
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.3,Male,,,,,7
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,G>T,5,,,,,,,,,,,,7
-,,51-60,Liver Hepatocellular Carcinoma,0.0,,0.0,,,,,,,,,Substitution/Indel,,,,,,,,,,,7
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,Substitution/Indel,,,,,,Male,,,,,7
-SNP,0.0,51-60,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,7
-SNP,0.0,31-40,Colorectal Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,7
-SNP,,41-50,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,7
-SNP,0.0,61-70,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,7
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,Truncation,,,,,,Male,,,,,7
-,,51-60,Liver Hepatocellular Carcinoma,,,,,,,,,,,,Substitution/Indel,,,,,,,,0.0,,,6
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,0.0,6
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,->A,5,,,,,,,,,,,,6
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,G>T,,,,,,,,,,,,,6
-,,,Colorectal Carcinoma,,,,,,,,0.0,,TT>-,,,,,,,,,,0.0,,,6
-,,61-70,Colorectal Carcinoma,,,,,,,0.0,,,,,,,0.0,,,,,,,,,6
-SNP,0.0,51-60,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,Male,,,,,6
-,0.0,,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,0.0,6
-SNP,,71-80,Gallbladder Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,6
-,,,Esophageal Carcinoma,0.0,0.0,,,,,,,,,,,,,,,,Male,,,,,6
-,,61-70,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,,,,,,,,,,,,6
-,,,Colorectal Carcinoma,,,,,,,,0.0,04/05,C>T,12,,,,,,,,,,,,6
-DEL,0.0,51-60,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,6
-,,51-60,Colorectal Carcinoma,,,,,,,,,,,,,,0.0,,,,,,,,,6
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,A>T,,,,,,,,,,,,,6
-,,,Colorectal Carcinoma,,,,,,,,0.0,07/11,C>T,17,,,,,,,,,,,,6
-,0.0,51-60,Liver Hepatocellular Carcinoma,,,,,,,,,,,,,,,,,,,,,,,6
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,T>-,5,,,,,,,,,,,,6
-,0.0,61-70,Colorectal Carcinoma,0.0,,0.0,,,,,,,,,,,,,,,,,,,,6
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>-,16,,,,,,,,,0.0,,,5
-SNP,0.0,71-80,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,5
-,,,Non Small Cell Lung Cancer,,,,746.0,,,,,,GAATTAAGAGAAGCA>-,,,,,EGFR,,0.066666667,,,,,,5
-,,,Esophageal Carcinoma,,,0.0,,,JAK3,,0.0,,,,,,,,,,,,,,0.0,5
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,0.233333333,,,,,,5
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,A>-,5,,,,,,,,,,,,5
-,0.0,71-80,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,5
-SNP,,61-70,Gallbladder Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,5
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,0.266666667,,,,,,5
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>-,,,,,,,,,,0.0,,,5
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,cTg/cGg,0.0,,,,,,,,,5
-,,,Colorectal Carcinoma,,,,,,,,0.0,08/11,G>A,17,,,,,,,,,,,,5
-DEL,0.0,21-30,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,Male,,,,,5
-,0.0,,Non Small Cell Lung Cancer,,,,790.0,,,,,,C>T,,,,,EGFR,,,,,,,,5
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,5,,,,,,,,,,,,5
-,,,Colorectal Carcinoma,,,,,,,,0.0,10/11,A>-,2,,,,,,,,,,,,5
-,,41-50,Colorectal Carcinoma,,,,,,,0.0,,,,,,,0.0,,,,,,,,,5
-DEL,0.0,61-70,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,5
-,,61-70,Colorectal Carcinoma,,,,,,,,,,,,,,0.0,,,,,,,,,5
-,1.0,51-60,Colorectal Carcinoma,0.0,,,435.0,,,,,,,,,,,,,,,,,,,5
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,0.0,,,,,,,,,,,,,,,5
-SNP,,21-30,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,5
-DEL,1.0,51-60,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,5
-,,,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,,,Substitution/Indel,,0.0,,,,,,,,0.0,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>T,,,,,,,,,,0.0,,,4
-,,41-50,Colorectal Carcinoma,,,,,,,,,,,,,,0.0,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,08/11,C>T,17,,,,,,,,,,,,4
-,1.0,51-60,Colorectal Carcinoma,0.0,,,125.0,,,,,,,,,,,,,,,,,,,4
-,0.0,51-60,Colorectal Carcinoma,0.0,,,246.0,,,,,,,,,,,,,,,,,,,4
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,Substitution/Indel,,,,,,,,0.0,,,4
-INS,1.0,21-30,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,Male,,,,,4
-DEL,,,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>-,X,,,,,,,,,0.0,,,4
-DEL,1.0,21-30,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,Male,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,AAAAG>-,5,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,10/21,G>A,3,,,,,,,,,,,,4
-,1.0,51-60,Colorectal Carcinoma,0.0,,,465.0,,,,,,,,,,,,,,,,,,,4
-SNP,,31-40,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,4
-,,61-70,Intrahepatic Cholangiocarcinoma,,,,,,,,,,,,,,,,,0.133333333,,,0.0,,,4
-,0.0,,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,4
-,0.0,31-40,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,0.0,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,07/16,C>T,5,,,,,,,,,,,,4
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,G>A,,,,,,,,,,,,,4
-,0.0,51-60,Colorectal Carcinoma,0.0,,,3112.0,,,,,,,,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,2,,,,,,,,,0.0,,,4
-,,,Non Small Cell Lung Cancer,,,,745.0,,,,,,GGAATTAAGAGAAGC>-,,,,,EGFR,,0.1,,,,,,4
-,0.0,51-60,Colorectal Carcinoma,0.0,,,143.0,,,,,,,,,,,,,,,,,,,4
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,9,,,,,,,Male,,,,,4
-,,,Pancreatic Cancer,,,,12.0,,,,0.0,,,,,gGt/gTt,0.0,,,,,,,,,4
-,,,Liver Hepatocellular Carcinoma,,,,,,,,0.0,,,,,,0.0,,1295228.0,,,,,1295228.0,,4
-,0.0,51-60,Colorectal Carcinoma,0.0,,,2481.0,,,,,,,,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,9,,,,,,,,,0.0,,,4
-SNP,,41-50,Colorectal Carcinoma,,,,,,,,,,,,,,0.0,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,4,,,,,,,,,,,,4
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,4
-SNP,0.0,31-40,Colorectal Carcinoma,,,,107.0,,,,,,,,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>-,4,,,,,,,,,,,,4
-,,51-60,Colorectal Carcinoma,,,,,,,0.0,,,,,,,0.0,,,,,,,,,4
-SNP,0.0,71-80,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,4
-,,,Pancreatic Cancer,,,,,,,,0.0,,,,,gGt/gTt,0.0,,,0.166666667,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,11,,,,,,,,,0.0,,,4
-,0.0,61-70,Colorectal Carcinoma,0.0,,,2481.0,,,,,,,,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,A>-,,,,,,,,,,0.0,,,4
-,,,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,Truncation,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>-,9,,,,,,,,,0.0,,,4
-,0.0,61-70,Colorectal Carcinoma,,0.0,,,,,,,,,,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,2,,,,,,,,,0.0,,,4
-,,61-70,Colorectal Carcinoma,,0.0,,,,,,,,,,,,,,,,,,,,,4
-SNP,,,Breast Carcinoma,,,,,,,0.0,,10/21,,3,,,,,,,,,,,,4
-,,,Non Small Cell Lung Cancer,,,,746.0,,,,,,ATTAAGAGAAGCAAC>-,,,,,EGFR,,0.133333333,,,,,,4
-,0.0,61-70,Colorectal Carcinoma,,0.0,,,,,,,,,,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,17,,,,,,,,,0.0,,,4
-SNP,0.0,31-40,Colorectal Carcinoma,,,,185.0,,,,,,,,,,,,,,,,,,,4
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,7,,,,,,,,,0.0,,,3
-,,,Liver Hepatocellular Carcinoma,,,,,,,0.0,,,,,,,0.0,,,,,,,,0.0,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,09/10,C>-,17,,,,,,,,,,,,3
-,1.0,31-40,Colorectal Carcinoma,,,,435.0,,,,,,,,,,,,,,,,,148683686.0,,3
-SNP,0.0,41-50,Colorectal Carcinoma,,,,659.0,,,,,,,,,,,,,,,,,,,3
-SNP,0.0,31-40,Colorectal Carcinoma,,,,12.0,,,,,,,,,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,746.0,,,,,,AATTAAGAGAAGCAA>-,7,,,,EGFR,,,,,,,,3
-,0.0,61-70,Colorectal Carcinoma,,,,,,,,,,,,Substitution/Indel,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,0.0,0.0,,,,0.0,,,,,,,,,,,,,,,,3
-SNP,0.0,31-40,Colorectal Carcinoma,,,,192.0,,,,,,,,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>A,1,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,05/11,C>A,17,,,,,,,,,,,,3
-,,,Breast Carcinoma,0.0,,,,,,,,,A>T,3,,,,PIK3CA,,,,,,,,3
-,,,Gastric Cancer,,,,,,,,,08/18,G>A,,Substitution/Indel,,,CYLD,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,14/14,A>-,10,,,,,,,,,,,,3
-,,,Breast Carcinoma,,,,756.0,,,,,,G>A,,Substitution/Indel,,0.0,,,,,,,,,3
-,0.0,51-60,Colorectal Carcinoma,,,,,,,,,,,,Substitution/Indel,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,09/12,G>A,4,,,,,,,,,,,,3
-,,61-70,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,,,0.0,,,,,,,,,3
-,,,Gastric Cancer,,,,,,,,0.0,,,7,Substitution/Indel,,,,151875100.0,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,745.0,,,,,,GGAATTAAGAGAAGC>-,,,,,EGFR,,0.066666667,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,,,,,,,,,,0.0,,,3
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.433333333,Female,,,,,3
-SNP,,41-50,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,C>T,,,,,,,,,,,,,3
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,C>A,17,,,,,,,,,,,,3
-,0.0,,Non Small Cell Lung Cancer,,,,746.0,,,,,,GAATTAAGAGAAGCA>-,,,,,EGFR,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,767.0,,,,,,C>T,,,,,PIK3C2B,,0.533333333,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,841.0,,,,,,C>A,,,aaG/aaT,,,149500514.0,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,512.0,,,,,,A>G,,,tAt/tGt,,,,0.533333333,,,,,,3
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,C>G,,,,,,,,,,,,,3
-SNP,0.0,21-30,Colorectal Carcinoma,,,,,,ETV6,,,,,,,,,,,,,,,,,3
-,0.0,51-60,Colorectal Carcinoma,0.0,,,449.0,,,,,,,,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,,02/02,G>A,X,,,,,,,,,0.0,,,3
-SNP,,61-70,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,3
-INS,1.0,61-70,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,582.0,,,,,,,,,cGg/cAg,,LRP1B,,0.533333333,,,,,,3
-DEL,1.0,61-70,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,3
-SNP,,,Pancreatic Cancer,0.0,,,,,,,,,,,,gGt/gAt,0.0,,,,,,,,,3
-,,,Gastric Cancer,0.0,,,3323.0,,,0.0,,,,,,,,,,,Male,,,,,3
-,1.0,61-70,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,3
-SNP,0.0,31-40,Colorectal Carcinoma,,,,130.0,,,,,,,,,,,,,,,,,,,3
-INS,1.0,61-70,Colorectal Carcinoma,,0.0,,,,,,,,,,,,,,,,,,,,,3
-,0.0,71-80,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,3
-DEL,,41-50,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,3
-,0.0,51-60,Colorectal Carcinoma,0.0,,,230.0,,,,,,,,,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,988.0,,,,,,,,,caG/caA,0.0,,,0.533333333,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,A>-,,,,0.0,,,,,,,,,3
-,1.0,,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,0.0,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,A>-,17,,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,545.0,,,,,,G>A,,,,,PIK3CA,,,,,,,,3
-,1.0,61-70,Colorectal Carcinoma,0.0,,,435.0,,,,,,,,,,,,,,,,,,,3
-,,51-60,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,,,Substitution/Indel,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,0.0,,,,0.0,,,,,Truncation,,,,,,,,,,,3
-,,,Ovarian Carcinoma,,,0.0,,,,,,,,17,,,,,,,Female,,,,0.0,3
-SNP,0.0,31-40,Colorectal Carcinoma,,,,184.0,,,,,,,,,,,,,,,,,,,3
-,,51-60,Liver Hepatocellular Carcinoma,,,,,,,,0.0,,,,,,,,,,,,,,0.0,3
-,,,Gastric Cancer,0.0,,,,,,0.0,,,,,,,,,,,Male,,,,,3
-,,,Non Small Cell Lung Cancer,,,,1512.0,,,,,,C>A,,,Gga/Tga,0.0,,,,,,,,,3
-SNP,,,Pancreatic Cancer,0.0,,,,,,,,,,,,,0.0,,,0.133333333,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,772.0,,,,,,->GCATACGTGATG,17,,,,ERBB2,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,720.0,,,,,,C>A,,,,,,,0.433333333,Male,,,,,3
-,,,Non Small Cell Lung Cancer,,,,1363.0,,,,,,C>A,,,,0.0,LRP2,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,433.0,,,,,,G>A,,,cGc/cAc,,,,0.533333333,,,,,,3
-DEL,1.0,,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,10/12,C>T,4,,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,1546.0,,,,,,A>G,,,Att/Gtt,0.0,,,,,,,,,3
-DEL,,,Gastric Cancer,,,,,,,,,,,,,,,,,,,,,,,3
-,,,Breast Carcinoma,0.0,,,,,,,,15/25,,,,,0.0,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,X,,,,,,,,,0.0,,,3
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,4,,,,,,,Male,,,,,3
-,0.0,51-60,Colorectal Carcinoma,0.0,,,18.0,,,,,,,,,,,,,,,,,,,3
-,0.0,51-60,Colorectal Carcinoma,0.0,,,107.0,,,,,,,,,,,,,,,,,,,3
-,,61-70,Intrahepatic Cholangiocarcinoma,,,,,,,,,04/10,,,,,,,,0.133333333,,,0.0,,,3
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,G>A,,,,,,,,,,,,,3
-,,,Pancreatic Cancer,,,,,,,,0.0,,C>A,,,gGt/gTt,0.0,,,,,,,,,3
-SNP,0.0,21-30,Colorectal Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,02/21,C>-,19,,,,,,,,,,,,3
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,,17,,,,TP53,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>C,3,,,,,,,,,0.0,,,3
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,A>T,17,,,,,,,,,,,,3
-,,,Bone Sarcoma,0.0,,,,,,,,,,,Substitution/Indel,,,,,,,,,,,3
-,0.0,51-60,Colorectal Carcinoma,0.0,,,1390.0,,,,,,,,,,,,,,,,,,,3
-,,61-70,Colorectal Carcinoma,,0.0,,175.0,,,,,,,,,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,746.0,,,,,,GAATTAAGAGAAGCA>-,,,,,EGFR,,0.1,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,C>T,,,,,,,,,,0.0,,,3
-,,,Esophageal Carcinoma,,,0.0,,,,,0.0,,G>A,,,,,,,0.3,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,AAA>-,12,,,,,,,,,,,,3
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,07/11,,,,,,,,,,,,7577534.0,,3
-,,,Pancreatic Cancer,,,,,,,,0.0,,,,,gGt/gTt,0.0,,,0.1,,,,,,3
-SNP,,,Head and Neck Carcinoma,,,,,,,,,,,,Substitution/Indel,,,,,,,,,,0.0,3
-,0.0,,Non Small Cell Lung Cancer,,,,719.0,,,,,,G>C,,,gGc/gCc,,,,,,,,,,3
-,,,Liver Hepatocellular Carcinoma,,,,,CREBRF-TERT,TERT,0.0,0.0,,,,,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,542.0,,,,,,G>A,,,,,PIK3CA,,,,,,,,3
-,,,Liver Hepatocellular Carcinoma,,,,,,,,,,,5,,,,,,,Male,,,1295228.0,,3
-,,,Soft Tissue Sarcoma,,,,,,,,,,,,,,,KIT,,0.066666667,,,0.0,,,3
-,,,Soft Tissue Sarcoma,,,0.0,,,,,,,,,,,,,,0.033333333,,,0.0,,,3
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,,,,,,,,,0.0,,,3
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,,,,,,,,,0.0,,0.0,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,A>-,5,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,06/11,G>A,17,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>-,5,,,,,,,,,,,,3
-SNP,0.0,41-50,Colorectal Carcinoma,,,,295.0,,,,,,,,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,A>T,5,,,,,,,,,,,,3
-SNP,0.0,41-50,Colorectal Carcinoma,,,,1070.0,,,,,,,,,,,,,,,,,,,3
-,,,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,C>A,,,,,,7577534.0,,,,,,,3
-,0.0,61-70,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,3
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,4,,,,,,,,,,,,3
-,,,Non Small Cell Lung Cancer,,,,,,,,,,G>T,,,,0.0,FAT4,126369815.0,,,,,,,2
-,,,Breast Carcinoma,,0.0,,,,,,,,,,,,,,180056424.0,0.133333333,Female,,,,,2
-INS,,31-40,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,2
-,0.0,61-70,Colorectal Carcinoma,0.0,,,207.0,,,,,,,,,,,,,,,,,,,2
-,,41-50,Breast Carcinoma,,,,60.0,,,,,02/09,,,,,,,,,,,,,0.0,2
-,,,Esophageal Carcinoma,,,,,,CDKN2BAS1,0.0,,,,,,,,NOTCH1,,,,,,,0.0,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,->A,5,,,,,,,,,0.0,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,A>-,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,C>T,1,,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,,,48/54,,,,,0.0,,,,,,0.0,49420958.0,,2
-,,,Breast Carcinoma,,,,,,,,0.0,04/15,,,,,,,,0.166666667,Female,,,,,2
-,,,Gastric Cancer,0.0,0.0,,177.0,,,,,,,16,,,,,,,,,,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,,,,,,TP53,,,,,,7577534.0,,2
-,,,Gastric Cancer,,,,,,,,0.0,,,,,,,,,,Male,,,,0.0,2
-,,,Breast Carcinoma,,0.0,,,,,0.0,,16/16,G>T,,,,,,,,,,,,,2
-SNP,0.0,61-70,Colorectal Carcinoma,,,,332.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,03/10,G>-,17,,,,,,,,,,,,2
-,,,Esophageal Carcinoma,,,0.0,,,MRPL3,0.0,,,,,,,,,,,,,,,,2
-,,,Gastric Cancer,0.0,0.0,,,,,,,,,,,,,,,0.3,,,,,0.0,2
-,,,Non Small Cell Lung Cancer,,,,746.0,,,,,,GAATTAAGA>-,,,,,EGFR,,0.066666667,,,,,,2
-,,,Gastric Cancer,,,,4349.0,,,,0.0,,,,,,,,92620273.0,,,,,,0.0,2
-,,,Gastric Cancer,0.0,,,,,,,0.0,,,,Substitution/Indel,Cat/Tat,,,,,,,,,,2
-SNP,0.0,41-50,Colorectal Carcinoma,,,,222.0,,,,,,,,,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,,,04/14,,,,,0.0,,,,,,0.0,40761129.0,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,,,LRP1B-Intragenic,LRP1B,,,,,,,,,,,,,,,,,2
-SNP,,,Gastric Cancer,,,,,,,,,,,,,,,FANCD2,,,Male,,0.0,,,2
-,,,Esophageal Carcinoma,0.0,0.0,,,,,,,,,,,Gac/Aac,,,,,Female,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,12,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,7,,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,,,07/11,,,,,0.0,,,,,,0.0,347107.0,,2
-,0.0,,Non Small Cell Lung Cancer,,,,684.0,,,,,,G>T,,,,,FAM135B,,,,,,,,2
-SNP,0.0,41-50,Colorectal Carcinoma,,,,332.0,,,,,,,,,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,,,09/17,,,,,0.0,,,,,,0.0,126371807.0,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,02/05,,12,,,,,,0.533333333,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,1553.0,,,,,,G>T,,,cGc/cTc,,TET3,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,249.0,,,,,,C>A,,,,,TP53,,0.533333333,,,,,,2
-,,51-60,Non Small Cell Lung Cancer,,,0.0,,,,0.0,,,,,Truncation,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,09/18,->A,3,,,,,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,,,,,,0.2,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,1,,,,,,,,,0.0,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,2401.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,456.0,,,,,,,,,,,,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,,,,,,,,,,Substitution/Indel,,,,,,,,0.0,,0.0,2
-DEL,,,Breast Carcinoma,,,,,,,,,,CA>-,,,,,,,,,,,8111434.0,,2
-,,,Esophageal Carcinoma,,,0.0,,,,,,20/23,G>C,,,,,,,1.133333333,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>T,2,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,11/11,A>G,18,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,11,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,10/16,C>T,5,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,94.0,,,,0.0,,G>C,,,,,RBM10,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>T,11,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,->A,3,,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,,,Truncation,,,,,,,,,,0.0,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,13/30,C>T,5,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,382.0,,,,,,T>C,,,tTc/tCc,,,,,,,,,,2
-,0.0,51-60,Liver Hepatocellular Carcinoma,0.0,,0.0,,,,,,,,,,,,,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,0.0,,0.0,,,,,,,,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,1306.0,,,,0.0,,,,,Gaa/Aaa,0.0,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,146.0,,,,,,,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,,,,,0.0,,C>T,,,tCc/tTc,,FAT3,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,860.0,,,,0.0,,,,,Gtg/Atg,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,17,,,,,,,,,0.0,,,2
-,,51-60,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,140453136.0,,,,,,,2
-SNP,,,Breast Carcinoma,,0.0,0.0,,,,,,,,,,,,,,,,,,89717643.0,,2
-,0.0,,Non Small Cell Lung Cancer,,,,129.0,,,,0.0,,,,,,,STK11,,,,,,,,2
-,,,Breast Carcinoma,,,0.0,,,,,,,,,,,,FAT4,126370429.0,,,,,126370429.0,,2
-SNP,,,Breast Carcinoma,,,,,,,,0.0,,,,Substitution/Indel,,,,,,Female,,,,,2
-,,,Breast Carcinoma,,0.0,,,,,,,,,,,,,,7577121.0,,,BRCA2,,,0.0,2
-,,,Non Small Cell Lung Cancer,,,,117.0,,,,0.0,,G>A,,,,,,,,Male,,,,,2
-SNP,,,Breast Carcinoma,,,0.0,,,,,,,,,,,,,48125734.0,,,BRCA2,,,,2
-,,,Breast Carcinoma,,,0.0,3.0,,,,,01/05,,,,gCg/gTg,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,27.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,51-60,Colorectal Carcinoma,,,,678.0,,,,,,,,,,,,,,,,,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,,4,,,,,,,,,,,,2
-,1.0,51-60,Colorectal Carcinoma,0.0,,,508.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,12.0,,,,,,,,,,,,,,,,,,,2
-SNP,,51-60,Liver Hepatocellular Carcinoma,,,,,,,,,,T>A,,,,,,,,,,,,,2
-SNP,,,Gastric Cancer,,,,549.0,,,,,,,,Substitution/Indel,,,,,,,,,,0.0,2
-,,,Non Small Cell Lung Cancer,,,,601.0,,,,0.0,,G>A,,,gGc/gAc,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,207.0,,,,,,,,,,,,,,,,,,,2
-,1.0,51-60,Colorectal Carcinoma,0.0,,,659.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,G>T,,,,,,,,,,0.0,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,,,04/09,,,,,0.0,,,,,,0.0,161116165.0,,2
-SNP,0.0,41-50,Colorectal Carcinoma,,,,533.0,,,,,,,,,,,,,,,,,,,2
-,,,Gastric Cancer,,0.0,,3127.0,,,0.0,,,,,Truncation,,,,,,,,,,,2
-,,,Esophageal Carcinoma,,,,,,KDM6A,,0.0,,,,,,,,,0.2,,,,,0.0,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,02/12,A>-,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,19,,,,,,,Female,,,,,2
-SNP,0.0,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,,,,,,0.0,2
-,,,Gastric Cancer,,,0.0,,,,,,,T>-,,,,,,,,,,,21644547.0,,2
-,,,Gastric Cancer,0.0,,,,,,,,,,,,,,,41545025.0,,Male,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>C,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,5,,,,,,,Female,,,,,2
-DEL,,,Gastric Cancer,0.0,,,,,,,,,,,,,,,,,Male,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,168.0,,,,,,,,,,,,,,,,,,,2
-INS,,,Gastric Cancer,0.0,,0.0,,,,0.0,,,,,,,,,,,,,,,,2
-,,,Gastric Cancer,,,,,,,0.0,0.0,,,,Truncation,,,TGFBR2,,,,,,,,2
-,,61-70,Gastric Cancer,,,,,,,,,,,,,,,MRE11A,,,,,,,,2
-DEL,1.0,41-50,Colorectal Carcinoma,,,,465.0,,,,,,,,,,,,,,,,,,,2
-DEL,,,Gallbladder Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,0.0,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,234.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,261.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,198.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,65.0,,,,,,,,,,,,,,,,,,,2
-,0.0,61-70,Colorectal Carcinoma,,0.0,,,,,,,,,,Substitution/Indel,,,,,,,,,,,2
-SNP,,,Pancreatic Cancer,0.0,,,,,,,,,,,,,0.0,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,45.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,219.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,171.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>-,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,05/12,C>T,18,,,,,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,,,,,,0.2,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,366.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,,,,,,,,Female,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,02/09,C>T,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,12/12,A>G,18,,,,,,,,,,,,2
-SNP,,,Liver Hepatocellular Carcinoma,,,,,,,,,,T>A,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,1994.0,,,,,,,,,,,,,,,,,,,2
-SNP,,,Liver Hepatocellular Carcinoma,,0.0,,,,,,,,T>A,,,,,,,,,,,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,A>T,19,,,,,,,,,,,,2
-INS,1.0,71-80,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,02/11,C>T,7,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,01/17,C>T,4,,,,,,,,,,,,2
-,,,Esophageal Carcinoma,,,,,,LRP1B,,0.0,,C>T,,,,,,,0.266666667,,,,,,2
-,0.0,61-70,Colorectal Carcinoma,0.0,,,482.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,10/16,C>T,2,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,03/03,->GC,17,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,117.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,A>G,,,,,,,,,,0.0,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,,1,,,,,,,,,,65311203.0,,2
-,,,Gastric Cancer,,,,,,,,0.0,,,7,,,,,151875100.0,,Male,,,,,2
-,,,Soft Tissue Sarcoma,,,,,,,,,,,,,,,,,0.0,,,0.0,,,2
-INS,,41-50,Colorectal Carcinoma,,,,,,,0.0,,,,,,,,,,,,,,,,2
-,,,Gastric Cancer,,,,,,,,,,,,,gGt/gt,,RNF43,,,,,,,0.0,2
-DEL,,41-50,Colorectal Carcinoma,,,,,,,,,,,,,,0.0,,,,,,,,,2
-,,,Gastric Cancer,,,,,,,,,10/11,A>-,,Truncation,Aaa/aa,,,,,,,,,,2
-,,,Esophageal Carcinoma,0.0,0.0,,,,,,,,,,,,0.0,,,,Female,,,,,2
-,,,Gastric Cancer,,0.0,,,,,,,,,12,,,,,,,Male,,,25398281.0,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,8,,,,,,,,,,,0.0,2
-,0.0,,Esophageal Carcinoma,,,0.0,,,FBXW7,,0.0,,,,,,,,,,,,,,,2
-,,,Gastric Cancer,0.0,,,,,,,,10/11,A>-,,Truncation,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,13/13,->G,20,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,496.0,,,,,,,,,,,,,,,,,,,2
-,,41-50,Intrahepatic Cholangiocarcinoma,,,,,,,,,02/03,,,,,,,,1.966666667,,,0.0,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,,17,,,,,,,,,,,,2
-,,41-50,Intrahepatic Cholangiocarcinoma,,,,,,,,,10/11,,,,,,,,1.966666667,,,0.0,,,2
-,0.0,51-60,Colorectal Carcinoma,,,,,,,,,,,,Truncation,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,09/12,C>T,18,,,,,,,,,,,,2
-DEL,,61-70,Gallbladder Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,5,,,,,,,,,,,0.0,2
-,,61-70,Gastric Cancer,,,,,,,,0.0,,,,,,,,,,Male,,0.0,,,2
-,,61-70,Intrahepatic Cholangiocarcinoma,,,,,,,,,,,,,,,,,0.266666667,,,0.0,,,2
-,0.0,71-80,Colorectal Carcinoma,,,,465.0,,,0.0,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,TTTT>-,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,08/27,G>T,11,,,,,,,,,,,,2
-,0.0,,Uterine Corpus Endometrial Carcinoma,0.0,,,,,,,,,,,,Gca/Aca,,,,,,,,,,2
-,,,Gastric Cancer,,,,,,,,,,,,,gAc/gGc,0.0,,,,,,0.0,49405962.0,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,01/17,G>A,4,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,4,,,,,,,,,0.0,,,2
-,,,Esophageal Carcinoma,,,0.0,,,,,0.0,,G>C,,,,,,,0.3,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>A,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,03/10,G>A,17,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,08/11,C>-,17,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,15/18,A>T,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,16,,,,,,,,,,,,2
-SNP,0.0,41-50,Colorectal Carcinoma,,,,12.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,07/10,G>A,12,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,AAA>-,,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,19/19,G>A,,,,,,,,,,0.0,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,T>C,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,03/03,C>-,17,,,,,,,,,,,,2
-,0.0,41-50,Colorectal Carcinoma,,,,2481.0,,,,,,,,,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,,,,,,Substitution/Indel,,,,,,,,,,0.0,2
-,,,Esophageal Carcinoma,,,0.0,,,LRP1B,,0.0,,C>G,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,746.0,,,,,,GAATTAAGAGAAGCA>-,,,,,,,0.233333333,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,15,,,,,,,,,0.0,,,2
-,,,Liver Hepatocellular Carcinoma,,,0.0,,,,,0.0,,A>T,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,745.0,,,,,,GGAATTAAGAGAAGC>-,,,,,,55242465.0,0.166666667,,,,,,2
-,,,Soft Tissue Sarcoma,,,,,,,,,,,,,,,KIT,,0.033333333,,,0.0,,,2
-,,,Pancreatic Cancer,0.0,,,,,,,0.0,,,,,gGt/gTt,0.0,,,,,,,,,2
-SNP,,,Pancreatic Cancer,0.0,,,,,,,,,,,,gGt/gAt,,,,0.233333333,,,,,,2
-,0.0,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,2
-SNP,,51-60,Liver Hepatocellular Carcinoma,,,,,,,,,,A>G,,,,,,,,,,,,,2
-,,41-50,Thyroid Carcinoma,,,,,,,,,15/18,,,,,,,,0.033333333,,,0.0,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,C>A,17,,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,0.0,,,,,0.0,,,,,,,,,,,,,,,2
-SNP,,,Pancreatic Cancer,0.0,,,12.0,,,,,,,,,,0.0,,,,,,,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,03/15,,3,,,,,,,,,,,,2
-,,,Gastric Cancer,0.0,,0.0,,,,0.0,,08/11,,,,,,,,,,,,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,G>T,,,,,,,,,,,,,2
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,16,,,,,,,Male,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,1403.0,,,,,,,,,Gag/Aag,,MAGI2,,,,,,,,2
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,18,,,,,,,Male,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,0.0,,,,,,,,,,,,,,,2
-,,,Pancreatic Cancer,,,0.0,,,,,0.0,,,,,gGt/gTt,0.0,,,,,,,,,2
-,,,Esophageal Carcinoma,,,,,,CDKN2A,,0.0,,,,,,,TP53,,,,,,,0.0,2
-,,41-50,Colorectal Carcinoma,,,0.0,,,,0.0,,,,,,,,,,,,,,,,2
-,,,Gastric Cancer,,0.0,,,,,,,08/08,,,Substitution/Indel,,,,,,,,,,0.0,2
-SNP,,,Pancreatic Cancer,,,,,,,,,,,,Substitution/Indel,,0.0,,,,,,,,,2
-,,,Breast Carcinoma,,0.0,,,,,,,21/21,,3,,,,PIK3CA,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,3,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,09/12,G>A,18,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,G>T,,,Gag/Tag,0.0,,,,,,,,,2
-INS,,,Soft Tissue Sarcoma,,,0.0,,,,,,,,,,,,,,0.1,,FUS,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,01/20,G>-,1,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,336.0,,,,,,C>A,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,6,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,719.0,,,,,,G>C,,,,,EGFR,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,T>A,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,861.0,,,,,,T>A,,,,0.0,,,,,,,,,2
-DEL,,,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,Truncation,,,,,,,,,,,2
-,,,Gastric Cancer,,0.0,,4782.0,,,,0.0,,,,,,,,151836879.0,,,,,,,2
-,,,Gastric Cancer,,,,,,,0.0,0.0,03/07,,,,,,TGFBR2,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,,,0.0,,,,,,,,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,187.0,,CDKN2A,,,,,,,,,,,0.3,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,C>A,,,,,GATA4,,0.3,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,145.0,,,,0.0,,,,,,,,,0.3,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,702.0,,,,,,,7,,,,HGF,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,703.0,,,,,,G>C,,,,,,,0.3,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,73.0,,,,,,C>A,,,,,NR4A3,,,Male,,,,,2
-DEL,,51-60,Non Small Cell Lung Cancer,,,0.0,,,,0.0,,,,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,307.0,,,,,,G>T,,,cGg/cTg,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,745.0,,,,,,GGAATTAAGAGAAGC>-,,,,,,55242465.0,0.2,,,,,,2
-SNP,,41-50,Gallbladder Carcinoma,,,0.0,,ARID2-Intragenic,,,,,,,,,,,,,,,,,,2
-,,,Soft Tissue Sarcoma,,,,,,,,,,,,,,,,,0.0,,SS18,0.0,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,>,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>G,7,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,,,,,,,->AAAATTCCCGTCGCTATC,7,,,,EGFR,,0.1,,,,,,2
-,,41-50,Colorectal Carcinoma,,,,422.0,,DAXX,0.0,,,,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,662.0,,,,0.0,,G>T,,,,,,,0.533333333,,,,,,2
-DEL,,,Non Small Cell Lung Cancer,,,0.0,,,,0.0,,,,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,12.0,,,,,,C>T,,,,,KRAS,,,Male,,,,,2
-,,71-80,Colorectal Carcinoma,,,,645.0,,,0.0,,,,,,,,,,,,,,,,2
-,,51-60,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,Truncation,,,,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,,,,,0.0,,,G>T,,,caG/caT,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,08/12,G>A,7,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,16,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,8,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,9,,,,,,,,,0.0,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,931.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,317.0,,,,,,,,,,,,,,,,,,,2
-DEL,0.0,51-60,Colorectal Carcinoma,,,,332.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,213.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,341.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,392.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,111.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,41-50,Colorectal Carcinoma,,,,373.0,,,,,,,,,,,,,,,,,,,2
-DEL,0.0,41-50,Colorectal Carcinoma,,,,4782.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,41-50,Colorectal Carcinoma,,,,127.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,41-50,Colorectal Carcinoma,,,,711.0,,,,,,,,,,,,,,,,,,,2
-,1.0,41-50,Colorectal Carcinoma,,,,435.0,,,0.0,,,,,,,,,,,,,,,,2
-SNP,0.0,41-50,Colorectal Carcinoma,,,,428.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,20,,,,,,,,,,,,2
-INS,,,Non Small Cell Lung Cancer,,,0.0,,,,0.0,,,,,Truncation,,,,,,,,,,,2
-,,51-60,Non Small Cell Lung Cancer,,,0.0,,,,0.0,,,,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,G>T,,,,,BRCA1,,0.1,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,53.0,,ALK,,,,,,,,,MAP3K13,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,858.0,,,,,,T>G,,,,0.0,,,0.033333333,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,C>T,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,16/16,C>A,5,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,790.0,,,,,,C>T,,,,,,,,,,,,,2
-,,,Gastric Cancer,0.0,,,,,,,,11/16,,,Substitution/Indel,,,,68853215.0,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,12/12,G>T,18,,,,,,,,,,,,2
-SNP,,,Pancreatic Cancer,0.0,,,,,,,,,,,Substitution/Indel,gGt/gAt,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,36/43,C>T,6,,,,,,,,,,,,2
-,0.0,61-70,Colorectal Carcinoma,0.0,,,69.0,,,,,,,,,,,,,,,,,,,2
-,0.0,61-70,Colorectal Carcinoma,,0.0,0.0,,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,671.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,197.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,AAA>-,1,,,,,,,,,,,,2
-INS,1.0,51-60,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,7,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>-,15,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>-,2,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>T,15,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,5,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>A,10,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,TTTTTTTTTTT>-,X,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,A>-,X,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,AA>-,11,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,TTTTT>-,11,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,TTTTTTTTTT>-,X,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>-,11,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,G>-,12,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,TTTTTTTTTTTT>-,X,,,,,,,,,0.0,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,TT>-,11,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,AAA>-,2,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,TTT>-,X,,,,,,,,,0.0,,,2
-,,51-60,Colorectal Carcinoma,,,,,,,,,,,,Substitution/Indel,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,248.0,,,,,,,,,,,,,,,,,,,2
-,1.0,51-60,Colorectal Carcinoma,0.0,,,1307.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,448.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,2019.0,,,,,,,,,,,,,,,,,,,2
-,1.0,51-60,Colorectal Carcinoma,0.0,,,73.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,2263.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,181.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,30.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,693.0,,,,,,,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,772.0,,,,,,,17,,,,ERBB2,,,,,,,,2
-,,41-50,Colorectal Carcinoma,,,,,,,0.0,,,,,Truncation,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,12,,,,,,,,,0.0,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,,,,,,EPHA7,,,Male,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,,,07/11,,,,,,,,,Male,,0.0,7577534.0,,2
-,0.0,51-60,Liver Hepatocellular Carcinoma,,,,,,ARID2,,,,,,Substitution/Indel,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,0.0,,,,,Substitution/Indel,,0.0,,1295228.0,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,1503.0,,,,,,G>A,,,,,ARID2,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,309.0,,,,,,G>T,,,aGg/aTg,,RBM10,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,03/03,C>T,17,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,Male,,,,,2
-,,,Non Small Cell Lung Cancer,,0.0,0.0,,,,,,,,,,,,,,,,,,,,2
-,,,Bone Sarcoma,0.0,,,,,,,,,,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,CTT>-,,,,,CTNNB1,,0.033333333,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,12.0,,,,,,C>G,,,,,KRAS,,,Male,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,G>T,,,,,,,,,,,,,2
-,,51-60,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,Truncation,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,151.0,,,,,,,,,,,,,,,,,,,2
-,,,Breast Carcinoma,,,,,,,,0.0,04/15,,,,,,,,0.1,Female,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,101.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,682.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,437.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,358.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,549.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,4782.0,,,,,,,,,,,,,,,,,,,2
-,1.0,51-60,Colorectal Carcinoma,0.0,,,1119.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,1450.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,654.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,50.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,96.0,,,,,,,,,,,,,,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,176.0,,,,,,,,,,,,,,,,,,,2
-DEL,,,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,,,0.0,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,810.0,,,,,,G>T,,,,,RET,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,,,,,,,G>T,,,aaC/aaA,0.0,,141259430.0,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,3945.0,,,,,,,,,gGa/gTa,0.0,LRP1B,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,,,,tGg/tTg,0.0,LRP1B,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,03/07,A>-,3,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,09/27,A>G,11,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,T>C,4,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>-,19,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,719.0,,,,,18/28,G>A,,,,,,,0.166666667,,,,,,2
-,0.0,61-70,Colorectal Carcinoma,0.0,,,,,PARK2,,,,,,,,,,,,,,,,,2
-SNP,0.0,71-80,Colorectal Carcinoma,,0.0,,,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,07/16,,5,,,,,,0.633333333,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,232.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,245.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,14.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,123.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,144.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,183.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,172.0,,,,,,,,,,,,,,,,,,,2
-SNP,,31-40,Colorectal Carcinoma,,,,479.0,,,,,,,,,,,,,,,,,153247366.0,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,1333.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,6.0,,,,,,,,,,,,,,,,,,,2
-SNP,,41-50,Colorectal Carcinoma,,,,,,,,,,,,Substitution/Indel,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,772.0,,,,,,,17,,,,,,0.166666667,,,,,,2
-,,,Soft Tissue Sarcoma,,,,,,,,,,,,,,,NF1,,0.033333333,,CDKN2A,0.0,,,2
-,,51-60,Liver Hepatocellular Carcinoma,0.0,0.0,,,,PKD1,,,,,,,,,,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,,0.0,,,,,,0.0,,1295228.0,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,3465.0,,,,,,,,,Gca/Aca,0.0,LRP1B,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,,,,,,,A>G,,,aTg/aCg,0.0,,28883041.0,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,12.0,,,,,,C>A,,,gGt/gTt,,KRAS,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,1444.0,,,,,,T>C,,,Tac/Cac,,PREX2,,,,,,,,2
-,,,Liver Hepatocellular Carcinoma,,,,,,,0.0,,,,,Substitution/Indel,,0.0,,,,,,,,0.0,2
-,,,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,,,Substitution/Indel,,0.0,,,,,,,,,2
-,,,Bone Sarcoma,,,,,,,,,01/03,,,Substitution/Indel,Ggg/Tgg,,,,,,,,,,2
-,1.0,61-70,Colorectal Carcinoma,,0.0,,278.0,,,,,,,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,,,,,C>A,,,,,TP53,,0.133333333,,,,,,2
-,0.0,51-60,Colorectal Carcinoma,0.0,,,,,,,,,,,,,,,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,,5,,,,,,,,,0.0,,,2
-SNP,,,Pancreatic Cancer,0.0,,,12.0,,,,,,,,,gGt/gAt,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,22/40,C>T,12,,,,,,,,,,,,2
-,,,Esophageal Carcinoma,,0.0,,,,,,,,,,,,,,,0.133333333,Male,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,0.0,,,,,,,,C>A,,,agG/agT,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,1316.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,33.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,7.0,,,,,,,,,,,,,,,,,,,2
-SNP,,31-40,Colorectal Carcinoma,,,,1047.0,,,,,,,,,,,,,,,,,178952085.0,,2
-DEL,1.0,31-40,Colorectal Carcinoma,,,,529.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,17.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,387.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,22.0,,,,,,,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,609.0,,,,,,G>T,,,,,,,0.2,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,90.0,,,,,,A>T,,Substitution/Indel,,,,,0.2,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,824.0,,,,,,C>G,,,tCa/tGa,,,,,,,,,,2
-,1.0,,Non Small Cell Lung Cancer,,,0.0,,,,,,,,,Truncation,,,,,,,,,,,2
-,,61-70,Non Small Cell Lung Cancer,,0.0,0.0,,,,,,,,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,12.0,,,,,,,,,,,KRAS,,0.233333333,Male,,,,,2
-,,,Non Small Cell Lung Cancer,,,,542.0,,,,,,G>A,,,,,,,0.266666667,,,,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,0.0,,,,,,,,,,2,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,768.0,,,,,,G>T,,,,,,,0.2,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,A>G,5,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,07/11,G>A,17,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,249.0,,,,,,C>A,,,,,TP53,,0.366666667,,,,,,2
-DEL,1.0,61-70,Colorectal Carcinoma,,,,1205.0,,,,,,,,,,,,,,,,,,,2
-,1.0,61-70,Colorectal Carcinoma,0.0,,,465.0,,,,,,,,,,,,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,05/11,C>T,,,,,,,,,,0.0,,,2
-,0.0,61-70,Colorectal Carcinoma,0.0,,,379.0,,,,,,,,,,,,,,,,,,,2
-SNP,,41-50,Liver Hepatocellular Carcinoma,,,,,,,,,,A>T,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,353.0,,,,,,G>A,,,,,RET,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,,,,,,,,A>G,,,gAc/gGc,,,,,,,,,,2
-,,61-70,Intrahepatic Cholangiocarcinoma,,,,,,,,,15/25,,,,,,,,0.166666667,,,0.0,,,2
-,,,Non Small Cell Lung Cancer,,,,746.0,,,,,,AATTAAGAGAAGCAACATC>T,7,,,,EGFR,,,,,,,,2
-,,51-60,Liver Hepatocellular Carcinoma,,,0.0,,,,,,,T>G,,,,,,,,,,,,,2
-,0.0,,Non Small Cell Lung Cancer,,,,,,PALB2,,,,G>A,,,,0.0,,,,,,,,,2
-,1.0,21-30,Colorectal Carcinoma,,,,,,,,,,,,,,,,,,Male,,,148683686.0,,2
-,,,Non Small Cell Lung Cancer,,,,745.0,,,,,,GGAATTAAGAGAAGC>-,,,,,,55242465.0,0.266666667,,,,,,2
-,,,Soft Tissue Sarcoma,,,,,,,0.0,,,,,,,,,,0.0,,RB1,0.0,,,2
-,,,Non Small Cell Lung Cancer,,,,12.0,,,,,,C>T,,,,,KRAS,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,767.0,,,,,,->TGGCCAGCG,7,,,,EGFR,,,,,,,,2
-SNP,,51-60,Liver Hepatocellular Carcinoma,0.0,,,,,VAV2,,,,,,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,245.0,,,,0.0,,C>A,,,,,TP53,,,,,,,,2
-,,,Colorectal Carcinoma,,,,,,,,0.0,,C>T,17,,,,,,,,,,,,2
-,,,Non Small Cell Lung Cancer,,,,12.0,,,,,02/05,C>T,,,,,KRAS,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,59.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,598.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,182.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,756.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,373.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,162.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,350.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,146.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,104.0,,,,,,,,,,,,,,,,,,,2
-SNP,0.0,31-40,Colorectal Carcinoma,,,,120.0,,,,,,,,,,,,,,,,,,,2
-,1.0,61-70,Colorectal Carcinoma,,0.0,,125.0,,,,,,,,,,,,,,,,,,,2
-,0.0,61-70,Esophageal Carcinoma,,,,,,,,,,,,,,,,,,,,0.0,,0.0,2
+cancer_type,Smoke Status,Hugo_Symbol,TMB (nonsynonymous),Start_Position,Protein_position,Sex,SNP_event,Site1_Hugo_Symbol,Diagnosis Age,Chromosome,Codons,VAR_TYPE_SX,upstream_gene_variant,Site2_Hugo_Symbol,Event_Info,Exon_Number,splice_region_variant,End_Position,5_prime_UTR_variant,missense_variant,splice_donor_variant,support
+Colorectal Carcinoma,,,16.7,,,,,,31-40,,,,,,,,,,,,,525
+Colorectal Carcinoma,,,10.56666667,,,,,,21-30,,,,,,,,,,,,,336
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,61-70,,,,,,,,,,,,,219
+Non Small Cell Lung Cancer,Smoker,,,,,,,,61-70,,,,,,,,,,,,,168
+Colorectal Carcinoma,,,5.266666667,,,,,,31-40,,,,,,,,,,,,,165
+Colorectal Carcinoma,,,5.1,,,,,,41-50,,,,,,,,,,,,,149
+Colorectal Carcinoma,,,12.36666667,,,Male,,,,,,,,,,,,,,,,142
+Colorectal Carcinoma,,,4.366666667,,,,,,31-40,,,,,,,,,,,,,142
+Non Small Cell Lung Cancer,Nonsmoker,EGFR,,,,,,,,,,,,,,,,,,,,132
+Colorectal Carcinoma,,,3.866666667,,,,,,31-40,,,,,,,,,,,,,130
+Colorectal Carcinoma,,,4.966666667,,,,,,41-50,,,,,,,,,,,,,129
+Colorectal Carcinoma,,,4.333333333,,,Female,,,,,,,,,,,,,,,,122
+Colorectal Carcinoma,,,3.366666667,,,,,,41-50,,,,,,,,,,,,,100
+Colorectal Carcinoma,,,3.233333333,,,Female,,,,,,,,,,,,,,,,100
+Colorectal Carcinoma,Unknown,APC,,,,,,,,,,,,,,,,,,,,99
+Non Small Cell Lung Cancer,Smoker,,3.333333333,,,,,,,,,,,,,,,,,,,94
+Colorectal Carcinoma,,,2.7,,,,,,41-50,,,,,,,,,,,,,92
+Colorectal Carcinoma,,,2.933333333,,,,,,51-60,,,,,,,,,,,,,91
+Non Small Cell Lung Cancer,Smoker,,,,,,,,71-80,,,,,,,,,,,,,89
+Colorectal Carcinoma,,,2.933333333,,,,,,31-40,,,,,,,,,,,,,88
+Colorectal Carcinoma,,,2.866666667,,,,,,41-50,,,,,,,,,,,,,87
+Gastric Cancer,,,2.833333333,,,,,,61-70,,,,,,,,,,,,,76
+Colorectal Carcinoma,Unknown,,4.133333333,,,,,,,,,,,,,,,,,,,73
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,ALK,,,,,,,,73
+Non Small Cell Lung Cancer,Nonsmoker,,2.233333333,,,,,,,,,,,SS18,,,,,,,,72
+Non Small Cell Lung Cancer,Smoker,,0.766666667,,,,,,,,,,,,,,,,,,,71
+Non Small Cell Lung Cancer,Smoker,,,,,Male,,,71-80,,,,,,,,,,,,,65
+Colorectal Carcinoma,,,2.133333333,,,,,,31-40,,,,,,,,,,,,,64
+Non Small Cell Lung Cancer,Nonsmoker,,,,,Female,,,,,,,,,,,,,,,,62
+Colorectal Carcinoma,,,2.0,,,,,,21-30,,,,,,,,,,,,,62
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,C>A,,,,,,,,,,,,,,,55
+Colorectal Carcinoma,Unknown,,4.2,,,,,,,,,,,,,,,,,,,54
+Non Small Cell Lung Cancer,Nonsmoker,,0.266666667,,,,,,,,,,,,,,,,,,,52
+Colorectal Carcinoma,Unknown,,4.866666667,,,Male,,,,,,,,,,,,,,,,52
+Colorectal Carcinoma,,,1.866666667,,,,,,31-40,,,,,,,,,,,,,52
+Non Small Cell Lung Cancer,Nonsmoker,,0.133333333,,,,,,,,,,,,,,,,,,,51
+Colorectal Carcinoma,,,1.733333333,,,,,,21-30,,,,,,,,,,,,,50
+Colorectal Carcinoma,,,3.066666667,,,,,,51-60,,,,,,,,,,,,,47
+Non Small Cell Lung Cancer,Nonsmoker,,0.566666667,,,,,,,,,,,,,,,,,,,47
+Non Small Cell Lung Cancer,Smoker,,,,,,C>A,,,,,,,,,,,,,,,45
+Non Small Cell Lung Cancer,Smoker,,,,,,,LRP1B,,,,,,LRP1B,,,,,,,,44
+Non Small Cell Lung Cancer,Nonsmoker,,0.2,,,,,,,,,,,,,,,,,,,44
+Non Small Cell Lung Cancer,Smoker,,0.533333333,,,,,,,,,,,,,,,,,,,41
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,41
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,G>T,,,,,,,,,,,,,,,40
+Non Small Cell Lung Cancer,Smoker,,,,,Male,,KMT2D,71-80,,,,,,,,,,,,,39
+Non Small Cell Lung Cancer,Smoker,,0.7,,,,,,,,,,,,,,,,,,,39
+Non Small Cell Lung Cancer,Nonsmoker,,2.366666667,,,,,,,,,,,,,,,,,,,38
+Colorectal Carcinoma,,,3.333333333,,,Female,,,,,,,,,,,,,,,,38
+Non Small Cell Lung Cancer,Smoker,EGFR,,,,,,,,,,,,,,,,,,,,36
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,ALK,,,,,,,,36
+Colorectal Carcinoma,Unknown,,12.36666667,,,,,,,,,,,,,,,,,,,36
+Non Small Cell Lung Cancer,Smoker,,,,,,G>T,,,,,,,,,,,,,,,35
+Non Small Cell Lung Cancer,Smoker,,0.933333333,,,,,,,,,,,,,,,,,,,34
+Non Small Cell Lung Cancer,Nonsmoker,,1.366666667,,,,,,,,,,,,,,,,,,,34
+Gastric Cancer,Unknown,,2.033333333,,,Male,,,,,,,,,,,,,,,,34
+Gastric Cancer,,,2.266666667,,,,,,61-70,,,,,,,,,,,,,34
+Non Small Cell Lung Cancer,Smoker,,,,,,,,61-70,,,,,NTRK3,,,,,,,,33
+Gastric Cancer,,,1.266666667,,,Male,,,71-80,,,,,,,,,,,,,32
+Colorectal Carcinoma,Unknown,APC,,,,,,,,,,Truncation,,,,,,,,,,31
+Non Small Cell Lung Cancer,Smoker,,0.966666667,,,,,,,,,,,,,,,,,,,30
+Non Small Cell Lung Cancer,Smoker,,,,,Male,,,,,,,,,,,,,,,,30
+Extrahepatic Cholangiocarcinoma,,,1.0,,,,,,41-50,,,,,,,,,,,,,30
+Non Small Cell Lung Cancer,Smoker,,0.866666667,,,,,,,,,,,,,,,,,,,30
+Non Small Cell Lung Cancer,Nonsmoker,,0.966666667,,,,,,,,,,,,,,,,,,,30
+Intrahepatic Cholangiocarcinoma,,,1.433333333,,,,,,41-50,,,,,,,,,,,,,30
+Non Small Cell Lung Cancer,Smoker,,0.9,,,,,,,,,,,,,,,,,,,30
+Non Small Cell Lung Cancer,Smoker,,0.9,,,,,,,,,,,NTRK3,,,,,,,,29
+Non Small Cell Lung Cancer,Nonsmoker,,0.966666667,,,,,,61-70,,,,,,,,,,,,,28
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,51-60,,,,,,,,,,,,,26
+Esophageal Carcinoma,,,0.8,,,Male,,,71-80,,,,,,,,,,,,,25
+Non Small Cell Lung Cancer,Smoker,,0.666666667,,,,,,,,,,,,,,,,,,,25
+Non Small Cell Lung Cancer,Smoker,,,,,Male,,,61-70,,,,,,,,,,,,,24
+Non Small Cell Lung Cancer,Smoker,,0.8,,,,,,,,,,,,,,,,,,,24
+Colorectal Carcinoma,,,12.36666667,,,,,,,,,,,,,,,,,,,23
+Uterine Corpus Endometrial Carcinoma,,,1.233333333,,,Female,,,,,,,,,,,,,,,,23
+Non Small Cell Lung Cancer,Nonsmoker,,,,,Male,,,,,,,,,,,,,,,,22
+Extrahepatic Cholangiocarcinoma,,,1.166666667,,,,,,31-40,,,,,,,,,,,,,21
+Soft Tissue Sarcoma,,,0.333333333,,,,,,0-10,,,,,,,,,,,,,21
+Non Small Cell Lung Cancer,Smoker,,0.6,,,,,MAP4K5,71-80,,,,,MAP4K5,,,,,,,,18
+Non Small Cell Lung Cancer,Nonsmoker,,0.6,,,,,,71-80,,,,,,,,,,,,,18
+Non Small Cell Lung Cancer,Smoker,,0.6,,,,,,71-80,,,,,,,,,,,,,17
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,17
+Gastric Cancer,,,2.033333333,,,Male,,,,,,,,,,,,,,,,16
+Esophageal Carcinoma,,,0.266666667,,,,,LRP1B,,,,,,LRP1B,,,,,,,,16
+Non Small Cell Lung Cancer,Smoker,,0.6,,,,,,71-80,,,,,PTEN,,,,,,,,16
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,CDKN2A,,,,,,,,16
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,71-80,,,,,CDKN2A,,,,,,,,15
+Colorectal Carcinoma,,,4.133333333,,,,,,,,,,,,,,,,,,,15
+Non Small Cell Lung Cancer,Nonsmoker,,0.166666667,,,,,,,,,,,,,,,,,,,15
+Extrahepatic Cholangiocarcinoma,Unknown,,1.166666667,,,,,,,,,,,,,,,,,,,14
+Non Small Cell Lung Cancer,Nonsmoker,,0.466666667,,,,,,,,,,,NOTCH1,,,,,,,,14
+Colorectal Carcinoma,Unknown,,3.333333333,,,Female,,,,,,,,,,,,,,,,14
+Colorectal Carcinoma,,,4.133333333,,,,A>-,,,,,,,,,,,,,,,14
+Colorectal Carcinoma,,,12.36666667,,,,,,,,Cgg/Tgg,,,,,,,,,,,14
+Non Small Cell Lung Cancer,Smoker,,,,,,,,71-80,,,,,SMARCA4,,,,,,,,13
+Non Small Cell Lung Cancer,Smoker,,,,,,,FGFR3,,,,,,TACC3,,,,,,,,13
+Colorectal Carcinoma,,,12.36666667,,,,,,,,Cgc/Tgc,,,,,,,,,,,13
+Colorectal Carcinoma,,,2.933333333,,,,,,,,,,,,,,,,,,,13
+Non Small Cell Lung Cancer,Nonsmoker,,0.5,,,,,,71-80,,,,,,,,,,,,,13
+Non Small Cell Lung Cancer,Smoker,,,,,,,KEAP1,61-70,,,,,KEAP1,,,,,,,,12
+Colorectal Carcinoma,Unknown,,2.933333333,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,Smoker,,,,,,,,61-70,,,,,PDXK,,,,,,,,12
+Non Small Cell Lung Cancer,Smoker,,,,,,,,61-70,,,,,RB1,,,,,,,,12
+Non Small Cell Lung Cancer,Smoker,,,,,,,,61-70,,,,,NOTCH1,,,,,,,,12
+Non Small Cell Lung Cancer,Smoker,,,,,,,,61-70,,,,,PTK2,,,,,,,,12
+Non Small Cell Lung Cancer,Smoker,,,,,,,LRP1B,61-70,,,,,LRP1B,,,,,,,,12
+Non Small Cell Lung Cancer,Smoker,,,,,Male,,,61-70,,,,,FGFR2,,,,,,,,12
+Non Small Cell Lung Cancer,Smoker,,1.166666667,,,Male,,,61-70,,,,,FGFR2,,,,,,,,11
+Non Small Cell Lung Cancer,Nonsmoker,,0.466666667,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,Smoker,,0.566666667,,,,,,,,,,,RBM10,,,,,,,,11
+Liver Hepatocellular Carcinoma,Unknown,,,1295228.0,,Male,,,,,,,1.0,,,,,,,,,11
+Breast Carcinoma,,,,,,Female,,,41-50,,,,,NCOR1,NCOR1-Intragenic,,,,,,,11
+Colorectal Carcinoma,Unknown,,1.9,,,,,,41-50,,,,,,,,,,,,,11
+Esophageal Carcinoma,Unknown,,1.133333333,,,,,STK11,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,80+,,,,,,,,,,,,,11
+Gastric Cancer,Unknown,,,,,Male,,,71-80,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,Smoker,,,,,,,,71-80,,,,,CHD2,CHD2-Intragenic,,,,,,,10
+Non Small Cell Lung Cancer,Nonsmoker,,1.366666667,,,,,,,,,,,FANCE,,,,,,,,10
+Non Small Cell Lung Cancer,Smoker,,,,,,,NF1,71-80,,,,,SLC47A1,,,,,,,,10
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,71-80,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,CDKN2A-Intragenic,,,,,,,10
+Non Small Cell Lung Cancer,Nonsmoker,,0.1,,,,,,,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,Smoker,,0.533333333,,,,,,71-80,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,Smoker,,,,,,,NF1,,,,,,SLC47A1,,,,,,,,9
+Colorectal Carcinoma,,,12.36666667,,,,,,,,cGc/cAc,,,,,,,,,,,9
+Non Small Cell Lung Cancer,Smoker,,,,,,G>C,,,,,,,,,,,,,,,9
+Liver Hepatocellular Carcinoma,,,0.266666667,1295228.0,,Male,,,,,,,1.0,,,,,,,,,9
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,CDKN2A,CDKN2A-Intragenic,,,,,,,9
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,61-70,,,,,PMS2,,,,,,,,9
+Liver Hepatocellular Carcinoma,,,,,249.0,Male,C>A,,,,agG/agT,,,,,,,,,,,9
+Colorectal Carcinoma,,,4.2,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,Nonsmoker,,0.066666667,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,Smoker,,0.433333333,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,17,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,COL1A1-Intragenic,,,,,,,8
+Soft Tissue Sarcoma,,,0.1,,,,,,,,,,,,FUS-DDIT3,,,,,,,8
+Bone Sarcoma,,,0.033333333,,,,,,11-20,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,FLCN,,,,,,,,8
+Gastric Cancer,,,2.833333333,,,,A>-,,61-70,,,,,,,,,,,,,8
+Pancreatic Cancer,,,0.1,25398284.0,12.0,,,,,,,,,,,,,,,,,8
+Pancreatic Cancer,,,0.133333333,25398284.0,12.0,,,,,,gGt/gTt,,,,,,,,,,,8
+Non Small Cell Lung Cancer,Smoker,,1.166666667,,,,,,61-70,,,,,FGFR2,,,,,,,,8
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,LRP1,,,,,,,,,,,,,,8
+Colorectal Carcinoma,,,2.933333333,,,,A>-,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,Nonsmoker,,0.133333333,,,Female,,,,,,,,,,,,,,,,8
+Colorectal Carcinoma,,,12.36666667,,,,C>T,,,,,,,,,,,,,,,7
+Pancreatic Cancer,,,0.133333333,25398284.0,12.0,,,,,,,,,,,,,,,,,7
+Colorectal Carcinoma,Unknown,APC,0.333333333,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,Nonsmoker,EGFR,,,,,,,,,,,,,,19/28,,,,,,7
+Colorectal Carcinoma,Unknown,APC,,,,,,,31-40,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,Nonsmoker,,0.233333333,,,,,,,,,,,,,,,,,,,7
+Breast Carcinoma,,,0.333333333,,,Female,,BRCA2,,,,,,BRCA2,BRCA2-BRCA2,,,,,,,7
+Colorectal Carcinoma,,,12.36666667,,,,,,,,cGg/cAg,,,,,,,,,,,7
+Pancreatic Cancer,,,0.133333333,25398285.0,12.0,,,,,,Ggt/Cgt,,,,,,,,,,,7
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,LRP1B,61-70,,,,,LRP1B,,,,,,,,7
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,LRP1B,,,,,,LRP1B,,,,,,,,7
+Colorectal Carcinoma,,,4.866666667,,,Male,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,Nonsmoker,,0.1,,,,,,,,,,,ALK,,,,,,,,7
+Gastric Cancer,,,,,,,,NOTCH1,61-70,,,,,,NOTCH1-Intragenic,,,,,,,7
+Non Small Cell Lung Cancer,Smoker,,0.6,,,,,,61-70,,,,,,,,,,,,,7
+Colorectal Carcinoma,Unknown,TP53,,,,,C>T,,,17,cGc/cAc,,,,,,,7578406.0,,,,7
+Non Small Cell Lung Cancer,Nonsmoker,EGFR,,,,,,,,,,,,,,21/28,,,,,,7
+Colorectal Carcinoma,,,4.2,,,,A>-,,,,,,,,,,,,,,,7
+Liver Hepatocellular Carcinoma,Unknown,,,,,Male,T>A,,51-60,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,Smoker,,,,,,,,71-80,,,,,PRKDC,,,,,,,,6
+Non Small Cell Lung Cancer,Smoker,,,,,,,FANCM,,,,,,MIS18BP1,,,,,,,,6
+Non Small Cell Lung Cancer,Nonsmoker,,0.133333333,,,,,,,,,,,ALK,,,,,,,,6
+Non Small Cell Lung Cancer,Nonsmoker,,2.0,,,,,,,,,,,,,,,,,,,6
+Intrahepatic Cholangiocarcinoma,,,1.433333333,,,Male,,,41-50,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,Smoker,,0.566666667,,,,,,,,,,,,,,,,,,,6
+Esophageal Carcinoma,Unknown,,0.466666667,,,Male,,,61-70,,,,,,,,,,,,,6
+Esophageal Carcinoma,Unknown,,0.466666667,,,Male,,,61-70,,,,,CDKN2A,,,,,,,,6
+Non Small Cell Lung Cancer,,,0.966666667,,,Male,,GRIN2A,,,,,,,,,,,,,,6
+Bone Sarcoma,,,0.0,,,,,,11-20,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,0.966666667,,,Male,C>A,GRIN2A,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,C>-,,,,,,,,,,,,,,,6
+Liver Hepatocellular Carcinoma,Unknown,,0.4,,,Male,T>A,,41-50,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,DICER1,DICER1-Intragenic,,,,,,,6
+Colorectal Carcinoma,,,3.066666667,,,,,,,,Cga/Tga,,,,,,,,,,,6
+Colorectal Carcinoma,,,3.333333333,,,Female,,,,,,,,,,,,,,,,6
+Pancreatic Cancer,,,0.166666667,25398284.0,12.0,,,,,,gGt/gTt,,,,,,,,,,,6
+Colorectal Carcinoma,,APC,12.36666667,,,,,,,,,,,,,,,,,,,6
+Colorectal Carcinoma,,,4.2,,,Male,,,,,,,,,,,,,,,,6
+Liver Hepatocellular Carcinoma,Unknown,,,,,Male,A>T,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,NAPSB,71-80,,,,,,,,,,,,,6
+Gastric Cancer,,,2.266666667,,,,A>-,,61-70,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,0.9,,,Male,C>A,,,,,,,CDKN2A,,,,,,,,6
+Colorectal Carcinoma,,,12.36666667,,,,,,,,Cga/Tga,,,,,,,,,,,6
+Breast Carcinoma,,PIK3CA,,178952085.0,,Female,,,,,,,,,,21/21,,178952085.0,,,,6
+Bone Sarcoma,,,0.2,,,,,,11-20,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,KDM6A,,,,,,KDM6A,,,,,,,,6
+Colorectal Carcinoma,Unknown,AMER1,,,,,,,,,,Truncation,,,,,,,,,,5
+Non Small Cell Lung Cancer,Nonsmoker,,0.3,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Smoker,,,,,,,,61-70,,,,,FGFR2,,,,,,,,5
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,61-70,,,,,,CDKN2A-Intragenic,,,,,,,5
+Liver Hepatocellular Carcinoma,Unknown,,0.4,,,Male,A>T,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,Unknown,,0.466666667,,,Male,T>A,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,Unknown,,0.166666667,,,Male,A>T,,41-50,,,,,,,,,,,,,5
+Colorectal Carcinoma,Unknown,,,,,,,,21-30,,,,,,,,,,,,,5
+Pancreatic Cancer,,,0.166666667,25398284.0,12.0,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,tCa/tGa,,,,,,,,,,,5
+Colorectal Carcinoma,,ACVR1B,12.36666667,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Nonsmoker,EGFR,0.266666667,,,,,,,,,,,,,,,,,,,5
+Small Cell Lung Cancer,Smoker,,0.333333333,,,,,RB1,,,,,,,,,,,,,,5
+Head and Neck Carcinoma,Nonsmoker,,,,,,,CDKN2A,21-30,,,,,,CDKN2A-Intergenic,,,,,,,5
+Liver Hepatocellular Carcinoma,,CTNNB1,,,32.0,Male,,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,Unknown,,,,,Male,T>A,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,61-70,,,,,PXMP2,,,,,,,,5
+Colorectal Carcinoma,,,2.933333333,,,,,,,,Cgg/Tgg,,,,,,,,,,,5
+Pancreatic Cancer,,,0.166666667,25398285.0,12.0,,,,,,Ggt/Cgt,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Nonsmoker,,,,37.0,,,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,,,0.2,1295228.0,,Male,,,,,,,1.0,,,,,,,,,5
+Esophageal Carcinoma,,,0.366666667,,,Male,,,,,,,,,KMT2D-Intragenic,,,,,,,5
+Non Small Cell Lung Cancer,Smoker,,,,,Male,G>T,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Smoker,,,,,,,,71-80,,,,,PRKCI,,,,,,,,5
+Colorectal Carcinoma,Unknown,,1.6,,,,,,41-50,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Smoker,,,,,,C>-,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,Unknown,,0.233333333,,,Male,T>A,,51-60,,,,,,,,,,,,,5
+Colorectal Carcinoma,,,3.066666667,,,,,,,,Cgc/Tgc,,,,,,,,,,,5
+Colorectal Carcinoma,,,3.333333333,,,Female,A>-,,,,,,,,,,,,,,,5
+Colorectal Carcinoma,Unknown,,3.066666667,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,,4.133333333,,,,,,,,,,,,,,1.0,,,,,4
+Esophageal Carcinoma,Unknown,,0.5,,,Male,,,61-70,,,,,MRPL3,,,,,,,,4
+Esophageal Carcinoma,Unknown,,0.8,,,Male,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,Unknown,KRAS,,25398284.0,12.0,Female,C>T,,,12,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,Smoker,,,,,,,SKIL,71-80,,,,,PRKCI,,,,,,,,4
+Colorectal Carcinoma,Unknown,,4.866666667,,,Male,,,,,,,,,,,,,,,,4
+Esophageal Carcinoma,,,0.3,,,Male,,LRP1B,,,,,,LRP1B,,,,,,,,4
+Gallbladder Carcinoma,,ARID2,0.533333333,,,,,,71-80,,,,,,,,,,,,,4
+Colorectal Carcinoma,,,4.2,,,,,,,,Cgg/Tgg,,,,,,,,,,,4
+Pancreatic Cancer,,,0.1,25398284.0,12.0,,,,,,gGt/gTt,,,,,,,,,,,4
+Colorectal Carcinoma,Unknown,KRAS,,25398281.0,13.0,,C>T,,,12,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,Gag/Aag,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,0.133333333,,,,,EML4,,,,,,ALK,,,,,,,,4
+Colorectal Carcinoma,Unknown,,1.9,,,,,,41-50,,,,,,,,,,,,,4
+Colorectal Carcinoma,Unknown,,,,12.0,Female,C>T,,,12,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,Smoker,EGFR,,,,,,,,,,,,,,21/28,,,,,,4
+Non Small Cell Lung Cancer,Nonsmoker,,0.133333333,,,,,,,,,,,ROS1,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,,,,Male,,,,,,,,TERT,,,,,,,,4
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,BRD4,,,,,,,,4
+Non Small Cell Lung Cancer,Smoker,EGFR,,,,,,,,,,,,,,19/28,,,,,,4
+Pancreatic Cancer,,,0.233333333,25398284.0,12.0,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,13/20,,,,,,4
+Liver Hepatocellular Carcinoma,Unknown,,0.1,1295228.0,,Male,,,41-50,,,,1.0,,,,,,,,,4
+Non Small Cell Lung Cancer,Nonsmoker,,,,12.0,,,,,,,,,,,,,,,,,4
+Breast Carcinoma,,,,,,Female,,BRCA1,31-40,,,,,BRCA1,BRCA1-Intragenic,,,,,,,4
+Gastric Cancer,,,,,,,,,71-80,,,,,NTRK3,Intergenic-NTRK3,,,,,,,4
+Gastric Cancer,Unknown,,,,,,,,71-80,,,,,NTRK3,Intergenic-NTRK3,,,,,,,4
+Colorectal Carcinoma,,,12.36666667,,,,,,,,gCg/gTg,,,,,,,,,,,4
+Colorectal Carcinoma,,FAT4,12.36666667,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,SMARCA4,,,,,,,,4
+Non Small Cell Lung Cancer,Nonsmoker,EGFR,,,,,,,,7,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,Unknown,,0.166666667,1295228.0,,Male,,,41-50,,,,1.0,,,,,,,,,4
+Colorectal Carcinoma,,,2.933333333,,,,,,,,cGc/cAc,,,,,,,,,,,4
+Breast Carcinoma,,,0.766666667,,,Female,,,51-60,,,,,,LRP1B-Intragenic,,,,,,,4
+Non Small Cell Lung Cancer,,,0.9,,,Male,G>T,,,,,,,CDKN2A,,,,,,,,4
+Liver Hepatocellular Carcinoma,Unknown,,0.466666667,,,Male,T>A,,51-60,,,,,,,,,,,,,4
+Gastric Cancer,Unknown,,0.433333333,,,Male,,FANCM,61-70,,,,,,FANCM-Intragenic,,,,,,,4
+Colorectal Carcinoma,,,2.933333333,,,,,,,,Cga/Tga,,,,,,,,,,,4
+Colorectal Carcinoma,,,2.933333333,,,,,,,,Cgc/Tgc,,,,,,,,,,,4
+Colorectal Carcinoma,,,2.933333333,,,,,,,,cGa/cAa,,,,,,,,,,,4
+Colorectal Carcinoma,,,2.933333333,,,,->G,,,,,,,,,,,,,,,4
+Esophageal Carcinoma,,,0.433333333,,,,,,61-70,,,,,JAK3,JAK3-Intragenic,,,,,,,4
+Non Small Cell Lung Cancer,Nonsmoker,,0.033333333,,,,,,,,,,,ALK,,,,,,,,4
+Colorectal Carcinoma,Unknown,KRAS,,25398281.0,13.0,,C>T,,,12,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,CTNNB1,,,41.0,Male,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,Unknown,SMAD4,,48591919.0,361.0,,,,,18,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,CTNNB1,,,33.0,Male,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,Unknown,,,,12.0,,C>T,,,12,,,,,,,,,,,,4
+Colorectal Carcinoma,,FAT4,2.933333333,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,PDXK,,,,,,,,4
+Colorectal Carcinoma,,,3.066666667,,,,,,,,cGg/cAg,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.133333333,1295228.0,,Male,,,41-50,,,,1.0,,,,,,,,,3
+Bone Sarcoma,,,0.1,,,,,,11-20,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,4.133333333,,,,TTTTT>-,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,0.166666667,,,,,,0-10,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.233333333,,,Male,,,41-50,,,,,,,,,,,,,3
+Head and Neck Carcinoma,Nonsmoker,,0.0,,,,,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,0.066666667,,,,,,,,,,,,FUS-DDIT3,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,MAPK8IP3,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,EGFR,0.133333333,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,ROS1,,,,,,,,3
+Colorectal Carcinoma,Unknown,,4.866666667,,,Male,C>T,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,4.866666667,,,Male,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,,4.866666667,,,Male,,,,,Cgc/Tgc,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,,4.866666667,,,Male,A>-,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,FBXO11,,,,,,ALK,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,ZNF131,,,,,,,,3
+Colorectal Carcinoma,Unknown,,1.6,,,,,,41-50,,,,,,,,,,,,,3
+Breast Carcinoma,,,,,,Female,G>C,BRCA1,31-40,,,,,BRCA1,BRCA1-Intragenic,,,,,,,3
+Gastric Cancer,Unknown,,0.4,,,,,PIK3R1,,,,,,,PIK3R1-Intragenic,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.166666667,1295228.0,,Male,,,,,,,1.0,,,,,,,,,3
+Esophageal Carcinoma,,,0.433333333,,,,,,,,,,,JAK3,JAK3-Intragenic,,,,,,,3
+Colorectal Carcinoma,Unknown,,0.333333333,,12.0,Female,C>T,,,12,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,0.1,,,,,,0-10,,,,,,FUS-FEV,,,,,,,3
+Colorectal Carcinoma,Unknown,KRAS,,25398285.0,12.0,,C>T,,,12,Ggt/Agt,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,1.0,,,,,3
+Non Small Cell Lung Cancer,Smoker,,,,34.0,,,,,,,,,,,,,,,,,3
+Gastric Cancer,Unknown,,,,,,,NOTCH1,61-70,,,,,,NOTCH1-Intragenic,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,CDKN2A,,,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,1.133333333,,,Male,,,61-70,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,0.6,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,KRAS,,25398284.0,12.0,,,,,12,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,,,,,,,21-30,,,,,,JAML-KMT2A,,,,,,,3
+Liver Hepatocellular Carcinoma,,CTNNB1,0.266666667,,32.0,Male,,,,,,,,,,,,,,,,3
+Pancreatic Cancer,,,0.233333333,25398284.0,12.0,,,,,,gGt/gTt,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,APC,,,,,,,,,Cga/Tga,,,,,,,,,,,3
+Pancreatic Cancer,,,0.066666667,25398284.0,12.0,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,0.533333333,,,,C>A,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,,,,Male,C>A,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.333333333,,,Male,T>A,,51-60,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.266666667,,,Male,T>A,,31-40,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,tgG/tgA,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,,,,,,,61-70,,,,,ALK,,,,,,,,3
+Breast Carcinoma,,,,198266834.0,,Female,T>C,,,,,,,,,15/25,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,ROS1,,,,,,,,3
+Colorectal Carcinoma,,,2.933333333,,,,,,,,cGg/cAg,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.133333333,,,Male,T>C,,41-50,,,,,,,,,,,,,3
+Esophageal Carcinoma,,,1.133333333,,,,,STK11,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,,1295228.0,,Male,,,,,,,1.0,,,,,,,,,3
+Colorectal Carcinoma,Unknown,APC,,112175212.0,,,,,,,,Truncation,,,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,0.433333333,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,0.266666667,,,Male,A>T,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,1.0,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,NF1,,,,,,,,3
+Colorectal Carcinoma,,,4.2,,,,C>T,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,PIK3CA,,178936082.0,542.0,,G>A,,,3,,,,,,10/21,,178936082.0,,,,3
+Colorectal Carcinoma,,APC,,,,,,,,,,,,,,,,,,0.0,1.0,3
+Colorectal Carcinoma,,SOX9,4.333333333,,,,,,,,,,,,,,,,,,,3
+Gallbladder Carcinoma,,,0.466666667,,,Female,,,71-80,,,,,,,,,,,,,3
+Small Cell Lung Cancer,Smoker,,0.433333333,,,,,,,,,,,,,,,,,,,3
+Esophageal Carcinoma,,,0.233333333,,,,,LRP1B,,,,,,LRP1B,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.2,,,Male,T>C,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,0.066666667,1295228.0,,Male,,,,,,,1.0,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.233333333,,,Male,A>T,,41-50,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,0.233333333,,249.0,Male,C>A,,41-50,,agG/agT,,,,,,,,,,,3
+Gastric Cancer,Unknown,,,,,Male,,ERBB2,80+,,,,,,ERBB2-TOP2A,,,,,,,3
+Soft Tissue Sarcoma,,,0.0,,,,,,0-10,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Smoker,,,,,,,FGFR3,61-70,,,,,TACC3,,,,,,,,3
+Pancreatic Cancer,,,0.2,25398284.0,12.0,,,,,,gGt/gTt,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,,,249.0,Male,C>A,,41-50,,agG/agT,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,SMAD4,,,,Female,,,,18,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,EGFR,0.566666667,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,KIF5B,,,,,,RET,,,,,,,,3
+Non Small Cell Lung Cancer,,,0.9,,,Male,G>C,,,,,,,CDKN2A,,,,,,,,3
+Non Small Cell Lung Cancer,,,0.9,,,Male,,,,,,,,CDKN2A,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,0.266666667,,249.0,Male,C>A,,,,agG/agT,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.2,,,Male,T>A,,41-50,,,,,,,,,,,,,3
+Gastric Cancer,Unknown,,,,,Male,,,71-80,,,,,,,,,,,,,3
+Gastric Cancer,Unknown,,,,,Male,,,71-80,,,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,TP53,,7577120.0,,,C>T,,,17,cGt/cAt,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.366666667,,,Male,T>A,,31-40,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.233333333,,,Male,T>A,,41-50,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.4,,,Male,T>A,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,19/28,,,,,,3
+Colorectal Carcinoma,,,12.36666667,,,,G>A,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,12.36666667,,,,,,,,cGt/cAt,,,,,,,,,,,3
+Colorectal Carcinoma,,ACVR2A,12.36666667,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,3.333333333,,,Female,,,,,cGc/cAc,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,,3.333333333,,,Female,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Nonsmoker,,,,,,C>A,,61-70,,,,,,,,,,,,,3
+Pancreatic Cancer,,,0.1,25398285.0,12.0,,,,,,Ggt/Cgt,,,,,,,,,,,3
+Gastric Cancer,Unknown,,0.433333333,,,,,SLC24A2,,,,,,NTRK2,SLC24A2-NTRK2,,,,,,,3
+Gastric Cancer,Unknown,,0.433333333,,,,,SLC24A2,61-70,,,,,NTRK2,SLC24A2-NTRK2,,,,,,,3
+Liver Hepatocellular Carcinoma,,,,,,Male,A>T,,41-50,,,,,,,,,,,,,3
+Colorectal Carcinoma,,APC,3.233333333,,,Female,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,Unknown,APC,,112175760.0,,,,,,,,Truncation,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,Unknown,,0.266666667,,,Male,T>A,,51-60,,,,,,,,,,,,,3
+Breast Carcinoma,,,,,,Female,,PMS2,,,,,,,PMS2-CYTH3,,,,,,,3
+Gastric Cancer,Unknown,,0.233333333,,,Male,,ETV5,,,,,,DGKG,ETV5-DGKG,,,,,,,3
+Gastric Cancer,Unknown,,,,,Male,,CTNNA1,61-70,,,,,CTNNA1,CTNNA1-Intragenic,,,,,,,3
+Gastric Cancer,Unknown,,,,,,,,71-80,,,,,,EGFR-Intergenic,,,,,,,3
+Gastric Cancer,,,0.3,,,,,SDCCAG8,,,,,,NCOR1,SDCCAG8-NCOR1,,,,,,,3
+Gastric Cancer,Unknown,,0.3,,,,,SDCCAG8,,,,,,NCOR1,SDCCAG8-NCOR1,,,,,,,3

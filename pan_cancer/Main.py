@@ -45,13 +45,13 @@ if __name__ == "__main__":
     X_train, X_val, X_test, y_train, y_val, y_test, X_val_with_id = stratified_split_by_patient(X, y)
 
     # Fit and evaluate model
-    # validation_accuracy, model, predictions \
-    #     = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plots=False)
+    validation_accuracy, model, predictions \
+        = fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plots=False)
 
     # # Per Patient prediction
     # classify_patients(X_val_with_id, predictions, y_val, label_dict)
 
-    # explainer = shap.TreeExplainer(model)
+    explainer = shap.TreeExplainer(model)
 
     # pickle.dump(model, open("model.pkl", "wb"))
     # pickle.dump(explainer, open("explainer.pkl", "wb"))

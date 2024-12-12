@@ -3,6 +3,7 @@ The main script for the pan_cancer project.
 """
 from SHAP_explain import *
 from XGBoost_Model import *
+from tree_model import *
 import pickle
 
 def cancer_type_correlations(df):
@@ -48,8 +49,10 @@ if __name__ == "__main__":
     model, predictions \
         = fit_and_evaluate_model(X_train, X_test, y_train, y_test, label_dict, show_plots=False)
 
+    tree, tree_pred = fit_and_evaluate_tree(X_train, X_test, y_train, y_test, label_dict, show_plots=True)
+
     # Per Patient prediction
-    classify_patients(X_test_with_id, predictions, y_test, label_dict)
+    # classify_patients(X_test_with_id, predictions, y_test, label_dict)
 
     explainer = shap.TreeExplainer(model)
     get_shap_interactions(explainer, X, y, label_dict)
@@ -63,14 +66,14 @@ if __name__ == "__main__":
     # feature_importance = shap_analysis(explainer, X_val, y_val, predictions, label_dict)
 
     # Generate hypotheses database
-    initial_db = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict)
-    # print("initial" + str(len(list(initial_db.columns))))
-    hypotheses = apply_category_mappings(initial_db, mapping)
-    print("hypotheses" + str(len(list(hypotheses.columns))))
-    #
-    hypotheses.to_csv("hypotheses.csv", index=False)
-    sorted_hypotheses = hypotheses.sort_values(["cancer_type", 'support'], ascending=[True, False])
-    corr_list = cancer_type_correlations(sorted_hypotheses)
-    print(corr_list)
+    # initial_db = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict)
+    # # print("initial" + str(len(list(initial_db.columns))))
+    # hypotheses = apply_category_mappings(initial_db, mapping)
+    # print("hypotheses" + str(len(list(hypotheses.columns))))
+    # #
+    # hypotheses.to_csv("hypotheses.csv", index=False)
+    # sorted_hypotheses = hypotheses.sort_values(["cancer_type", 'support'], ascending=[True, False])
+    # corr_list = cancer_type_correlations(sorted_hypotheses)
+    # print(corr_list)
     # # Print results
     # print(f"Validation Accuracy: {validation_accuracy}")

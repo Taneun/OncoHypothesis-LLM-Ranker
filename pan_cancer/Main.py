@@ -4,6 +4,8 @@ The main script for the pan_cancer project.
 from SHAP_explain import *
 from XGBoost_Model import *
 from tree_model import *
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 import pickle
 
 def cancer_type_correlations(df):
@@ -46,16 +48,21 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
 
     # Fit and evaluate model
-    model, predictions \
-        = fit_and_evaluate_model(X_train, X_test, y_train, y_test, label_dict, show_plots=False)
+    # model, predictions \
+    #     = fit_and_evaluate_model(X_train, X_test, y_train, y_test, label_dict, show_plots=True)
 
-    tree, tree_pred = fit_and_evaluate_tree(X_train, X_test, y_train, y_test, label_dict, show_plots=True)
+    # Initialize the model
+    rand_forest = RandomForestClassifier(random_state=39)
+    rand_forest.fit(X_train, y_train)
+    plot_permutation_importance(rand_forest, X_test, y_test, random_state=39)
+
+    # tree, tree_pred = fit_and_evaluate_tree(rand_forest, X_train, X_test, y_train, y_test, label_dict, show_plots=True)
 
     # Per Patient prediction
     # classify_patients(X_test_with_id, predictions, y_test, label_dict)
 
-    explainer = shap.TreeExplainer(model)
-    get_shap_interactions(explainer, X, y, label_dict)
+    # explainer = shap.TreeExplainer(model)
+    # get_shap_interactions(explainer, X, y, label_dict)
 
     # pickle.dump(model, open("model.pkl", "wb"))
     # pickle.dump(explainer, open("explainer.pkl", "wb"))

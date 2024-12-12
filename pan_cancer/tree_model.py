@@ -1,18 +1,17 @@
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, roc_auc_score
 import numpy as np
 import plotly.graph_objects as go
 from sklearn.metrics import roc_curve, auc
 from sklearn.preprocessing import label_binarize
+from sklearn.metrics import make_scorer
+from sklearn.inspection import permutation_importance
+import matplotlib.pyplot as plt
 
 
-def fit_and_evaluate_tree(X_train, X_test, y_train, y_test, label_dict, show_plots=False):
+def fit_and_evaluate_tree(model, X_train, X_test, y_train, y_test, label_dict, show_plots=False):
     """
     Fit the DecisionTree model to the training data and evaluate it on the validation data.
     """
-    # Initialize the model
-    model = DecisionTreeClassifier(random_state=39)
-
     # Fit the model
     model.fit(X_train, y_train)
 
@@ -25,6 +24,7 @@ def fit_and_evaluate_tree(X_train, X_test, y_train, y_test, label_dict, show_plo
     recall = recall_score(y_test, y_pred, average='weighted')
     f1 = f1_score(y_test, y_pred, average='weighted')
 
+    print("\nTree")
     print(f"Test Accuracy: {accuracy:.4f}")
     print(f"Test Precision: {precision:.4f}")
     print(f"Test Recall: {recall:.4f}")
@@ -54,7 +54,7 @@ def fit_and_evaluate_tree(X_train, X_test, y_train, y_test, label_dict, show_plo
         fig_roc.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode='lines', line=dict(dash='dash'), name='Chance'))
 
         fig_roc.update_layout(
-            title="Multiclass ROC Curve - Test",
+            title="Random Forest Multiclass ROC Curve - Test",
             xaxis_title="False Positive Rate",
             yaxis_title="True Positive Rate",
             showlegend=True
@@ -78,7 +78,7 @@ def fit_and_evaluate_tree(X_train, X_test, y_train, y_test, label_dict, show_plo
         ))
 
         fig_cm.update_layout(
-            title="Confusion Matrix - Test",
+            title="Random Forest Confusion Matrix - Test",
             xaxis_title="Predicted Label",
             yaxis_title="True Label",
             xaxis=dict(tickmode='array', tickvals=np.arange(len(display_labels))),
@@ -89,3 +89,64 @@ def fit_and_evaluate_tree(X_train, X_test, y_train, y_test, label_dict, show_plo
         fig_cm.show()
 
     return model, y_pred
+
+def plot_permutation_importance(
+    model, X, y, scoring=None, n_repeats=30, random_state=None, multiclass=True
+):
+    """
+    Computes and plots permutation importance for a given model.
+
+    Parameters:
+    - model: The trained model (e.g., RandomForestClassifier).
+    - X: Feature matrix.
+    - y: Target labels.
+    - scoring: Scoring metric or dict of scoring metrics (default: None).
+    - n_repeats: Number of repeats for permutation (default: 30).
+    - random_state: Random seed for reproducibility (default: None).
+    - multiclass: If True, computes multiclass ROC AUC if scoring is None.
+
+    Returns:
+    - A result Bunch or dict of Bunch objects, containing the permutation importances.
+    """
+    # Define scoring if not provided
+    if scoring is None and multiclass:
+        scoring = make_scorer(roc_auc_score, multi_class='ovr', needs_proba=True)
+
+    # Compute permutation importance
+    result = permutation_importance(
+        model, X, y, scoring=scoring, n_repeats=n_repeats, random_state=random_state
+    )
+
+    # Handle multiple scorers
+    if isinstance(result, dict):
+        for scorer_name, scorer_result in result.items():
+            _plot_importance(scorer_result, X, scorer_name)
+    else:
+        _plot_importance(result, X)
+
+    return result
+
+
+def _plot_importance(result, X, scorer_name=None):
+    """
+    Helper function to plot the permutation importances.
+    """
+    importance_means = result.importances_mean
+    importance_stds = result.importances_std
+
+    indices = np.argsort(importance_means)[::-1]  # Sort by importance
+
+    plt.figure(figsize=(10, 6))
+    plt.bar(
+        range(len(importance_means)),
+        importance_means[indices],
+        yerr=importance_stds[indices],
+        align="center",
+        alpha=0.7
+    )
+    plt.xticks(range(len(importance_means)), np.array(X.columns)[indices], rotation=90)
+    plt.title(f"Permutation Importance{f' ({scorer_name})' if scorer_name else ''}")
+    plt.xlabel("Features")
+    plt.ylabel("Mean Importance")
+    plt.tight_layout()
+    plt.show()

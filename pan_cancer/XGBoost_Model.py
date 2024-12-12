@@ -164,7 +164,7 @@ def fit_and_evaluate_model(X_train, X_test, y_train, y_test, label_dict, show_pl
         ))
 
         fig_cm.update_layout(
-            title="Confusion Matrix - Test",
+            title="XGBoost Confusion Matrix - Test",
             xaxis_title="Predicted Label",
             yaxis_title="True Label",
             xaxis=dict(tickmode='array', tickvals=np.arange(len(display_labels))),
@@ -179,6 +179,7 @@ def fit_and_evaluate_model(X_train, X_test, y_train, y_test, label_dict, show_pl
     recall = recall_score(y_test, y_pred, average='weighted')
     f1 = f1_score(y_test, y_pred, average='weighted')
 
+    print("\nXGBoost")
     print(f"Test Accuracy: {accuracy:.4f}")
     print(f"Test Precision: {precision:.4f}")
     print(f"Test Recall: {recall:.4f}")

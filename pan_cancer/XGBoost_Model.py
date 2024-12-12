@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import StratifiedGroupKFold
 import xgboost as xgb
-from sklearn.metrics import accuracy_score, auc, roc_curve, confusion_matrix
+from sklearn.metrics import accuracy_score, auc, roc_curve, confusion_matrix, precision_score, recall_score, f1_score
 import plotly.graph_objects as go
 from sklearn.preprocessing import label_binarize
 
@@ -60,12 +60,12 @@ def split_data(X, y):
     return X_train, X_val, X_test, y_train, y_val, y_test
 
 
-def stratified_split_by_patient(X, y, train_ratio=0.55, val_ratio=0.25, test_ratio=0.2):
+def stratified_split_by_patient(X, y, train_ratio=0.7, test_ratio=0.3):
     """
-    Split data into training, validation, and testing sets with stratification by PATIENT_ID.
+    Split data into training and testing sets with stratification by PATIENT_ID.
     """
     # Ensure the ratios sum to 1
-    assert train_ratio + val_ratio + test_ratio == 1, "Ratios must sum to 1."
+    assert train_ratio + test_ratio == 1, "Ratios must sum to 1."
 
     # Get unique patient IDs
     unique_ids = X['PATIENT_ID'].unique()
@@ -75,43 +75,34 @@ def stratified_split_by_patient(X, y, train_ratio=0.55, val_ratio=0.25, test_rat
     unique_patient_labels = [patient_labels[pid] for pid in unique_ids]
 
     # Initial split: train+val and test
-    train_val_ids, test_ids = train_test_split(
+    train_ids, test_ids = train_test_split(
         unique_ids,
         test_size=test_ratio,
         stratify=unique_patient_labels,
         random_state=42
     )
 
-    # Split train_val into train and validation
-    val_size = val_ratio / (train_ratio + val_ratio)  # Adjust validation size relative to train+val
-    train_ids, val_ids = train_test_split(
-        train_val_ids,
-        test_size=val_size,
-        stratify=[patient_labels[pid] for pid in train_val_ids],
-        random_state=42
-    )
-
     # Split data into subsets
     X_train = X[X['PATIENT_ID'].isin(train_ids)].drop(columns=['PATIENT_ID'])
-    X_val = X[X['PATIENT_ID'].isin(val_ids)].drop(columns=['PATIENT_ID'])
+    # X_val = X[X['PATIENT_ID'].isin(val_ids)].drop(columns=['PATIENT_ID'])
     X_test = X[X['PATIENT_ID'].isin(test_ids)].drop(columns=['PATIENT_ID'])
-    X_val_with_id = X[X['PATIENT_ID'].isin(val_ids)]  # Keep validation set with PATIENT_ID for patient-level analysis
+    X_test_with_id = X[X['PATIENT_ID'].isin(test_ids)]  # Keep validation set with PATIENT_ID for patient-level analysis
 
     y_train = y[X['PATIENT_ID'].isin(train_ids)]
-    y_val = y[X['PATIENT_ID'].isin(val_ids)]
+    # y_val = y[X['PATIENT_ID'].isin(val_ids)]
     y_test = y[X['PATIENT_ID'].isin(test_ids)]
 
-    return X_train, X_val, X_test, y_train, y_val, y_test, X_val_with_id
+    return X_train, X_test, y_train, y_test, X_test_with_id
 
 
-def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plots=False):
+def fit_and_evaluate_model(X_train, X_test, y_train, y_test, label_dict, show_plots=False):
     """
     Fit the XGBoost model to the training data and evaluate it on the validation data.
     """
     xtra_cheese = xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
                                     tree_method='hist', enable_categorical=True)
     xtra_cheese.fit(X_train, y_train)
-    y_pred = xtra_cheese.predict(X_val)
+    y_pred = xtra_cheese.predict(X_test)
 
     if show_plots:
         # Feature importance
@@ -129,13 +120,13 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plot
 
         # Binarize the output labels for multiclass ROC computation
         classes = np.unique(y_train)
-        y_val_bin = label_binarize(y_val, classes=classes)
-        y_proba = xtra_cheese.predict_proba(X_val)
+        y_test_bin = label_binarize(y_test, classes=classes)
+        y_proba = xtra_cheese.predict_proba(X_test)
 
         # Plot ROC curve using Plotly
         fig_roc = go.Figure()
         for i, class_label in enumerate(classes):
-            fpr, tpr, _ = roc_curve(y_val_bin[:, i], y_proba[:, i])
+            fpr, tpr, _ = roc_curve(y_test_bin[:, i], y_proba[:, i])
             roc_auc = auc(fpr, tpr)
 
             # Reverse the label_dict to get cancer type names from numeric labels
@@ -149,7 +140,7 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plot
         fig_roc.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode='lines', line=dict(dash='dash'), name='Chance'))
 
         fig_roc.update_layout(
-            title="Multiclass ROC Curve - Validation",
+            title="Multiclass ROC Curve - Test",
             xaxis_title="False Positive Rate",
             yaxis_title="True Positive Rate",
             showlegend=True
@@ -157,7 +148,7 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plot
         fig_roc.show()
 
         # Confusion Matrix
-        cm = confusion_matrix(y_val, y_pred, normalize='true')
+        cm = confusion_matrix(y_test, y_pred, normalize='true')
 
         # Map numeric indices to cancer type names
         reversed_label_dict = {v: k for k, v in label_dict.items()}
@@ -173,7 +164,7 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plot
         ))
 
         fig_cm.update_layout(
-            title="Confusion Matrix - Validation",
+            title="Confusion Matrix - Test",
             xaxis_title="Predicted Label",
             yaxis_title="True Label",
             xaxis=dict(tickmode='array', tickvals=np.arange(len(display_labels))),
@@ -183,7 +174,17 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val, label_dict, show_plot
         fig_cm.update_xaxes(tickangle=45)
         fig_cm.show()
 
-    return accuracy_score(y_val, y_pred), xtra_cheese, y_pred
+    accuracy = accuracy_score(y_test, y_pred)
+    precision = precision_score(y_test, y_pred, average='weighted')
+    recall = recall_score(y_test, y_pred, average='weighted')
+    f1 = f1_score(y_test, y_pred, average='weighted')
+
+    print(f"Test Accuracy: {accuracy:.4f}")
+    print(f"Test Precision: {precision:.4f}")
+    print(f"Test Recall: {recall:.4f}")
+    print(f"Test F1 Score: {f1:.4f}")
+
+    return xtra_cheese, y_pred
 
 
 def classify_patients(X, y_pred, y_true, label_dict):
@@ -230,7 +231,7 @@ def classify_patients(X, y_pred, y_true, label_dict):
     ))
 
     fig_cmat.update_layout(
-        title="Confusion Matrix - By Patient (Validation)",
+        title="Confusion Matrix - By Patient (Test)",
         xaxis_title="Predicted Label",
         yaxis_title="True Label",
         xaxis=dict(tickmode='array', tickvals=np.arange(len(unique_cancer_types)), ticktext=unique_cancer_types),
@@ -241,8 +242,3 @@ def classify_patients(X, y_pred, y_true, label_dict):
     fig_cmat.show()
 
     return patient_predictions, conf_matrix
-
-
-
-
-

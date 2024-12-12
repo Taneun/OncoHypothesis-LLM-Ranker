@@ -56,6 +56,25 @@ def extract_top_features(shap_values, correct_X, print_table=True, num_to_print=
 
     return feature_importance_correct
 
+def get_shap_interactions(explainer, X, y, label_dict):
+    """
+    Get SHAP interaction values for a multiclass classification model.
+    """
+    reversed_label_dict = {v: k for k, v in label_dict.items()}
+    # Initialize SHAP TreeExplainer
+    # explainer = shap.TreeExplainer(model)
+
+    # Compute SHAP interaction values for multiclass (shape: [n_samples, n_features, n_features, n_classes])
+    shap_interaction_values = explainer.shap_interaction_values(X, y)  # Already in (n_samples, n_features, n_features, n_classes)
+
+    if len(shap_interaction_values.shape) != 4:
+        raise ValueError("Expected SHAP interaction values to have 4 dimensions (samples, features, features, classes).")
+
+    # Generate a SHAP interaction summary plot for each class
+    for i in range(shap_interaction_values.shape[3]):  # Iterate over classes
+        shap.summary_plot(shap_interaction_values[:, :, :, i], X, show=False)
+        plt.title(f"SHAP Interaction Summary for Class {reversed_label_dict[i]}")
+        plt.show()
 
 def generate_hypotheses_db(explainer, model, X, y_true, label_dict, min_features=2, relative_threshold_percent=10, min_support=3):
     """
@@ -81,7 +100,6 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict, min_features
     # Filter correct predictions
     correct_indices = y_pred == y_true
     correct_X = X[correct_indices]
-    print("correctX " + str(len(list(correct_X.columns))))
     correct_y = y_true[correct_indices]
 
     # Compute SHAP values for correct predictions
@@ -119,12 +137,7 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict, min_features
         hypothesis = {f"{feature}": value for feature, value in top_features}
         hypothesis["cancer_type"] = cancer_type
         hypotheses.append(frozenset(hypothesis.items()))
-    # todo: remove all the debugging prints
-    print(len(top_feat))
-    print(top_feat)
     columns_missing = [col for col in list(correct_X.columns) if col not in list(top_feat)]
-    print(f"columns missing: {columns_missing}")
-    print("hypo " + str(len(list(hypotheses[0]))))
     # Count occurrences of each hypothesis
     hypothesis_counts = Counter(hypotheses)
 

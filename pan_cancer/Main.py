@@ -3,10 +3,10 @@ The main script for the pan_cancer project.
 """
 from SHAP_explain import *
 from XGBoost_Model import *
-from tree_model import *
-from sklearn.tree import DecisionTreeClassifier
+from model_metrics import *
 from sklearn.ensemble import RandomForestClassifier
 import pickle
+
 
 def cancer_type_correlations(df):
     """
@@ -41,31 +41,29 @@ def cancer_type_correlations(df):
 
     return corr_list
 
+
 if __name__ == "__main__":
     # Load the data
     filepath = "pan_cancer_data_for_model.csv"
     X, y, label_dict, mapping = load_data(filepath)
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
-
-    # Fit and evaluate model
-    # model, predictions \
-    #     = fit_and_evaluate_model(X_train, X_test, y_train, y_test, label_dict, show_plots=True)
-
-    # Initialize the model
+    xtra_cheese = xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
+                                    tree_method='hist', enable_categorical=True)
     rand_forest = RandomForestClassifier(random_state=39)
-    rand_forest.fit(X_train, y_train)
-    plot_permutation_importance(rand_forest, X_test, y_test, random_state=39)
+    model_dict = {"XGBoost": xtra_cheese, "Random Forest": rand_forest}
+    for model_type, model in model_dict.items():
+        # Fit and evaluate the model
+        fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_dict,
+                         show_auc=True, show_cm=True, show_precision_recall=True)
+        # Save the model
+        # pickle.dump(model, open(f"{model_type}_model.pkl", "wb"))
 
-    # tree, tree_pred = fit_and_evaluate_tree(rand_forest, X_train, X_test, y_train, y_test, label_dict, show_plots=True)
 
     # Per Patient prediction
-    # classify_patients(X_test_with_id, predictions, y_test, label_dict)
+    # classify_patients(X_test_with_id, tree_pred, y_test, label_dict)
 
     # explainer = shap.TreeExplainer(model)
     # get_shap_interactions(explainer, X, y, label_dict)
-
-    # pickle.dump(model, open("model.pkl", "wb"))
-    # pickle.dump(explainer, open("explainer.pkl", "wb"))
 
     # model = pickle.load(open("model.pkl", "rb"))
     # explainer = pickle.load(open("explainer.pkl", "rb"))

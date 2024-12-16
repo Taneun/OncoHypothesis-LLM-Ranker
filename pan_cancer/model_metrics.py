@@ -96,6 +96,7 @@ def fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_
         fig_pr_rc = go.Figure()
         for i, class_label in enumerate(classes):
             precision, recall, _ = precision_recall_curve(y_test_bin[:, i], y_proba[:, i])
+            pr_rc_auc = auc(recall, precision)
             average_precision = np.mean(precision)
             # Reverse the label_dict to get cancer type names from numeric labels
             reversed_label_dict = {v: k for k, v in label_dict.items()}
@@ -103,7 +104,7 @@ def fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_
             # Add ROC curve to the plot for each class
             fig_pr_rc.add_trace(
                 go.Scatter(x=recall, y=precision, mode='lines',
-                           name=f'{reversed_label_dict[class_label]} (Avg Prc = {average_precision:.2f})'))
+                           name=f'{reversed_label_dict[class_label]} (AUC = {pr_rc_auc:.2f})'))
 
         fig_pr_rc.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode='lines', line=dict(dash='dash'), name='Chance'))
 

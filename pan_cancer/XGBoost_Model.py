@@ -8,7 +8,6 @@ from sklearn.metrics import accuracy_score, auc, roc_curve, confusion_matrix, pr
 import plotly.graph_objects as go
 from sklearn.preprocessing import label_binarize
 
-
 def load_data(filepath):
     features_to_drop = ['Cancer Type', 'Cancer Type Detailed', 'Tumor Stage', 'Sample Type']
     data = pd.read_csv(filepath)
@@ -28,6 +27,7 @@ def load_data(filepath):
     X = data.drop(features_to_drop, axis=1)
     y, uniques = pd.factorize(data['Cancer Type'])
     label_dict = {cancer: idx for idx, cancer in enumerate(cancer_types)}
+
     return X, y, label_dict, mapping
 
 

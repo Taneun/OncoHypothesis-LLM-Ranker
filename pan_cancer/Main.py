@@ -7,7 +7,7 @@ from model_metrics import *
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 from sklearn.tree import DecisionTreeClassifier
-
+from imodels.rule_set.skope_rules import SkopeRuleClassifier
 
 def cancer_type_correlations(df):
     """
@@ -48,23 +48,31 @@ if __name__ == "__main__":
     filepath = "pan_cancer_data_for_model.csv"
     X, y, label_dict, mapping = load_data(filepath)
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
-    xtra_cheese = xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
-                                    tree_method='hist', enable_categorical=True)
-    rand_forest = RandomForestClassifier(random_state=39)
-    decision_tree = DecisionTreeClassifier(random_state=39)
-    model_dict = {"XGBoost": xtra_cheese, "Random Forest": rand_forest, "Decision Tree": decision_tree}
-    for model_type, model in model_dict.items():
-        # Fit and evaluate the model
-        model, y_pred = fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_dict,
-                         show_auc=True, show_cm=True, show_precision_recall=True)
-        classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
+    # xtra_cheese = xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
+    #                                 tree_method='hist', enable_categorical=True)
+    # rand_forest = RandomForestClassifier(random_state=39)
+    # decision_tree = DecisionTreeClassifier(random_state=39)
+    # model_dict = {"XGBoost": xtra_cheese, "Random Forest": rand_forest, "Decision Tree": decision_tree}
+    # for model_type, model in model_dict.items():
+    #     # Fit and evaluate the model
+    #     model, y_pred = fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_dict,
+    #                      show_auc=True, show_cm=True, show_precision_recall=True)
+    #     classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
 
         # Save the model
         # pickle.dump(model, open(f"{model_type}_model.pkl", "wb"))
 
+    feature_names = list(X.columns)
+    for cancer_type, idx in label_dict:
+        rule_model = SkopeRuleClassifier()
+        one_vs_all_y_train = y_train.apply(lambda x: 1 if x == idx else 0)
+        one_vs_all_y_test = y_test.apply(lambda x: 1 if x == idx else 0)
+        fit_and_evaluate(f"{cancer_type} vs. All", rule_model, X_train, X_test,
+                         one_vs_all_y_train, one_vs_all_y_test, label_dict,
+                         show_auc=True, show_cm=True, show_precision_recall=True)
 
-    # Per Patient prediction
-    #  classify_patients(X_test_with_id, tree_pred, y_test, label_dict)
+
+
 
     # explainer = shap.TreeExplainer(model)
     # get_shap_interactions(explainer, X, y, label_dict)

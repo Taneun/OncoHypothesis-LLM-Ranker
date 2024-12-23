@@ -6,6 +6,7 @@ from XGBoost_Model import *
 from model_metrics import *
 from sklearn.ensemble import RandomForestClassifier
 import pickle
+from sklearn.tree import DecisionTreeClassifier
 
 
 def cancer_type_correlations(df):
@@ -50,17 +51,20 @@ if __name__ == "__main__":
     xtra_cheese = xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
                                     tree_method='hist', enable_categorical=True)
     rand_forest = RandomForestClassifier(random_state=39)
-    model_dict = {"XGBoost": xtra_cheese, "Random Forest": rand_forest}
+    decision_tree = DecisionTreeClassifier(random_state=39)
+    model_dict = {"XGBoost": xtra_cheese, "Random Forest": rand_forest, "Decision Tree": decision_tree}
     for model_type, model in model_dict.items():
         # Fit and evaluate the model
-        fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_dict,
+        model, y_pred = fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_dict,
                          show_auc=True, show_cm=True, show_precision_recall=True)
+        classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
+
         # Save the model
         # pickle.dump(model, open(f"{model_type}_model.pkl", "wb"))
 
 
     # Per Patient prediction
-    # classify_patients(X_test_with_id, tree_pred, y_test, label_dict)
+    #  classify_patients(X_test_with_id, tree_pred, y_test, label_dict)
 
     # explainer = shap.TreeExplainer(model)
     # get_shap_interactions(explainer, X, y, label_dict)

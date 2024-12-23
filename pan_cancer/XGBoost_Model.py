@@ -188,7 +188,7 @@ def fit_and_evaluate_model(X_train, X_test, y_train, y_test, label_dict, show_pl
     return xtra_cheese, y_pred
 
 
-def classify_patients(X, y_pred, y_true, label_dict):
+def classify_patients(X, y_pred, y_true, label_dict, model_type):
     """
     Classify patients using the trained model and generate a confusion matrix.
     """
@@ -232,7 +232,7 @@ def classify_patients(X, y_pred, y_true, label_dict):
     ))
 
     fig_cmat.update_layout(
-        title="Confusion Matrix - By Patient (Test)",
+        title="Confusion Matrix - By Patient (Test) - model {}".format(model_type),
         xaxis_title="Predicted Label",
         yaxis_title="True Label",
         xaxis=dict(tickmode='array', tickvals=np.arange(len(unique_cancer_types)), ticktext=unique_cancer_types),
@@ -241,5 +241,6 @@ def classify_patients(X, y_pred, y_true, label_dict):
 
     fig_cmat.update_xaxes(tickangle=45)
     fig_cmat.show()
+    fig_cmat.write_image("figures/{}_confusion_matrix_per_patient.png".format(model_type))
 
     return patient_predictions, conf_matrix

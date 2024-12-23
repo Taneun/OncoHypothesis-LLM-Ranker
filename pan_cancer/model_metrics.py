@@ -61,7 +61,7 @@ def fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_
             showlegend=True
         )
         fig_roc.show()
-        fig_roc.write_html(f"figures/{model_type}_roc.html")
+        fig_roc.write_image(f"figures/{model_type}_roc.png")
 
     if show_cm:
         # Confusion Matrix
@@ -90,7 +90,7 @@ def fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_
 
         fig_cm.update_xaxes(tickangle=45)
         fig_cm.show()
-        fig_cm.write_html(f"figures/{model_type}_cm.html")
+        fig_cm.write_image(f"figures/{model_type}_cm.png")
 
     if show_precision_recall:
         fig_pr_rc = go.Figure()
@@ -115,7 +115,7 @@ def fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_
             showlegend=True
         )
         fig_pr_rc.show()
-        fig_pr_rc.write_html(f"figures/{model_type}_pr_rc.html")
+        fig_pr_rc.write_image(f"figures/{model_type}_pr_rc.png")
 
     return model, y_pred
 

@@ -7,7 +7,7 @@ from model_metrics import *
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 from sklearn.tree import DecisionTreeClassifier
-from imodels.rule_set.skope_rules import SkopeRuleClassifier
+from imodels.rule_set.skope_rules import SkopeRulesClassifier
 
 def cancer_type_correlations(df):
     """
@@ -63,10 +63,11 @@ if __name__ == "__main__":
         # pickle.dump(model, open(f"{model_type}_model.pkl", "wb"))
 
     feature_names = list(X.columns)
-    for cancer_type, idx in label_dict:
-        rule_model = SkopeRuleClassifier()
-        one_vs_all_y_train = y_train.apply(lambda x: 1 if x == idx else 0)
-        one_vs_all_y_test = y_test.apply(lambda x: 1 if x == idx else 0)
+    for cancer_type, idx in label_dict.items():
+        rule_model = SkopeRulesClassifier()
+        one_vs_all_y_train = y_train[y_train == idx].astype(int)
+        one_vs_all_y_test = y_test[y_test == idx].astype(int)
+        # one_vs_all_y_test = y_test.apply(lambda x: 1 if x == idx else 0)
         fit_and_evaluate(f"{cancer_type} vs. All", rule_model, X_train, X_test,
                          one_vs_all_y_train, one_vs_all_y_test, label_dict,
                          show_auc=True, show_cm=True, show_precision_recall=True)

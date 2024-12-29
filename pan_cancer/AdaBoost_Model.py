@@ -36,7 +36,7 @@ def fit_and_evaluate_model(X_train, X_val, y_train, y_val):
 
 
 if __name__ == "__main__":
-    filepath = "pan_cancer_data_for_model.csv"
+    filepath = "all_cancers_data.csv"
     X_train, X_val, X_test, y_train, y_val, y_test = load_and_split_data(filepath)
     accuracy = fit_and_evaluate_model(X_train, X_val, y_train, y_val)
     print(f"Validation Accuracy: {accuracy}")

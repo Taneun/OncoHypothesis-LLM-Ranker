@@ -241,6 +241,6 @@ def classify_patients(X, y_pred, y_true, label_dict, model_type):
 
     fig_cmat.update_xaxes(tickangle=45)
     fig_cmat.show()
-    fig_cmat.write_image("figures/{}_confusion_matrix_per_patient.png".format(model_type))
+    fig_cmat.write_image("figures/{}_confusion_matrix_per_patient.png".format(model_type), scale=2)
 
     return patient_predictions, conf_matrix

@@ -75,7 +75,7 @@ def plot_multiclass(classes, label_dict, model_type, show_auc, show_cm, show_pre
             showlegend=True
         )
         fig_roc.show()
-        fig_roc.write_image(f"figures/{model_type}_roc.png")
+        fig_roc.write_image(f"figures/{model_type}_roc.png", scale=2)
     if show_cm:
         # Confusion Matrix
         cm = confusion_matrix(y_test, y_pred, normalize='true')
@@ -103,7 +103,7 @@ def plot_multiclass(classes, label_dict, model_type, show_auc, show_cm, show_pre
 
         fig_cm.update_xaxes(tickangle=45)
         fig_cm.show()
-        fig_cm.write_image(f"figures/{model_type}_cm.png")
+        fig_cm.write_image(f"figures/{model_type}_cm.png", scale=2)
     if show_precision_recall:
         fig_pr_rc = go.Figure()
         for i, class_label in enumerate(classes):
@@ -127,7 +127,4 @@ def plot_multiclass(classes, label_dict, model_type, show_auc, show_cm, show_pre
             showlegend=True
         )
         fig_pr_rc.show()
-        fig_pr_rc.write_image(f"figures/{model_type}_pr_rc.png")
-
-def plot_one_vs_all():
-    pass
+        fig_pr_rc.write_image(f"figures/{model_type}_pr_rc.png", scale=2)

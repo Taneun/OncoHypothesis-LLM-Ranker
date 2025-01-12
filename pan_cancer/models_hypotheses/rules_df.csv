@@ -1,148 +1,90 @@
 Cancer Type,Rule
-Colorectal Carcinoma,Smoke Status > 1.5 and TMB (nonsynonymous) > 1.98333 and inframe_insertion <= 0.5
-Colorectal Carcinoma,TMB (nonsynonymous) > 2.28333 and inframe_deletion <= 0.5 and stop_gained <= 0.5
-Colorectal Carcinoma,Diagnosis Age <= 5.5 and Hugo_Symbol > 12.5 and Protein_position > 8.5 and Smoke Status > 1.5 and TMB (nonsynonymous) > 1.98333
-Colorectal Carcinoma,Diagnosis Age <= 4.5 and TMB (nonsynonymous) > 2.08333 and coding_sequence_variant <= 0.5 and stop_gained <= 0.5
-Colorectal Carcinoma,Chromosome <= 18.5 and Diagnosis Age > 3.5 and TMB (nonsynonymous) > 2.56667
-Colorectal Carcinoma,Smoke Status > 1.5 and TMB (nonsynonymous) <= 8.83333 and TMB (nonsynonymous) > 3.78333 and Variant_Type > 2.5
-Colorectal Carcinoma,Diagnosis Age <= 3.5 and Hugo_Symbol <= 451.5 and Smoke Status > 1.5
-Colorectal Carcinoma,Diagnosis Age <= 3.5 and Hugo_Symbol > 12.5 and protein_altering_variant <= 0.5
-Colorectal Carcinoma,TMB (nonsynonymous) <= 8.13333 and TMB (nonsynonymous) > 3.78333 and frameshift_variant <= 0.5 and splice_donor_variant <= 0.5 and stop_gained <= 0.5
-Colorectal Carcinoma,Diagnosis Age > 3.5 and Exon_Number > 417.5 and Hugo_Symbol > 11.5 and Smoke Status > 1.5 and TMB (nonsynonymous) > 2.56667
-Colorectal Carcinoma,Diagnosis Age <= 3.5 and Variant_Type > 3.5 and splice_donor_variant <= 0.5
-Colorectal Carcinoma,Codons > 401.5 and Exon_Number <= 797.5 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 8.83333 and TMB (nonsynonymous) > 3.78333 and splice_acceptor_variant <= 0.5
-Colorectal Carcinoma,Exon_Number > 15.5 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 3.38333 and TMB (nonsynonymous) > 1.98333 and frameshift_variant <= 0.5 and inframe_deletion <= 0.5
-Colorectal Carcinoma,End_Position <= 187441520.0 and Hugo_Symbol > 12.5 and SNP_event > 965.5 and TMB (nonsynonymous) <= 3.78333 and TMB (nonsynonymous) > 1.98333 and VAR_TYPE_SX <= 0.5 and Variant_Type > 2.0
-Colorectal Carcinoma,Diagnosis Age <= 4.5 and Hugo_Symbol <= 418.5 and SNP_event > 965.5 and TMB (nonsynonymous) <= 3.38333 and TMB (nonsynonymous) > 1.98333 and stop_gained <= 0.5
-Colorectal Carcinoma,End_Position <= 115119828.0 and End_Position > 56435128.0 and SNP_event <= 2078.5 and Sex > 0.5 and VAR_TYPE_SX > 0.5
-Colorectal Carcinoma,Diagnosis Age > 4.5 and End_Position > 55968166.0 and Protein_position <= 1558.5 and SNP_event <= 985.0 and Smoke Status > 1.5 and VAR_TYPE_SX > 0.5
-Colorectal Carcinoma,Diagnosis Age > 4.5 and Hugo_Symbol <= 11.5
-Colorectal Carcinoma,Chromosome > 10.5 and Hugo_Symbol <= 13.5 and Protein_position > 201.5 and SNP_event <= 2078.5 and VAR_TYPE_SX > 0.5
-Colorectal Carcinoma,Chromosome <= 17.5 and End_Position > 56435128.0 and Hugo_Symbol > 15.5 and Smoke Status > 1.5 and frameshift_variant > 0.5 and splice_acceptor_variant <= 0.5
-Colorectal Carcinoma,Diagnosis Age > 3.5 and End_Position > 55964658.0 and Hugo_Symbol > 14.5 and SNP_event <= 1480.0 and Sex <= 0.5 and Smoke Status > 1.5 and Variant_Type <= 3.0
-Liver Hepatocellular Carcinoma,End_Position > 416421.0 and Exon_Number <= -0.5 and SNP_event <= 2080.0 and SNP_event > 2078.5 and Sex > 0.5 and Smoke Status > 1.5 and Variant_Type > 1.5
-Liver Hepatocellular Carcinoma,SNP_event <= 2078.5 and Sex > 0.5 and Start_Position <= 397062.0
-Liver Hepatocellular Carcinoma,End_Position <= 397207.0 and Sex > 0.5 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 1.0 and missense_variant <= 0.5
-Liver Hepatocellular Carcinoma,Hugo_Symbol <= 123.5 and Start_Position <= 397200.0 and missense_variant <= 0.5
-Liver Hepatocellular Carcinoma,End_Position <= 397200.0 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 1.03333
-Liver Hepatocellular Carcinoma,Smoke Status > 1.5 and Start_Position <= 397219.5 and TMB (nonsynonymous) <= 0.65 and Variant_Type > 3.0
-Liver Hepatocellular Carcinoma,SNP_event <= 2078.5 and Sex > 0.5 and TMB (nonsynonymous) <= 3.08333 and TMB (nonsynonymous) > 3.01667 and frameshift_variant <= 0.5
-Liver Hepatocellular Carcinoma,End_Position <= 397200.0 and Hugo_Symbol <= 123.5 and Smoke Status > 1.5 and Start_Position > 339460.0 and missense_variant <= 0.5 and splice_acceptor_variant <= 0.5 and stop_gained <= 0.5
-Soft Tissue Sarcoma,Chromosome <= 21.5 and Diagnosis Age <= 1.5 and Start_Position <= 183833560.0
-Soft Tissue Sarcoma,Diagnosis Age <= 1.5 and End_Position <= 159322536.0 and SNP_event <= 2082.5 and TMB (nonsynonymous) > 0.11667
-Soft Tissue Sarcoma,Smoke Status > 1.5 and TMB (nonsynonymous) <= 0.05
-Soft Tissue Sarcoma,Chromosome <= 21.5 and Diagnosis Age <= 1.5 and Exon_Number > 254.0 and Protein_position > 33.5 and Start_Position <= 183833560.0
-Soft Tissue Sarcoma,Diagnosis Age <= 1.5 and TMB (nonsynonymous) <= 1.45 and TMB (nonsynonymous) > 0.11667
-Soft Tissue Sarcoma,Diagnosis Age <= 1.5 and Exon_Number <= 1529.0 and Hugo_Symbol <= 364.5 and TMB (nonsynonymous) > 0.11667 and stop_gained <= 0.5
-Soft Tissue Sarcoma,Diagnosis Age <= 1.5 and Exon_Number <= 669.5 and Smoke Status > 1.5
-Soft Tissue Sarcoma,Smoke Status > 1.5 and Start_Position > 29486016.0 and TMB (nonsynonymous) <= 0.05 and start_lost <= 0.5 and stop_gained <= 0.5 and synonymous_variant <= 0.5
-Soft Tissue Sarcoma,Chromosome <= 21.5 and Diagnosis Age <= 1.5 and Hugo_Symbol > 15.5 and TMB (nonsynonymous) > 0.28333 and coding_sequence_variant <= 0.5 and inframe_insertion <= 0.5
-Soft Tissue Sarcoma,Hugo_Symbol <= 366.5 and Start_Position <= 55968390.0 and Start_Position > 55431244.0 and TMB (nonsynonymous) <= 0.11667 and synonymous_variant <= 0.5
-Soft Tissue Sarcoma,Diagnosis Age <= 1.5 and Hugo_Symbol <= 360.5 and TMB (nonsynonymous) <= 1.45 and TMB (nonsynonymous) > 0.11667 and splice_acceptor_variant <= 0.5 and stop_gained <= 0.5
-Soft Tissue Sarcoma,Chromosome <= 21.5 and Diagnosis Age <= 1.5 and Hugo_Symbol > 15.5 and TMB (nonsynonymous) <= 0.21667 and coding_sequence_variant <= 0.5 and inframe_insertion <= 0.5
-Soft Tissue Sarcoma,Diagnosis Age > 2.5 and End_Position <= 55968390.0 and Start_Position > 55430576.0 and TMB (nonsynonymous) <= 0.11667 and inframe_deletion <= 0.5
-Soft Tissue Sarcoma,Chromosome <= 19.5 and Diagnosis Age > 1.5 and Sex <= 0.5 and TMB (nonsynonymous) <= 1.08333 and TMB (nonsynonymous) > 1.03333
-Soft Tissue Sarcoma,Chromosome > 13.5 and Codons > 3583.0 and Smoke Status > 1.5 and inframe_insertion > 0.5
-Soft Tissue Sarcoma,Chromosome > 21.5 and Codons <= 2055.0 and End_Position > 66876082.0 and Protein_position > 10.5 and SNP_event > 2130.0 and Smoke Status > 1.5
-Soft Tissue Sarcoma,Chromosome > 21.5 and Diagnosis Age > 4.5 and End_Position > 55431246.0 and Hugo_Symbol <= 366.5 and TMB (nonsynonymous) <= 0.11667 and TMB (nonsynonymous) > 0.08333 and Variant_Type <= 3.0
-Soft Tissue Sarcoma,Diagnosis Age > 1.5 and Exon_Number > 350.5 and Hugo_Symbol <= 239.0 and Hugo_Symbol > 236.0 and inframe_insertion > 0.5
-Soft Tissue Sarcoma,End_Position <= 76938152.0 and End_Position > 72700152.0 and Smoke Status > 1.5 and stop_gained > 0.5
-Gastric Cancer,Smoke Status > 1.5 and TMB (nonsynonymous) <= 3.78333 and TMB (nonsynonymous) > 3.41667
-Gastric Cancer,Diagnosis Age > 5.5 and TMB (nonsynonymous) <= 3.63333 and TMB (nonsynonymous) > 1.21667 and VAR_TYPE_SX > 0.5 and frameshift_variant > 0.5
-Gastric Cancer,Diagnosis Age > 5.5 and Sex > 0.5 and Smoke Status > 1.5 and TMB (nonsynonymous) > 1.21667 and missense_variant <= 0.5 and splice_region_variant <= 0.5 and stop_gained <= 0.5
-Gastric Cancer,Diagnosis Age > 5.5 and Protein_position > 12.5 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 3.41667 and TMB (nonsynonymous) > 1.21667 and Variant_Type <= 0.5
-Gastric Cancer,Codons <= 3526.0 and Diagnosis Age <= 7.5 and Diagnosis Age > 6.5 and Sex > 0.5 and TMB (nonsynonymous) > 1.25 and inframe_deletion <= 0.5 and missense_variant <= 0.5
-Gastric Cancer,Chromosome > 6.5 and Protein_position <= 2652.0 and Protein_position > 12.5 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 3.78333 and TMB (nonsynonymous) > 3.41667 and splice_region_variant <= 0.5
-Gastric Cancer,Diagnosis Age <= 6.5 and Diagnosis Age > 5.5 and Hugo_Symbol <= 297.0 and Smoke Status > 1.5 and TMB (nonsynonymous) > 1.45 and frameshift_variant > 0.5 and stop_gained <= 0.5
-Gastric Cancer,Protein_position > 195.0 and Sex <= 0.5 and TMB (nonsynonymous) <= 3.78333 and TMB (nonsynonymous) > 3.41667 and Variant_Type > 2.5 and synonymous_variant <= 0.5
-Gastric Cancer,Diagnosis Age <= 6.5 and Diagnosis Age > 4.5 and Sex <= 0.5 and TMB (nonsynonymous) > 4.33333 and Variant_Type <= 1.0 and protein_altering_variant <= 0.5
-Gastric Cancer,Diagnosis Age > 5.5 and Hugo_Symbol > 26.0 and TMB (nonsynonymous) > 1.21667 and Variant_Type <= 1.0 and intron_variant > 0.5 and stop_gained <= 0.5
-Gastric Cancer,Diagnosis Age <= 5.5 and Diagnosis Age > 4.5 and Sex > 0.5 and TMB (nonsynonymous) <= 2.81667 and TMB (nonsynonymous) > 2.51667
-Pancreatic Cancer,Protein_position <= 12.5 and Start_Position <= 27206741.0 and TMB (nonsynonymous) <= 0.25
-Pancreatic Cancer,Chromosome <= 5.0 and End_Position <= 25398296.0 and Exon_Number <= 53.5 and Hugo_Symbol > 241.5 and TMB (nonsynonymous) <= 0.18333 and splice_acceptor_variant <= 0.5
-Pancreatic Cancer,End_Position > 21807030.0 and Sex > 0.5 and Start_Position <= 25398294.0 and Start_Position > 25398283.0 and TMB (nonsynonymous) <= 0.25 and frameshift_variant <= 0.5 and splice_region_variant <= 0.5
-Pancreatic Cancer,Codons > 2709.5 and Exon_Number <= 53.5 and Hugo_Symbol <= 243.5 and Hugo_Symbol > 241.5 and TMB (nonsynonymous) <= 0.21667 and inframe_insertion <= 0.5 and synonymous_variant <= 0.5
-Pancreatic Cancer,Codons <= 2722.5 and Codons > 2711.5 and End_Position <= 25398297.0 and Sex > 0.5 and Smoke Status > 1.5 and VAR_TYPE_SX <= 0.5
-Pancreatic Cancer,Chromosome > 9.5 and Codons > 412.5 and Protein_position > 12.5 and Sex <= 0.5 and TMB (nonsynonymous) <= 3.75 and TMB (nonsynonymous) > 3.61667
-Pancreatic Cancer,Codons <= 883.0 and Hugo_Symbol > 240.0 and Protein_position <= 12.5 and SNP_event <= 970.5 and coding_sequence_variant <= 0.5 and frameshift_variant <= 0.5
-Pancreatic Cancer,Sex <= 0.5 and Smoke Status > 1.5 and Start_Position > 48690806.0 and TMB (nonsynonymous) <= 3.75 and TMB (nonsynonymous) > 3.61667 and splice_acceptor_variant <= 0.5
-Pancreatic Cancer,Hugo_Symbol <= 404.5 and Hugo_Symbol > 401.5 and Protein_position <= 288.5 and SNP_event > 446.0 and Start_Position > 27190647.0 and TMB (nonsynonymous) <= 0.21667 and inframe_insertion <= 0.5
-Pancreatic Cancer,Exon_Number <= 57.5 and SNP_event > 1480.0 and Start_Position <= 27023160.0 and coding_sequence_variant <= 0.5 and frameshift_variant > 0.5 and splice_region_variant <= 0.5 and start_lost <= 0.5
-Breast Carcinoma,Diagnosis Age <= 5.5 and End_Position <= 179088696.0 and Sex <= 0.5 and Smoke Status > 1.5 and Start_Position > 178917488.0 and TMB (nonsynonymous) <= 1.71667 and synonymous_variant <= 0.5
-Breast Carcinoma,End_Position > 178921544.0 and Hugo_Symbol > 251.5 and SNP_event <= 724.5 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 0.48333 and Variant_Type > 1.5 and coding_sequence_variant <= 0.5
-Breast Carcinoma,Diagnosis Age <= 5.5 and Diagnosis Age > 4.5 and Sex <= 0.5 and TMB (nonsynonymous) <= 1.71667 and TMB (nonsynonymous) > 1.51667 and missense_variant > 0.5 and synonymous_variant <= 0.5
-Breast Carcinoma,Chromosome <= 15.5 and End_Position > 178952064.0 and Start_Position <= 178952088.0 and splice_region_variant <= 0.5
-Breast Carcinoma,End_Position > 178916864.0 and Exon_Number > 939.5 and SNP_event <= 724.5 and Sex <= 0.5 and Start_Position <= 178952088.0 and Start_Position > 178952048.0 and splice_region_variant <= 0.5
-Breast Carcinoma,Diagnosis Age <= 5.5 and Diagnosis Age > 4.5 and Sex <= 0.5 and Smoke Status > 1.5 and Start_Position <= 179014648.0 and Start_Position > 178916768.0 and TMB (nonsynonymous) <= 1.71667
-Breast Carcinoma,End_Position <= 179491184.0 and Exon_Number > 936.5 and Smoke Status > 1.5 and Start_Position > 178916864.0 and TMB (nonsynonymous) <= 0.35
-Breast Carcinoma,End_Position <= 9857722.5 and End_Position > 8100604.5 and Hugo_Symbol <= 251.5 and TMB (nonsynonymous) <= 1.71667 and intron_variant <= 0.5
-Breast Carcinoma,End_Position <= 178952120.0 and End_Position > 178952048.0 and Sex <= 0.5 and inframe_deletion <= 0.5
-Breast Carcinoma,Codons <= 1950.5 and Codons > 1891.5 and Hugo_Symbol > 325.5 and Protein_position <= 1140.5 and Sex <= 0.5 and Start_Position > 178916864.0 and stop_gained <= 0.5
-Breast Carcinoma,End_Position > 178917488.0 and Exon_Number > 936.5 and SNP_event <= 724.5 and Sex <= 0.5 and Variant_Type > 1.5 and protein_altering_variant <= 0.5 and synonymous_variant <= 0.5
-Breast Carcinoma,Codons > 850.5 and SNP_event <= 1780.5 and Start_Position <= 8181087.5 and Start_Position > 8110811.5 and frameshift_variant > 0.5
-Extrahepatic Cholangiocarcinoma,Sex <= 0.5 and TMB (nonsynonymous) <= 8.83333 and TMB (nonsynonymous) > 8.13333 and splice_donor_variant <= 0.5
-Extrahepatic Cholangiocarcinoma,Diagnosis Age > 5.5 and Sex <= 0.5 and TMB (nonsynonymous) > 8.08333
-Extrahepatic Cholangiocarcinoma,Diagnosis Age > 6.5 and Exon_Number > 24.0 and TMB (nonsynonymous) <= 8.83333 and TMB (nonsynonymous) > 8.13333 and downstream_gene_variant <= 0.5 and frameshift_variant <= 0.5
-Extrahepatic Cholangiocarcinoma,Diagnosis Age > 6.5 and TMB (nonsynonymous) > 8.13333 and frameshift_variant <= 0.5
-Extrahepatic Cholangiocarcinoma,End_Position <= 139159576.0 and Protein_position <= 4861.5 and TMB (nonsynonymous) <= 8.83333 and TMB (nonsynonymous) > 8.13333 and VAR_TYPE_SX <= 0.5 and Variant_Type > 3.0
-Extrahepatic Cholangiocarcinoma,End_Position > 56177996.0 and Sex <= 0.5 and Smoke Status > 1.5 and Start_Position > 56178076.0 and TMB (nonsynonymous) <= 8.83333 and TMB (nonsynonymous) > 8.13333
-Extrahepatic Cholangiocarcinoma,Codons <= 1992.5 and SNP_event > 424.5 and Sex <= 0.5 and Start_Position <= 163983792.0 and TMB (nonsynonymous) <= 8.83333 and TMB (nonsynonymous) > 8.13333 and Variant_Type > 0.5
-Extrahepatic Cholangiocarcinoma,Chromosome > 14.5 and Diagnosis Age <= 7.5 and Diagnosis Age > 6.5 and TMB (nonsynonymous) > 6.38333
-Extrahepatic Cholangiocarcinoma,Diagnosis Age <= 5.5 and Diagnosis Age > 3.5 and Protein_position > 12.5 and TMB (nonsynonymous) <= 2.58333 and TMB (nonsynonymous) > 2.5 and missense_variant > 0.5
-Extrahepatic Cholangiocarcinoma,Diagnosis Age > 6.5 and Exon_Number <= 1797.0 and TMB (nonsynonymous) > 8.08333 and VAR_TYPE_SX > 0.5 and frameshift_variant > 0.5
-Extrahepatic Cholangiocarcinoma,Codons <= 3474.5 and Exon_Number <= 775.5 and TMB (nonsynonymous) > 8.08333 and VAR_TYPE_SX > 0.5 and Variant_Type <= 1.0 and frameshift_variant > 0.5 and splice_region_variant <= 0.5
-Extrahepatic Cholangiocarcinoma,Sex <= 0.5 and Start_Position <= 55222694.0 and TMB (nonsynonymous) > 8.13333 and VAR_TYPE_SX > 0.5 and Variant_Type <= 2.0
-Extrahepatic Cholangiocarcinoma,Codons > 861.5 and Exon_Number > 3.0 and Sex <= 0.5 and TMB (nonsynonymous) > 8.13333 and missense_variant <= 0.5 and stop_gained <= 0.5 and synonymous_variant <= 0.5
-Esophageal Carcinoma,Chromosome > 20.5 and Diagnosis Age > 4.5 and End_Position > 139392672.0 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 1.25
-Esophageal Carcinoma,Chromosome > 20.5 and Diagnosis Age > 4.5 and Hugo_Symbol > 294.5 and Smoke Status > 1.5 and Start_Position > 139391936.0
-Esophageal Carcinoma,Hugo_Symbol <= 477.5 and Sex > 0.5 and Smoke Status > 1.5 and Start_Position <= 139937320.0 and Start_Position > 139277976.0 and TMB (nonsynonymous) <= 1.25
-Esophageal Carcinoma,End_Position > 20199773.0 and Sex <= 0.5 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 1.25 and TMB (nonsynonymous) > 1.11667 and Variant_Type > 0.5
-Esophageal Carcinoma,Diagnosis Age > 4.5 and End_Position > 18622601.0 and Sex <= 0.5 and TMB (nonsynonymous) <= 1.25 and TMB (nonsynonymous) > 1.11667
-Esophageal Carcinoma,Chromosome > 20.5 and Codons > 591.0 and Start_Position > 139392672.0 and TMB (nonsynonymous) <= 1.15 and VAR_TYPE_SX <= 0.5
-Esophageal Carcinoma,Hugo_Symbol > 477.5 and Sex > 0.5 and start_lost <= 0.5
-Esophageal Carcinoma,Hugo_Symbol > 477.5 and Start_Position > 80789432.0 and Variant_Type > 0.5
-Small Cell Lung Cancer,Sex <= 0.5 and Smoke Status <= 0.5 and TMB (nonsynonymous) <= 1.08333 and TMB (nonsynonymous) > 0.68333 and upstream_gene_variant <= 0.5
-Small Cell Lung Cancer,Smoke Status > 1.5 and TMB (nonsynonymous) <= 1.75 and TMB (nonsynonymous) > 1.71667
-Small Cell Lung Cancer,Hugo_Symbol <= 458.5 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 1.75 and TMB (nonsynonymous) > 1.71667 and synonymous_variant <= 0.5
-Small Cell Lung Cancer,Smoke Status <= 1.5 and TMB (nonsynonymous) <= 1.08333 and TMB (nonsynonymous) > 1.01667 and frameshift_variant <= 0.5 and inframe_deletion <= 0.5 and splice_region_variant <= 0.5
-Small Cell Lung Cancer,Sex > 0.5 and TMB (nonsynonymous) <= 1.75 and TMB (nonsynonymous) > 1.71667
-Small Cell Lung Cancer,Hugo_Symbol > 114.0 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 1.75 and TMB (nonsynonymous) > 1.71667 and start_lost <= 0.5
-Small Cell Lung Cancer,Diagnosis Age > 4.5 and TMB (nonsynonymous) <= 1.75 and TMB (nonsynonymous) > 1.71667
-Small Cell Lung Cancer,Codons > 449.5 and Hugo_Symbol <= 336.0 and Sex > 0.5 and Smoke Status <= 1.5 and TMB (nonsynonymous) <= 1.08333 and TMB (nonsynonymous) > 1.01667 and upstream_gene_variant <= 0.5
-Small Cell Lung Cancer,Chromosome <= 6.5 and Start_Position <= 49043500.0 and Start_Position > 48604816.0 and TMB (nonsynonymous) > 0.25 and frameshift_variant > 0.5
-Small Cell Lung Cancer,Hugo_Symbol > 215.0 and Smoke Status <= 1.5 and Start_Position > 49687900.0 and TMB (nonsynonymous) > 0.31667 and Variant_Type > 3.0 and splice_donor_variant > 0.5
-Small Cell Lung Cancer,Chromosome > 6.5 and Codons > 3271.0 and Exon_Number > 35.5 and SNP_event <= 481.5 and Smoke Status <= 1.5 and Smoke Status > 0.5
-Intrahepatic Cholangiocarcinoma,Codons <= 2676.5 and Diagnosis Age > 4.0 and Hugo_Symbol > 11.5 and TMB (nonsynonymous) <= 2.68333 and TMB (nonsynonymous) > 2.65
-Intrahepatic Cholangiocarcinoma,Diagnosis Age > 3.5 and End_Position <= 52713548.0 and End_Position > 52412144.0 and VAR_TYPE_SX > 0.5 and start_lost <= 0.5
-Intrahepatic Cholangiocarcinoma,Diagnosis Age > 4.0 and End_Position > 53225192.0 and SNP_event <= 1641.0 and TMB (nonsynonymous) <= 2.68333 and TMB (nonsynonymous) > 2.65
-Intrahepatic Cholangiocarcinoma,Hugo_Symbol <= 211.5 and Hugo_Symbol > 209.0 and Protein_position <= 218.0 and Protein_position > 129.0 and SNP_event > 724.5 and Start_Position > 52712518.0
-Intrahepatic Cholangiocarcinoma,SNP_event <= 2082.5 and SNP_event > 479.5 and Sex > 0.5 and TMB (nonsynonymous) <= 2.68333 and TMB (nonsynonymous) > 2.65 and frameshift_variant <= 0.5
-Intrahepatic Cholangiocarcinoma,SNP_event > 369.0 and Start_Position <= 53225542.0 and Start_Position > 52411076.0 and TMB (nonsynonymous) <= 1.98333 and frameshift_variant > 0.5
-Intrahepatic Cholangiocarcinoma,End_Position > 52411108.0 and Protein_position > 13.5 and Smoke Status > 1.5 and Start_Position <= 52712600.0 and TMB (nonsynonymous) <= 0.21667 and Variant_Type <= 2.5
-Intrahepatic Cholangiocarcinoma,Protein_position <= 5148.0 and TMB (nonsynonymous) <= 1.98333 and TMB (nonsynonymous) > 1.95 and frameshift_variant > 0.5
-Intrahepatic Cholangiocarcinoma,Hugo_Symbol > 56.5 and SNP_event > 970.5 and Sex <= 0.5 and TMB (nonsynonymous) <= 1.95 and TMB (nonsynonymous) > 1.9 and synonymous_variant <= 0.5
-Non Small Cell Lung Cancer,Diagnosis Age > 2.5 and Smoke Status <= 1.5 and upstream_gene_variant <= 0.5
-Non Small Cell Lung Cancer,5_prime_UTR_variant <= 0.5 and Smoke Status <= 1.5 and TMB (nonsynonymous) <= 2.25
-Non Small Cell Lung Cancer,Chromosome <= 18.5 and Diagnosis Age > 3.5 and Smoke Status <= 1.5
-Non Small Cell Lung Cancer,Smoke Status <= 1.5 and TMB (nonsynonymous) > 0.25 and Variant_Type > 3.5
-Non Small Cell Lung Cancer,Chromosome <= 18.5 and End_Position <= 126368636.0 and SNP_event > 965.5 and Smoke Status <= 1.5 and TMB (nonsynonymous) <= 2.25
-Non Small Cell Lung Cancer,Chromosome > 6.5 and End_Position <= 242793944.0 and Smoke Status <= 1.5 and TMB (nonsynonymous) <= 1.08333 and TMB (nonsynonymous) > 0.25
-Non Small Cell Lung Cancer,Chromosome > 5.5 and Smoke Status <= 0.5
-Non Small Cell Lung Cancer,Chromosome > 8.5 and Codons > 49.5 and Exon_Number <= 709.5 and Smoke Status <= 1.5 and Start_Position <= 243814568.0 and TMB (nonsynonymous) > 0.25 and intron_variant <= 0.5
-Non Small Cell Lung Cancer,Chromosome <= 8.5 and Codons > 400.0 and Exon_Number <= 709.5 and Smoke Status <= 1.5 and Start_Position <= 243814568.0 and TMB (nonsynonymous) > 0.25 and intron_variant <= 0.5
-Non Small Cell Lung Cancer,End_Position > 48271452.0 and Exon_Number > 839.5 and Hugo_Symbol <= 114.0 and TMB (nonsynonymous) <= 1.31667 and start_retained_variant <= 0.5
-Non Small Cell Lung Cancer,Diagnosis Age > 3.5 and SNP_event > 1480.0 and Start_Position > 52708526.0 and TMB (nonsynonymous) <= 2.25 and TMB (nonsynonymous) > 0.68333
-Non Small Cell Lung Cancer,Chromosome > 18.5 and Exon_Number > 843.5 and Hugo_Symbol <= 183.0 and Protein_position <= 862.5 and Start_Position <= 62127514.0
-Non Small Cell Lung Cancer,Chromosome > 18.5 and Exon_Number > 843.5 and TMB (nonsynonymous) <= 0.25
-Non Small Cell Lung Cancer,Chromosome <= 20.0 and Chromosome > 18.5 and Codons > 629.0 and Hugo_Symbol <= 121.0 and Protein_position > 716.5 and SNP_event > 1480.0 and frameshift_variant <= 0.5
-Non Small Cell Lung Cancer,Chromosome <= 19.5 and Chromosome > 18.5 and Exon_Number > 838.5 and Protein_position <= 862.5 and SNP_event > 1502.5 and VAR_TYPE_SX <= 0.5
-Non Small Cell Lung Cancer,Chromosome <= 19.5 and Chromosome > 18.5 and Exon_Number > 827.0 and VAR_TYPE_SX <= 0.5 and Variant_Type <= 2.5 and coding_sequence_variant <= 0.5 and inframe_insertion <= 0.5
-Gallbladder Carcinoma,Diagnosis Age <= 5.5 and Exon_Number <= 1131.5 and TMB (nonsynonymous) <= 3.25 and TMB (nonsynonymous) > 3.21667
-Gallbladder Carcinoma,Sex > 0.5 and TMB (nonsynonymous) <= 3.25 and TMB (nonsynonymous) > 3.21667 and frameshift_variant <= 0.5 and missense_variant > 0.5
-Gallbladder Carcinoma,Codons <= 3315.5 and End_Position <= 170071576.0 and Sex > 0.5 and TMB (nonsynonymous) <= 3.25 and TMB (nonsynonymous) > 3.21667 and coding_sequence_variant <= 0.5
-Gallbladder Carcinoma,Chromosome <= 15.5 and Codons <= 3315.5 and Diagnosis Age > 4.5 and SNP_event <= 2544.5 and Sex <= 0.5 and TMB (nonsynonymous) <= 1.45 and TMB (nonsynonymous) > 1.36667
-Gallbladder Carcinoma,Chromosome <= 9.5 and Chromosome > 2.0 and Codons <= 3324.5 and Codons > 3315.5 and End_Position <= 49124220.0 and SNP_event <= 1225.0 and Sex <= 0.5
-Gallbladder Carcinoma,Codons <= 3315.5 and Sex <= 0.5 and TMB (nonsynonymous) <= 1.45 and TMB (nonsynonymous) > 1.36667 and coding_sequence_variant <= 0.5 and splice_donor_variant <= 0.5
-Gallbladder Carcinoma,Exon_Number > 120.0 and Start_Position > 59035720.0 and TMB (nonsynonymous) <= 3.25 and TMB (nonsynonymous) > 3.21667 and Variant_Type > 2.0 and frameshift_variant <= 0.5 and missense_variant <= 0.5
-Gallbladder Carcinoma,Diagnosis Age > 4.5 and Hugo_Symbol > 51.0 and Smoke Status > 1.5 and TMB (nonsynonymous) <= 3.28333 and TMB (nonsynonymous) > 3.21667 and stop_gained > 0.5
-Gallbladder Carcinoma,SNP_event > 2563.5 and Sex <= 0.5 and Start_Position > 48776668.0
+Colorectal Carcinoma,Codons is ggC/ggT AND SNP event is G>AAA AND TMB (nonsynonymous) > 1.98333
+Colorectal Carcinoma,SNP event is not A>C AND TMB (nonsynonymous) > 3.78333 NOT frameshift variant NOT inframe deletion
+Colorectal Carcinoma,Diagnosis Age is younger than 55.5 AND Start Position <= 243814536.0 AND TMB (nonsynonymous) > 1.98333 AND Variant Type is not DNP AND Chromosome is NOT 10
+Colorectal Carcinoma,Protein position > 6.5 AND SNP event is TGGCCCACTCC>- AND Start Position > 393238.0 AND TMB (nonsynonymous) > 3.78333 AND variant type is Truncation AND Chromosome is NOT 7
+Colorectal Carcinoma,Codons is not Cga/Gga AND Exon Number is not 01/22 AND SNP event is G>AAA AND TMB (nonsynonymous) > 1.98333 AND Chromosome is NOT 2 missense variant
+Colorectal Carcinoma,Diagnosis Age is younger than 42.5 AND End Position > 8923672.5 AND Chromosome is NOT 7 NOT inframe deletion NOT inframe insertion
+Colorectal Carcinoma,Protein position > 6.5 AND TMB (nonsynonymous) <= 8.83333 AND TMB (nonsynonymous) > 3.78333 AND Chromosome is NOT 16 AND Chromosome is NOT 5 NOT frameshift variant
+Colorectal Carcinoma,SNP event is not C>G AND TMB (nonsynonymous) <= 8.83333 AND TMB (nonsynonymous) > 3.78333 AND Chromosome is NOT 11 AND Chromosome is NOT 5 NOT protein altering variant
+Colorectal Carcinoma,Diagnosis Age is younger than 42.5 AND End Position <= 55776742.0 AND End Position > 8923672.5 AND SNP event is T>G missense variant
+Colorectal Carcinoma,Protein position <= 4500.5 AND Protein position > 850.5 AND Start Position <= 202710160.0 AND TMB (nonsynonymous) <= 3.78333 AND TMB (nonsynonymous) > 1.98333
+Colorectal Carcinoma,Start Position <= 70332844.0 AND Start Position > 56168618.0 AND variant type is Truncation AND Chromosome is NOT 12 AND Chromosome is NOT 5 AND Chromosome is NOT 7 NOT splice region variant
+Liver Hepatocellular Carcinoma,End Position <= 41275096.0 AND Hugo Symbol is EPHA5 AND Hugo Symbol is not CSF1 AND Sex is female AND variant type is Truncation AND Chromosome is 3 NOT frameshift variant
+Liver Hepatocellular Carcinoma,Hugo Symbol is DICER1 AND Sex is female AND Start Position <= 41275096.0 AND Chromosome is 3 NOT frameshift variant
+Liver Hepatocellular Carcinoma,Start Position <= 397041.0 AND TMB (nonsynonymous) <= 1.3 NOT inframe insertion
+Liver Hepatocellular Carcinoma,Codons is not CTAGTG/- AND End Position > 397068.0 AND Protein position <= 249.5 AND Protein position > 248.5 AND Chromosome is NOT 12 AND Chromosome is NOT 3 NOT start lost
+Liver Hepatocellular Carcinoma,End Position <= 397068.0 AND Chromosome is 16 NOT missense variant
+Liver Hepatocellular Carcinoma,Exon Number is not 20/24 AND Hugo Symbol is not AURKB AND SNP event is T>A AND SNP event is not T>- AND Start Position <= 55149826.0 AND Chromosome is NOT 19 AND Chromosome is NOT 22
+Soft Tissue Sarcoma,Codons is not Ccg/Tcg AND Diagnosis Age is younger than 22.5 AND Sex is female AND Start Position > 6369226.5 NOT inframe insertion
+Soft Tissue Sarcoma,Codons is not Cag/ag AND Diagnosis Age is younger than 16.5 AND Hugo Symbol is not APEX1
+Soft Tissue Sarcoma,Diagnosis Age is younger than 30.5 AND TMB (nonsynonymous) <= 0.08333 AND Chromosome is NOT 19 AND Chromosome is NOT 22 AND Chromosome is NOT 5
+Soft Tissue Sarcoma,Diagnosis Age is younger than 16.5 AND TMB (nonsynonymous) > 0.08333 AND variant type is Truncation NOT inframe deletion NOT synonymous variant
+Soft Tissue Sarcoma,Codons is not Aac/Gac AND Diagnosis Age is younger than 21.5 AND Hugo Symbol is RB1 AND Protein position <= 1481.5 AND Sex is female AND Chromosome is NOT 5
+Soft Tissue Sarcoma,Diagnosis Age is older than 23.5 AND TMB (nonsynonymous) <= 0.11667 AND Variant Type is INS AND Chromosome is NOT 15 AND Chromosome is 4 NOT frameshift variant
+Soft Tissue Sarcoma,Codons is not Tga/Gga AND Protein position <= 1481.5 AND Protein position > 37.5 AND TMB (nonsynonymous) <= 0.11667 AND Chromosome is 4 NOT frameshift variant NOT inframe insertion
+Soft Tissue Sarcoma,Diagnosis Age is older than 16.5 AND Hugo Symbol is not ETV6 AND Start Position <= 55593968.0 AND variant type is Truncation AND Chromosome is 4 AND Chromosome is NOT 9 NOT missense variant
+Soft Tissue Sarcoma,Sex is female AND variant type is Truncation AND Chromosome is NOT 2 AND Chromosome is 4 inframe insertion
+Soft Tissue Sarcoma,Sex is female AND Chromosome is 4 inframe deletion
+Soft Tissue Sarcoma,Diagnosis Age is older than 16.5 AND SNP event is ->TT AND SNP event is not ->ACTAAGAGA AND Start Position <= 55593864.0 AND Start Position > 55573290.0
+Gastric Cancer,Diagnosis Age is older than 53.5 AND Protein position > 13.5 AND SNP event is not A>- AND Sex is female AND TMB (nonsynonymous) <= 3.56667 AND TMB (nonsynonymous) > 3.38333
+Gastric Cancer,Diagnosis Age is older than 75.5 AND Protein position <= 2687.5 AND TMB (nonsynonymous) > 1.21667 frameshift variant
+Gastric Cancer,Diagnosis Age is younger than 62.5 AND Diagnosis Age is older than 56.5 AND End Position <= 162745544.0 AND TMB (nonsynonymous) <= 6.71667 AND TMB (nonsynonymous) > 3.78333 NOT frameshift variant NOT inframe deletion
+Gastric Cancer,Exon Number is 25/45 AND Sex is female AND Start Position > 29836338.0 AND TMB (nonsynonymous) <= 3.81667 AND TMB (nonsynonymous) > 3.38333 AND variant type is Truncation AND Chromosome is NOT 13
+Gastric Cancer,Diagnosis Age is younger than 85.0 AND Diagnosis Age is older than 75.5 AND Hugo Symbol is not CFTR AND Start Position > 7578348.0 AND TMB (nonsynonymous) > 1.2 frameshift variant
+Gastric Cancer,Codons is ttt/tTTCtt AND Diagnosis Age is younger than 53.5 AND TMB (nonsynonymous) <= 1.85 AND TMB (nonsynonymous) > 1.8
+Pancreatic Cancer,Exon Number is not 01/38 AND Protein position <= 12.5 AND TMB (nonsynonymous) <= 0.21667 AND Chromosome is 12 AND Chromosome is NOT 13 AND Chromosome is NOT 16 AND Chromosome is NOT 6
+Pancreatic Cancer,Codons is gGt/gCt AND Codons is not gGg/gTg AND Protein position <= 12.5 AND Protein position > 10.5 AND SNP event is not C>G AND TMB (nonsynonymous) <= 0.21667 AND Variant Type is not DNP
+Pancreatic Cancer,Codons is not gGg/gAg AND SNP event is CCACAGCTCCTTCTCTGAGTGGTAAAGGCAATCCTG>- AND Sex is female AND TMB (nonsynonymous) <= 0.21667 AND Chromosome is 12
+Pancreatic Cancer,Codons is not -/CCCCTGGTCCTGCTGGTCCCCGAGGGGCCAACGGTGCTCCC AND Exon Number is 02/05 AND Start Position <= 25398283.0 AND Start Position > 21653792.0 AND Chromosome is NOT 18 frameshift variant
+Pancreatic Cancer,Codons is Ggt/TTGTgt AND Codons is not Ggt/Agt AND Diagnosis Age is older than 51.5 AND Exon Number is 02/05 AND SNP event is C>G AND TMB (nonsynonymous) <= 0.25
+Pancreatic Cancer,Codons is not Cag/ATCAACGag AND End Position <= 48591838.0 AND End Position > 27190646.0 AND Hugo Symbol is not SMAD3 AND TMB (nonsynonymous) <= 0.21667 AND Chromosome is 18 NOT synonymous variant
+Breast Carcinoma,SNP event is AATTAAGAGAAGCAACA>TTGCT AND Sex is female AND Start Position <= 179561752.0 AND Start Position > 178917488.0 AND TMB (nonsynonymous) <= 0.48333
+Breast Carcinoma,Codons is cAt/cGt AND Codons is not cAt/cCt AND Diagnosis Age is younger than 64.0 AND Hugo Symbol is not PDGFRA AND variant type is Truncation AND Chromosome is 3
+Breast Carcinoma,Codons is cCc/cAc AND Codons is not cAt/cCt AND End Position > 176211616.0 AND Exon Number is not 20/44 AND Sex is female AND Chromosome is NOT 6 AND Chromosome is NOT X
+Breast Carcinoma,Diagnosis Age is younger than 65.0 AND End Position <= 178952120.0 AND End Position > 178916888.0 AND Protein position > 1038.0 AND SNP event is A>GT AND TMB (nonsynonymous) <= 0.25
+Breast Carcinoma,End Position > 176518712.0 AND Exon Number is not 20/47 AND SNP event is A>TGGCTGG AND SNP event is not A>C AND TMB (nonsynonymous) <= 0.35 AND Chromosome is NOT 5 missense variant
+Breast Carcinoma,Codons is Gat/Cat AND Codons is not Cgt/gt AND Diagnosis Age is younger than 58.5 AND Hugo Symbol is NFKBIA AND TMB (nonsynonymous) <= 1.71667 AND TMB (nonsynonymous) > 1.51667 AND variant type is Truncation
+Breast Carcinoma,Codons is Gat/Cat AND Hugo Symbol is not NFKBIA AND TMB (nonsynonymous) <= 1.71667 AND TMB (nonsynonymous) > 1.51667 AND variant type is Truncation
+Breast Carcinoma,End Position <= 178916888.0 AND Exon Number is 08/14 AND Exon Number is not 01/43 AND TMB (nonsynonymous) <= 1.71667 AND TMB (nonsynonymous) > 1.68333 AND Variant Type is not INS AND Chromosome is NOT 15
+Breast Carcinoma,End Position <= 178916888.0 AND Exon Number is not 08/14 AND TMB (nonsynonymous) <= 1.71667 AND TMB (nonsynonymous) > 1.68333 AND Variant Type is not INS AND Chromosome is NOT 15
+Extrahepatic Cholangiocarcinoma,Diagnosis Age is older than 69.5 AND TMB (nonsynonymous) > 8.13333 AND Chromosome is NOT 4
+Extrahepatic Cholangiocarcinoma,Diagnosis Age is younger than 74.5 AND Diagnosis Age is older than 73.5 AND TMB (nonsynonymous) > 5.55 AND Chromosome is NOT 18
+Extrahepatic Cholangiocarcinoma,Hugo Symbol is not ACVR1B AND Sex is female AND TMB (nonsynonymous) <= 8.83333 AND TMB (nonsynonymous) > 8.13333 AND variant type is Truncation
+Extrahepatic Cholangiocarcinoma,Diagnosis Age is younger than 74.5 AND Diagnosis Age is older than 73.5 AND TMB (nonsynonymous) > 5.55 NOT frameshift variant
+Extrahepatic Cholangiocarcinoma,Codons is tCc/tGc AND TMB (nonsynonymous) <= 8.83333 AND TMB (nonsynonymous) > 8.13333 AND Variant Type is not DNP
+Extrahepatic Cholangiocarcinoma,Diagnosis Age is older than 73.5 AND SNP event is not G>CC AND TMB (nonsynonymous) <= 8.83333 AND TMB (nonsynonymous) > 6.0 NOT frameshift variant
+Extrahepatic Cholangiocarcinoma,Protein position <= 4210.5 AND Protein position > 23.5 AND TMB (nonsynonymous) <= 8.83333 AND TMB (nonsynonymous) > 8.08333 AND Chromosome is NOT 11 AND Chromosome is NOT 6 frameshift variant
+Extrahepatic Cholangiocarcinoma,Sex is female AND TMB (nonsynonymous) <= 8.83333 AND TMB (nonsynonymous) > 8.08333 frameshift variant
+Extrahepatic Cholangiocarcinoma,Codons is aAt/aGt AND Protein position <= 783.5 AND TMB (nonsynonymous) > 8.08333 AND variant type is Truncation frameshift variant
+Esophageal Carcinoma,Codons is tAt/tGTt AND Diagnosis Age is older than 52.5 AND Sex is female AND TMB (nonsynonymous) <= 1.15 AND TMB (nonsynonymous) > 1.11667
+Esophageal Carcinoma,End Position <= 139440216.0 AND End Position > 139190856.0 AND Exon Number is 15/17 AND TMB (nonsynonymous) <= 0.45
+Esophageal Carcinoma,End Position > 139392624.0 AND Exon Number is not 03/29 AND Hugo Symbol is NOTCH3 AND Sex is female AND TMB (nonsynonymous) <= 0.45 AND Chromosome is 9
+Esophageal Carcinoma,Hugo Symbol is not ZNF703 AND Start Position > 7723558.0 AND TMB (nonsynonymous) <= 1.31667
+Esophageal Carcinoma,End Position > 139399656.0 AND Start Position > 139412216.0 AND Chromosome is 9 NOT protein altering variant
+Esophageal Carcinoma,Sex is female AND Start Position > 139412216.0 AND Chromosome is 9 missense variant NOT stop gained
+Esophageal Carcinoma,End Position > 139399656.0 AND Exon Number is 09/10 AND Exon Number is not 06/07 AND Hugo Symbol is ZNF703 AND Sex is female AND Chromosome is NOT 5 AND Chromosome is 9
+Esophageal Carcinoma,End Position > 80789368.0 AND Hugo Symbol is not ZNF703 AND TMB (nonsynonymous) <= 1.31667
+Esophageal Carcinoma,Hugo Symbol is ZNF703 AND Protein position > 306.5 AND Start Position > 139392656.0 AND TMB (nonsynonymous) <= 0.41667 AND TMB (nonsynonymous) > 0.18333 AND Chromosome is 9
+Esophageal Carcinoma,End Position > 80789432.0 AND Exon Number is 02/30 AND Hugo Symbol is not ZNF703 AND TMB (nonsynonymous) <= 1.25 AND Chromosome is NOT 14 AND Chromosome is NOT 9
+Esophageal Carcinoma,Codons is tAt/tGTt AND Exon Number is 11/15 AND Hugo Symbol is not ZNF703 AND Protein position > 13.5 AND Start Position > 7700586.0 AND Chromosome is NOT 18 AND Chromosome is NOT 22
+Small Cell Lung Cancer,End Position <= 49045172.0 AND End Position > 48916804.0 AND Start Position > 48951102.0 AND TMB (nonsynonymous) <= 1.21667 AND TMB (nonsynonymous) > 0.28333 AND Chromosome is 13
+Small Cell Lung Cancer,TMB (nonsynonymous) <= 1.75 AND TMB (nonsynonymous) > 1.71667 AND Chromosome is NOT 17 AND Chromosome is NOT 5
+Small Cell Lung Cancer,End Position > 45060732.0 AND TMB (nonsynonymous) <= 1.41667 AND TMB (nonsynonymous) > 0.31667 AND variant type is Truncation AND Variant Type is DNP AND Chromosome is 13 frameshift variant
+Small Cell Lung Cancer,End Position <= 48934204.0 AND End Position > 48604828.0 AND Exon Number is 10/25 AND Chromosome is 13 AND Chromosome is NOT 5 frameshift variant NOT splice region variant
+Intrahepatic Cholangiocarcinoma,Protein position > 13.5 AND TMB (nonsynonymous) <= 2.68333 AND TMB (nonsynonymous) > 2.65
+Intrahepatic Cholangiocarcinoma,Sex is female AND TMB (nonsynonymous) <= 2.68333 AND TMB (nonsynonymous) > 2.65 AND Chromosome is NOT 12 AND Chromosome is NOT 5
+Intrahepatic Cholangiocarcinoma,Diagnosis Age is older than 39.5 AND Hugo Symbol is ERBB2 AND Hugo Symbol is not EGFR AND variant type is Truncation AND Chromosome is 1
+Non Small Cell Lung Cancer,Diagnosis Age is older than 41.5 AND SNP event is C>G AND SNP event is not A>GTG AND Sex is female AND TMB (nonsynonymous) <= 2.5 AND TMB (nonsynonymous) > 0.41667 NOT splice region variant
+Non Small Cell Lung Cancer,End Position <= 55269452.0 AND Hugo Symbol is EPHB1 AND Chromosome is 7
+Non Small Cell Lung Cancer,Exon Number is 21/30 AND Exon Number is not 18/26 AND Protein position <= 862.5 AND TMB (nonsynonymous) <= 2.5 NOT protein altering variant
+Non Small Cell Lung Cancer,Exon Number is not 18/23 AND variant type is Truncation AND Chromosome is 7
+Non Small Cell Lung Cancer,Exon Number is not 18/27 AND Protein position <= 861.5 AND variant type is Truncation
+Non Small Cell Lung Cancer,Codons is not Att/Ctt AND Hugo Symbol is not CTNNB1 AND SNP event is not G>AAA AND Chromosome is NOT 18 AND Chromosome is 7
+Gallbladder Carcinoma,Diagnosis Age is younger than 57.5 AND Diagnosis Age is older than 56.5 AND TMB (nonsynonymous) > 1.41667 AND Chromosome is NOT 5
+Gallbladder Carcinoma,SNP event is G>CC AND SNP event is not C>ATCAACG AND TMB (nonsynonymous) <= 1.41667 AND TMB (nonsynonymous) > 1.38333 AND variant type is Truncation
+Gallbladder Carcinoma,Codons is tCa/tAa AND Sex is female AND TMB (nonsynonymous) <= 1.41667 AND TMB (nonsynonymous) > 1.38333 NOT inframe deletion
+Gallbladder Carcinoma,Hugo Symbol is TNFSF13B AND Hugo Symbol is not ERBB3 AND Sex is female AND TMB (nonsynonymous) <= 3.25 AND TMB (nonsynonymous) > 3.21667 missense variant
+Gallbladder Carcinoma,Sex is female AND Start Position <= 140453144.0 AND Start Position > 48712644.0 AND TMB (nonsynonymous) <= 3.25 AND TMB (nonsynonymous) > 3.21667
+Gallbladder Carcinoma,SNP event is not CCCGCGCC>- AND Start Position > 48712644.0 AND TMB (nonsynonymous) <= 3.25 AND TMB (nonsynonymous) > 3.21667 AND Variant Type is not INS AND Chromosome is NOT 16 AND Chromosome is NOT X
+Gallbladder Carcinoma,Codons is Gat/Aat AND Diagnosis Age is older than 79.5 AND Sex is female AND variant type is Truncation AND Chromosome is 12 AND Chromosome is NOT 3

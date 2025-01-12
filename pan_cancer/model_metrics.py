@@ -9,9 +9,8 @@ from sklearn.inspection import permutation_importance
 import matplotlib.pyplot as plt
 
 
-
 def fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_dict, print_eval=True,
-                          show_auc=False, show_cm=False, show_precision_recall=False, is_multiclass=True):
+                     show_auc=False, show_cm=False, show_precision_recall=False, is_multiclass=True):
     """
     Fit the DecisionTree model to the training data and evaluate it on the validation data.
     """
@@ -20,14 +19,12 @@ def fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_
 
     # Make predictions
     y_pred = model.predict(X_test)
-
-    # Evaluate the model
-    accuracy = accuracy_score(y_test, y_pred)
-    precision = precision_score(y_test, y_pred, average='weighted')
-    recall = recall_score(y_test, y_pred, average='weighted')
-    f1 = f1_score(y_test, y_pred, average='weighted')
-
     if print_eval:
+        # Evaluate the model
+        accuracy = accuracy_score(y_test, y_pred)
+        precision = precision_score(y_test, y_pred, average='weighted', zero_division=0)
+        recall = recall_score(y_test, y_pred, average='weighted', zero_division=0)
+        f1 = f1_score(y_test, y_pred, average='weighted', zero_division=0)
         print("\n****** Model Evaluation ******\n")
         print(f"    {model_type} Test Accuracy: {accuracy:.4f}")
         print(f"    {model_type} Test Precision: {precision:.4f}")
@@ -40,12 +37,14 @@ def fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_
     y_proba = model.predict_proba(X_test)
 
     if is_multiclass:
-        plot_multiclass(classes, label_dict, model_type, show_auc, show_cm, show_precision_recall, y_pred, y_proba, y_test,
-                    y_test_bin)
+        plot_multiclass(classes, label_dict, model_type, show_auc, show_cm, show_precision_recall, y_pred, y_proba,
+                        y_test,
+                        y_test_bin)
+        return model, y_pred
     else:
         return model, y_pred, y_proba
 
-    return model, y_pred
+
 
 
 def plot_multiclass(classes, label_dict, model_type, show_auc, show_cm, show_precision_recall, y_pred, y_proba, y_test,

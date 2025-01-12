@@ -50,7 +50,8 @@ if __name__ == "__main__":
     # Load the data
     all_cancers = "all_cancers_data.csv"
     partial_cancers = "narrowed_cancers_data.csv"
-    X, y, label_dict, mapping = load_data(partial_cancers)
+    data_for_rules = "data_for_rules.csv"
+    X, y, label_dict, mapping = load_data(data_for_rules)
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
     # xtra_cheese = xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
     #                                 tree_method='hist', enable_categorical=True)
@@ -87,10 +88,12 @@ if __name__ == "__main__":
     #     print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")
 
     # optimize_skope_rules(X_train, X_test, y_train, y_test)
-    rules = rule_based(X_train, X_test, y_train, y_test, label_dict)
-    convert_rules_to_readable(rules, mapping)
-    # rules_df = create_rules_dataframe(rules)
-    # rules_df.to_csv("models_hypotheses/rules_df.csv", index=False)
+    plot_only = True
+    rules = rule_based(X_train, X_test, y_train, y_test, label_dict, is_plot_run=True)
+    if not plot_only:
+        rules = convert_rules_to_readable(rules, mapping)
+        rules_df = create_rules_dataframe(rules)
+        rules_df.to_csv("models_hypotheses/rules_df_nonsmoker_fixed.csv", index=False)
 
     # get_shap_interactions(explainer, X, y, label_dict) # very slow currently
 

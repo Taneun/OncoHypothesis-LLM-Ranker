@@ -4,6 +4,8 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from collections import Counter
 
+from pan_cancer.XGBoost_Model import apply_category_mappings
+
 
 def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
     """
@@ -74,7 +76,7 @@ def get_shap_interactions(explainer, X, y, label_dict):
         plt.show()
 
 
-def generate_hypotheses_db(explainer, model, X, y_true, label_dict,
+def generate_hypotheses_db(explainer, model, X, y_true, label_dict, mapping,
                            min_features=2, relative_threshold_percent=10, min_support=3):
     """
     Generate a hypotheses database from an XGBoost model's correct predictions.
@@ -90,25 +92,28 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict,
     Returns:
     - DataFrame of hypotheses with feature-value combinations and cancer types.
     """
+    hypotheses_db = generate_raw_df(X, explainer, label_dict, min_features, min_support, model,
+                                    relative_threshold_percent, y_true)
+    hypotheses_db = apply_category_mappings(hypotheses_db, mapping)
+
+    return hypotheses_db.sort_values(by="support", ascending=False)
+
+
+def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, relative_threshold_percent, y_true):
     # Reverse label dictionary
     reversed_label_dict = {v: k for k, v in label_dict.items()}
-
     # Get predictions
     y_pred = model.predict(X)
-
     # Filter correct predictions
     correct_indices = y_pred == y_true
     correct_X = X[correct_indices]
     correct_y = y_true[correct_indices]
-
     # Compute SHAP values for correct predictions
     shap_values = explainer.shap_values(correct_X)
     extract_top_features(shap_values, correct_X)
-
     # Store hypotheses
     hypotheses = []
     top_feat = set()
-
     # Iterate over correct predictions
     for i, sample_idx in enumerate(correct_X.index):
         cancer_type = reversed_label_dict[correct_y[i]]
@@ -134,19 +139,15 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict,
         hypothesis = {f"{feature}": value for feature, value in top_features}
         hypothesis["cancer_type"] = cancer_type
         hypotheses.append(frozenset(hypothesis.items()))
-
     # Count occurrences of each hypothesis
     hypothesis_counts = Counter(hypotheses)
-
     # Filter hypotheses by support
     filtered_hypotheses = [
         dict(hypo) for hypo, count in hypothesis_counts.items() if count >= min_support
     ]
-
     # Create hypotheses database
     hypotheses_db = pd.DataFrame(filtered_hypotheses).fillna("")
     hypotheses_db["support"] = [
         hypothesis_counts[frozenset(hypo.items())] for hypo in filtered_hypotheses
     ]
-
-    return hypotheses_db.sort_values(by="support", ascending=False)
+    return hypotheses_db

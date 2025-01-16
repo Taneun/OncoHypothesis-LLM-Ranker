@@ -7,6 +7,8 @@ from XGBoost_Model import *
 from model_metrics import *
 from sklearn.ensemble import RandomForestClassifier
 import pickle
+from sklearn.tree import DecisionTreeClassifier, _tree
+from rule_based import rule_based
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
 from sklearn import tree
 from sklearn.tree import export_text
@@ -137,6 +139,58 @@ def tree_to_sentences(tree, feature_names, class_names, node_id=0, path_dict=Non
 
     return results_df
 
+
+def get_rules(tree, feature_names, class_names):
+    tree_ = tree.tree_
+    feature_name = [
+        feature_names[i] if i != _tree.TREE_UNDEFINED else "undefined!"
+        for i in tree_.feature
+    ]
+
+    paths = []
+    path = []
+
+    def recurse(node, path, paths):
+
+        if tree_.feature[node] != _tree.TREE_UNDEFINED:
+            name = feature_name[node]
+            threshold = tree_.threshold[node]
+            p1, p2 = list(path), list(path)
+            p1 += [f"({name} <= {np.round(threshold, 3)})"]
+            recurse(tree_.children_left[node], p1, paths)
+            p2 += [f"({name} > {np.round(threshold, 3)})"]
+            recurse(tree_.children_right[node], p2, paths)
+        else:
+            path += [(tree_.value[node], tree_.n_node_samples[node])]
+            paths += [path]
+
+    recurse(0, path, paths)
+
+    # sort by samples count
+    samples_count = [p[-1][1] for p in paths]
+    ii = list(np.argsort(samples_count))
+    paths = [paths[i] for i in reversed(ii)]
+
+    rules = []
+    for path in paths:
+        rule = "if "
+
+        for p in path[:-1]:
+            if rule != "if ":
+                rule += " and "
+            rule += str(p)
+        rule += " then "
+        if class_names is None:
+            rule += "response: " + str(np.round(path[-1][0][0][0], 3))
+        else:
+            classes = path[-1][0][0]
+            l = np.argmax(classes)
+            rule += f"class: {class_names[l]} (proba: {np.round(100.0 * classes[l] / np.sum(classes), 2)}%)"
+        rule += f" | based on {path[-1][1]:,} samples"
+        rules += [rule]
+
+    return rules
+
 if __name__ == "__main__":
     # Load the data
     all_cancers = "all_cancers_data.csv"
@@ -175,48 +229,52 @@ if __name__ == "__main__":
     reversed_label_dict = {v: k for k, v in label_dict.items()}
     class_names = [reversed_label_dict[cat] for cat in sorted(reversed_label_dict.keys())]
 
-    results_df = pd.DataFrame(columns=["Cancer Type", "Sentence"])
-
-    # Generate sentences from the global decision tree
-    global_tree_model = DecisionTreeClassifier( random_state=39)
+    # results_df = pd.DataFrame(columns=["Cancer Type", "Sentence"])
+    #
+    # # Generate sentences from the global decision tree
+    global_tree_model = DecisionTreeClassifier(max_depth=10, random_state=39)
     global_tree_model.fit(X_train, y_train)
 
     tree = global_tree_model.tree_
     feature_names = list(X_train.columns)
-    results_df = tree_to_sentences(tree, feature_names, class_names, node_id=0, path_dict=None, results_df=results_df)
+    # results_df = tree_to_sentences(tree, feature_names, class_names, node_id=0, path_dict=None, results_df=results_df)
+    #
+    # print(results_df.head())
+    # results_df.to_csv("decision_tree_sentences.csv", index=False)
 
-    print(results_df.head())
-    results_df.to_csv("decision_tree_sentences.csv", index=False)
+    rules = get_rules(global_tree_model, feature_names, class_names)
+    for r in rules:
+        print(r)
 
-    for label_name, label_value in label_dict.items():
-        print(f"Training tree for label: {label_name}")
-
-        # Create a binary target for the current label
-        binary_target = (y_train == label_value).astype(int)
-
-        # Train the decision tree for the current label
-        tree_model = DecisionTreeClassifier(random_state=42)
-        tree_model.fit(X_train, binary_target)
-
-        # tree = tree_model.tree_
-        feature_names = list(X_train.columns)
-
-        # Export rules for the decision tree
-        tree_rules = export_text(tree_model, feature_names=list(X_train.columns))
-        print(f"Rules for {label_name}:\n{tree_rules}\n")
-
-        # Plot the decision tree
-        plt.figure(figsize=(20, 10))
-        plot_tree(
-            decision_tree=tree_model,
-            feature_names=feature_names,
-            class_names=["Not " + label_name, label_name],
-            filled=True,
-            rounded=True
-        )
-        plt.title(f"Decision Tree for {label_name}")
-        plt.savefig(f"figures/decision_tree_{label_name.replace(' ', '_')}.png", dpi=300)
-        plt.close()
+    # for label_name, label_value in label_dict.items():
+    #     print(f"Training tree for label: {label_name}")
+    #
+    #     # Create a binary target for the current label
+    #     binary_target = (y_train == label_value).astype(int)
+    #
+    #     # Train the decision tree for the current label
+    #     tree_model = DecisionTreeClassifier(random_state=42)
+    #     tree_model.fit(X_train, binary_target)
+    #
+    #     # tree = tree_model.tree_
+    #     feature_names = list(X_train.columns)
+    #
+    #     # Export rules for the decision tree
+    #     tree_rules = export_text(tree_model, feature_names=list(X_train.columns))
+    #     print(f"Rules for {label_name}:\n{tree_rules}\n")
+    #
+    #     # Plot the decision tree
+    #     plt.figure(figsize=(20, 10))
+    #     plot_tree(
+    #         decision_tree=tree_model,
+    #         feature_names=feature_names,
+    #         class_names=["Not " + label_name, label_name],
+    #         filled=True,
+    #         rounded=True
+    #     )
+    #     plt.title(f"Decision Tree for {label_name}")
+    #     plt.savefig(f"figures/decision_tree_{label_name.replace(' ', '_')}.png", dpi=300)
+    #     plt.close()
 
 
     # Export the decision tree to DOT format

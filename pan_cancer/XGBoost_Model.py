@@ -84,7 +84,6 @@ def stratified_split_by_patient(X, y, train_ratio=0.7, test_ratio=0.3):
 
     # Split data into subsets
     X_train = X[X['PATIENT_ID'].isin(train_ids)].drop(columns=['PATIENT_ID'])
-    # X_val = X[X['PATIENT_ID'].isin(val_ids)].drop(columns=['PATIENT_ID'])
     X_test = X[X['PATIENT_ID'].isin(test_ids)].drop(columns=['PATIENT_ID'])
     X_test_with_id = X[X['PATIENT_ID'].isin(test_ids)]  # Keep validation set with PATIENT_ID for patient-level analysis
 
@@ -241,6 +240,6 @@ def classify_patients(X, y_pred, y_true, label_dict, model_type):
 
     fig_cmat.update_xaxes(tickangle=45)
     fig_cmat.show()
-    fig_cmat.write_image("figures/{}_confusion_matrix_per_patient.png".format(model_type))
+    fig_cmat.write_image("figures/{}_confusion_matrix_per_patient.png".format(model_type), scale=2)
 
     return patient_predictions, conf_matrix

@@ -3,16 +3,13 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 from collections import Counter
+from pan_cancer.XGBoost_Model import apply_category_mappings
 
 
 def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
     """
     Perform SHAP analysis for a multiclass classification model.
     """
-    reversed_label_dict = {v: k for k, v in label_dict.items()}
-    # Initialize SHAP TreeExplainer
-    # explainer = shap.TreeExplainer(model)
-
     # Compute SHAP values for multiclass (shape: [n_samples, n_features, n_classes])
     shap_values = explainer.shap_values(X_val)  # Already in (n_samples, n_features, n_classes)
 
@@ -25,7 +22,7 @@ def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
     # Select only correct predictions
     shap_values_correct = shap_values[correct_indices, :, :]  # Filter by correct samples
 
-    feature_importance_correct = extract_top_features(shap_values_correct, X_val[correct_indices], print_table=False)
+    feature_importance_correct = extract_top_features(shap_values_correct, X_val[correct_indices], print_table=True)
 
     # Generate a SHAP summary plot for each class
     # for i in range(shap_values.shape[2]):  # Iterate over classes
@@ -37,7 +34,7 @@ def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
     return feature_importance_correct
 
 
-def extract_top_features(shap_values, correct_X, print_table=True, num_to_print=10):
+def extract_top_features(shap_values, correct_X, print_table=False, num_to_print=10):
     """
     Compute the top features for correct predictions based on SHAP values.
     """
@@ -56,6 +53,7 @@ def extract_top_features(shap_values, correct_X, print_table=True, num_to_print=
 
     return feature_importance_correct
 
+
 def get_shap_interactions(explainer, X, y, label_dict):
     """
     Get SHAP interaction values for a multiclass classification model.
@@ -65,7 +63,7 @@ def get_shap_interactions(explainer, X, y, label_dict):
     # explainer = shap.TreeExplainer(model)
 
     # Compute SHAP interaction values for multiclass (shape: [n_samples, n_features, n_features, n_classes])
-    shap_interaction_values = explainer.shap_interaction_values(X, y)  # Already in (n_samples, n_features, n_features, n_classes)
+    shap_interaction_values = explainer.shap_interaction_values(X, y)  # (n_samples, n_features, n_features, n_classes)
 
     if len(shap_interaction_values.shape) != 4:
         raise ValueError("Expected SHAP interaction values to have 4 dimensions (samples, features, features, classes).")
@@ -76,7 +74,9 @@ def get_shap_interactions(explainer, X, y, label_dict):
         plt.title(f"SHAP Interaction Summary for Class {reversed_label_dict[i]}")
         plt.show()
 
-def generate_hypotheses_db(explainer, model, X, y_true, label_dict, min_features=2, relative_threshold_percent=10, min_support=3):
+
+def generate_hypotheses_db(explainer, model, X, y_true, label_dict, mapping,
+                           min_features=2, relative_threshold_percent=10, min_support=3):
     """
     Generate a hypotheses database from an XGBoost model's correct predictions.
 
@@ -91,27 +91,30 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict, min_features
     Returns:
     - DataFrame of hypotheses with feature-value combinations and cancer types.
     """
+    hypotheses_db = generate_raw_df(X, explainer, label_dict, min_features, min_support, model,
+                                    relative_threshold_percent, y_true)
+    hypotheses_db = apply_category_mappings(hypotheses_db, mapping)
+    hypotheses_db = hypotheses_db.sort_values(["cancer_type", 'support'], ascending=[True, False])
+    hypotheses_db = generate_sentences(hypotheses_db)
+
+    return hypotheses_db
+
+
+def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, relative_threshold_percent, y_true):
     # Reverse label dictionary
     reversed_label_dict = {v: k for k, v in label_dict.items()}
-
     # Get predictions
     y_pred = model.predict(X)
-
     # Filter correct predictions
     correct_indices = y_pred == y_true
     correct_X = X[correct_indices]
     correct_y = y_true[correct_indices]
-
     # Compute SHAP values for correct predictions
-    # explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(correct_X)
-
     extract_top_features(shap_values, correct_X)
-
     # Store hypotheses
     hypotheses = []
     top_feat = set()
-
     # Iterate over correct predictions
     for i, sample_idx in enumerate(correct_X.index):
         cancer_type = reversed_label_dict[correct_y[i]]
@@ -137,19 +140,48 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict, min_features
         hypothesis = {f"{feature}": value for feature, value in top_features}
         hypothesis["cancer_type"] = cancer_type
         hypotheses.append(frozenset(hypothesis.items()))
-    columns_missing = [col for col in list(correct_X.columns) if col not in list(top_feat)]
     # Count occurrences of each hypothesis
     hypothesis_counts = Counter(hypotheses)
-
     # Filter hypotheses by support
     filtered_hypotheses = [
         dict(hypo) for hypo, count in hypothesis_counts.items() if count >= min_support
     ]
-
     # Create hypotheses database
     hypotheses_db = pd.DataFrame(filtered_hypotheses).fillna("")
     hypotheses_db["support"] = [
         hypothesis_counts[frozenset(hypo.items())] for hypo in filtered_hypotheses
     ]
+    return hypotheses_db
 
-    return hypotheses_db.sort_values(by="support", ascending=False)
+
+def generate_sentences(df):
+    """
+    Generate sentences from a DataFrame of hypotheses.
+    """
+    sentences = []
+    df = df.drop(columns=["support"])
+    hypotheses_df = df[["cancer_type"]].copy()
+
+    for _, row in df.iterrows():
+        sentence_parts = []
+        for col in df.columns:
+            if col == "cancer_type":
+                continue
+
+            value = row[col]
+            if pd.isna(value) or value == "" or value is None:
+                # Skip NaN values
+                continue
+            elif value in [0, 1]:
+                sentence_parts.append(f"{'is' if value == 1 else 'is NOT'} {col}")
+            else:
+                sentence_parts.append(f"{col} value is {value}")
+
+        sentence = " AND ".join(sentence_parts).replace("_", " ")
+        sentences.append(sentence)
+        print(sentence)
+
+    # hypotheses_df['hypothesis'] = sentences
+    # return hypotheses_df
+    df['hypothesis'] = sentences
+    return df

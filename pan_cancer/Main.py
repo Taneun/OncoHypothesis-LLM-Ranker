@@ -181,35 +181,35 @@ if __name__ == "__main__":
     print(results_df.head())
     results_df.to_csv("decision_tree_sentences.csv", index=False)
 
-    # for label_name, label_value in label_dict.items():
-    #     print(f"Training tree for label: {label_name}")
-    #
-    #     # Create a binary target for the current label
-    #     binary_target = (y_train == label_value).astype(int)
-    #
-    #     # Train the decision tree for the current label
-    #     tree_model = DecisionTreeClassifier(random_state=42)
-    #     tree_model.fit(X_train, binary_target)
-    #
-    #     # tree = tree_model.tree_
-    #     feature_names = list(X_train.columns)
-    #
-    #     # Export rules for the decision tree
-    #     tree_rules = export_text(tree_model, feature_names=list(X_train.columns))
-    #     print(f"Rules for {label_name}:\n{tree_rules}\n")
-    #
-    #     # Plot the decision tree
-    #     plt.figure(figsize=(20, 10))
-    #     plot_tree(
-    #         decision_tree=tree_model,
-    #         feature_names=feature_names,
-    #         class_names=["Not " + label_name, label_name],
-    #         filled=True,
-    #         rounded=True
-    #     )
-    #     plt.title(f"Decision Tree for {label_name}")
-    #     plt.savefig(f"decision_tree_{label_name.replace(' ', '_')}.png", dpi=300)
-    #     plt.close()
+    for label_name, label_value in label_dict.items():
+        print(f"Training tree for label: {label_name}")
+
+        # Create a binary target for the current label
+        binary_target = (y_train == label_value).astype(int)
+
+        # Train the decision tree for the current label
+        tree_model = DecisionTreeClassifier(random_state=42)
+        tree_model.fit(X_train, binary_target)
+
+        # tree = tree_model.tree_
+        feature_names = list(X_train.columns)
+
+        # Export rules for the decision tree
+        tree_rules = export_text(tree_model, feature_names=list(X_train.columns))
+        print(f"Rules for {label_name}:\n{tree_rules}\n")
+
+        # Plot the decision tree
+        plt.figure(figsize=(20, 10))
+        plot_tree(
+            decision_tree=tree_model,
+            feature_names=feature_names,
+            class_names=["Not " + label_name, label_name],
+            filled=True,
+            rounded=True
+        )
+        plt.title(f"Decision Tree for {label_name}")
+        plt.savefig(f"figures/decision_tree_{label_name.replace(' ', '_')}.png", dpi=300)
+        plt.close()
 
 
     # Export the decision tree to DOT format

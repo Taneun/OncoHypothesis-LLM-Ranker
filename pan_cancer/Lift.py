@@ -1,5 +1,6 @@
 import pandas as pd
 from itertools import combinations
+from tqdm import tqdm
 
 def data_prep_lift(df):
     # Select a subset of columns to analyze (e.g., most relevant ones)
@@ -15,8 +16,8 @@ def data_prep_lift(df):
 def calculate_lift(data_for_lift, cancer_probabilities, feature_combinations):
     lifts = []
 
-    for cancer_type, P_B in cancer_probabilities.items():
-        for feature in feature_combinations:
+    for cancer_type, P_B in tqdm(cancer_probabilities.items(), desc="Cancer Types", unit="type"):
+        for feature in tqdm(feature_combinations, desc="Feature Combinations", unit="comb", leave=False):
             # Combine the selected features into a single feature
             combined_feature = data_for_lift[list(feature)].astype(str).agg('_'.join, axis=1)
 
@@ -47,7 +48,7 @@ def calculate_lift(data_for_lift, cancer_probabilities, feature_combinations):
 
             # Store results as a list of tuples
             lifts.append((cancer_type, feature, lift))
-
+    counter+=1
     # Return lifts as a DataFrame
     lift_data = []
     for cancer_type, feature, lift in lifts:

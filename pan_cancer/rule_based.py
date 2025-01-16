@@ -114,7 +114,8 @@ def plot_rules_roc_curves_by_cancer(y_proba_list, y_test, label_dictionary, rule
             go.Scatter(
                 x=fpr,
                 y=tpr,
-                name=f'{idx_to_label[idx]} (n={n_samples} ({true_type_count} from this type), Rules={rules_count[idx_to_label[idx]]} AUC={roc_auc:.2f})',
+                name=f'{idx_to_label[idx]} (n={n_samples} ({true_type_count} from this type), '
+                     f'Rules={rules_count[idx_to_label[idx]]} AUC={roc_auc:.2f})',
                 mode='lines',
                 hovertemplate=(
                     'False Positive Rate: %{x:.3f}<br>'

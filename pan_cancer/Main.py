@@ -37,7 +37,6 @@ def main():
                                 help='Generate hypotheses database flag')
     regular_parser.add_argument('--get_shap_interactions', type=bool, default=False,
                                 help='Get SHAP interactions flag')
-
     args = parser.parse_args()
 
     # Load the data

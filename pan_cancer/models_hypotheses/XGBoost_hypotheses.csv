@@ -1,0 +1,446 @@
+cancer_type,Codons,Hugo_Symbol,Smoke Status,Event_Info,SNP_event,Sex,Start_Position,TMB (nonsynonymous),Site1_Hugo_Symbol,Protein_position,Chromosome,Exon_Number,End_Position,Diagnosis Age,VAR_TYPE_SX,Site2_Hugo_Symbol,intergenic_variant,downstream_gene_variant,splice_acceptor_variant,start_lost,mature_miRNA_variant,stop_gained,splice_region_variant,stop_lost,Variant_Type,splice_donor_variant,5_prime_UTR_variant,upstream_gene_variant,stop_retained_variant,coding_sequence_variant,inframe_insertion,missense_variant,frameshift_variant,inframe_deletion,protein_altering_variant,synonymous_variant,intron_variant,NMD_transcript_variant,start_retained_variant,non_coding_transcript_exon_variant,non_coding_transcript_variant,3_prime_UTR_variant,support
+Breast Carcinoma,,,,BRAF-Intragenic,,Female,,,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Breast Carcinoma,,,,ATR-Intragenic,,Female,,,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Breast Carcinoma,,,,POLR1D-ERBB2,,Female,,,POLR1D,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Breast Carcinoma,,,,CACNB1-RARA,,Female,,,,,,,,,,RARA,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Breast Carcinoma,,,,CASC21-RARA,,Female,,,,,,,,,,RARA,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Breast Carcinoma,,,,MAPRE3-PTEN,,Female,,,,,,,,41-50,,PTEN,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,,,,,Male,,10.63333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,330
+Colorectal Carcinoma,,,,,,,,8.766666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,279
+Colorectal Carcinoma,,,,,,,,8.533333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,268
+Colorectal Carcinoma,,,,,,Male,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,261
+Colorectal Carcinoma,,,,,,Male,,5.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,188
+Colorectal Carcinoma,,,,,,,,4.9,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,158
+Colorectal Carcinoma,,,,,,,,4.366666667,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,142
+Colorectal Carcinoma,,,,,,,,4.0,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,131
+Colorectal Carcinoma,,,,,,Female,,3.333333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,108
+Colorectal Carcinoma,,APC,Unknown,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,103
+Colorectal Carcinoma,,,,,,,,2.766666667,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,91
+Colorectal Carcinoma,,,,,,Female,,2.8,FGFR2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,90
+Colorectal Carcinoma,,,,,,,,3.1,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,79
+Colorectal Carcinoma,,,,,,,,2.633333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,77
+Colorectal Carcinoma,,,,TRIM24-BRAF,,Female,,2.333333333,TRIM24,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,69
+Colorectal Carcinoma,,,,,,Male,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,63
+Colorectal Carcinoma,,,,,,,,2.3,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,56
+Colorectal Carcinoma,,APC,Unknown,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,45
+Colorectal Carcinoma,,,Unknown,,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,44
+Colorectal Carcinoma,,,Unknown,,,,,2.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,35
+Colorectal Carcinoma,,,,,,,,1.733333333,,,,,,21-30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,33
+Colorectal Carcinoma,,,,,,,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,25
+Colorectal Carcinoma,,,,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,23
+Colorectal Carcinoma,,,,,,Female,,3.1,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,20
+Colorectal Carcinoma,,,,,,Male,,1.733333333,,,,,,21-30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,16
+Colorectal Carcinoma,,,,,,,,5.733333333,ETV6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13
+Colorectal Carcinoma,,,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13
+Colorectal Carcinoma,Cga/Tga,APC,Unknown,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13
+Colorectal Carcinoma,,,Unknown,,,,,3.066666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Colorectal Carcinoma,,KRAS,Unknown,,C>T,,25398281.0,,,13.0,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Colorectal Carcinoma,,APC,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Colorectal Carcinoma,,,,,,,,2.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Colorectal Carcinoma,,,,,,,,2.933333333,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Colorectal Carcinoma,,,,,,Male,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Colorectal Carcinoma,Cga/Tga,AMER1,Unknown,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Colorectal Carcinoma,cGc/cAc,,,,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Colorectal Carcinoma,,,,,,,,5.733333333,,,,,,,,NTRK3,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Colorectal Carcinoma,,KRAS,Unknown,,C>T,Female,,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Colorectal Carcinoma,,,,,A>C,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Colorectal Carcinoma,Cga/Tga,APC,Unknown,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Colorectal Carcinoma,,,,,T>G,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Colorectal Carcinoma,,,,,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Colorectal Carcinoma,,APC,Unknown,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Colorectal Carcinoma,,,,,A>-,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Colorectal Carcinoma,,APC,Unknown,,->A,,,,,,,,112175952.0,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Colorectal Carcinoma,,,Unknown,,,Male,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Colorectal Carcinoma,,,Unknown,TMPRSS2-Intergenic,,,,,TMPRSS2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Colorectal Carcinoma,,,Unknown,,,,,3.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,cCg/cTg,,,,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,,,,,,,3.0,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,,,,T>-,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,cGg/cAg,,,,,,,2.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,KRAS,Unknown,,C>T,Female,25398284.0,,,12.0,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,KRAS,Unknown,,,,25398281.0,,,13.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,gCg/gTg,,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,FAT4,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,FBXW7,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,,,TRIM24-BRAF,,Female,,2.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,APC,Unknown,,,,,0.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Colorectal Carcinoma,,KRAS,Unknown,,C>T,Female,25398284.0,,,12.0,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,APC,Unknown,,T>-,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,APC,,,,Male,,10.63333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,,,,,,0.333333333,,,,,,21-30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,,,G>A,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,Cgc/Tgc,,,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,KRAS,Unknown,,,,25398281.0,,,13.0,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,cGt/cAt,,,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,gCg/gTg,,,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,,,->G,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,gGt/gAt,KRAS,Unknown,,C>T,,25398284.0,,,12.0,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,Cgg/Tgg,,,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,cGc/cAc,,,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,,,->A,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,KRAS,Unknown,,,,,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,gTg/gAg,BRAF,Unknown,,,,,,,600.0,7,15/18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,gTg/gAg,BRAF,Unknown,,,,,,,600.0,7,15/18,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,APC,Unknown,,->A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,Unknown,,C>T,,,,,12.0,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,APC,Unknown,,,,112175576.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,cGc/cAc,,Unknown,,C>T,,7578406.0,,,175.0,17,05/11,7578406.0,,Substitution/Indel,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,SNP,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3
+Colorectal Carcinoma,,,,,->A,,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,,,A>-,,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,AMER1,Unknown,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Colorectal Carcinoma,,,,,A>-,,,2.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Esophageal Carcinoma,,,,,,,,0.433333333,,,,,,61-70,,KDM6A,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Esophageal Carcinoma,,,,,,,,0.366666667,LRP1B,,,,,,,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Esophageal Carcinoma,,,,Intergenic-PTCH1,,,,,,,,,,,,PTCH1,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Esophageal Carcinoma,,,Unknown,Intergenic-SMARCA4,,Male,,,,,,,,61-70,,SMARCA4,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Esophageal Carcinoma,,,Unknown,,,,,0.8,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Esophageal Carcinoma,,ZNF750,,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Esophageal Carcinoma,,,Unknown,,,,,0.433333333,CDKN2A,,,,,61-70,,CDKN2A,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Esophageal Carcinoma,,,Unknown,,,Male,,0.5,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Esophageal Carcinoma,,,,SPEN-Intragenic,,Male,,,,,,,,,,SPEN,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Esophageal Carcinoma,,,,,,,,,PTCH1,,,,,61-70,,ZSCAN22,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Esophageal Carcinoma,,TP53,Unknown,,,Male,,0.466666667,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Esophageal Carcinoma,,,Unknown,,,Male,,0.466666667,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Esophageal Carcinoma,,,Unknown,,,Male,,0.366666667,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Gallbladder Carcinoma,,,,,,Female,,0.366666667,,,,,,,,CDKN2B,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Gallbladder Carcinoma,,,,,,Female,,1.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Gallbladder Carcinoma,,,,,,Female,,0.233333333,,,,,,,,MTAP,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Gastric Cancer,,,,,,Male,,2.9,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,77
+Gastric Cancer,,,,,,Male,,2.833333333,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,71
+Gastric Cancer,,,,,,,,2.833333333,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,17
+Gastric Cancer,,,,RAD54B-KIAA1429,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Gastric Cancer,,,,PIK3R1-Intragenic,,,,0.4,PIK3R1,,,,,,,PIK3R1,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Gastric Cancer,,,Unknown,,,,,2.233333333,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Gastric Cancer,,,Unknown,,,,,0.9,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Gastric Cancer,,,,,,,,2.233333333,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Gastric Cancer,,,Unknown,RNF43-Intragenic,,,,,,,,,,71-80,,RNF43,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Gastric Cancer,,,Unknown,CTNNA1-Intragenic,,,,,,,,,,,,CTNNA1,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Gastric Cancer,,,,VPS13D-TMPRSS2,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Gastric Cancer,,,,TNFRSF14-TMOD1,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Gastric Cancer,,,Unknown,VPS13D-TMPRSS2,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Gastric Cancer,,,Unknown,RUNX1-Intragenic,,,,0.233333333,,,,,,61-70,,RUNX1,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Gastric Cancer,,,Unknown,USP31-PALB2,,,,,,,,,,,,PALB2,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Gastric Cancer,,,Unknown,SLC24A2-NTRK2,,,,0.433333333,,,,,,,,NTRK2,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Gastric Cancer,,,Unknown,,,Male,,2.9,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Gastric Cancer,,,Unknown,,,Male,,0.9,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Gastric Cancer,,,,,A>-,Male,,2.9,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Gastric Cancer,,,Unknown,TNFRSF14-TMOD1,,,,0.433333333,,,,,,,,TMOD1,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Gastric Cancer,,,,KIAA1549-BRAF,,,,0.233333333,,,,,,,,BRAF,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Gastric Cancer,,,,,,,,2.9,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Intrahepatic Cholangiocarcinoma,,,Unknown,,,,,1.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,21
+Intrahepatic Cholangiocarcinoma,,,,,,,,1.433333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Intrahepatic Cholangiocarcinoma,,,Unknown,,,,,1.433333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Intrahepatic Cholangiocarcinoma,,,,,,,,0.166666667,FGFR2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Intrahepatic Cholangiocarcinoma,,,,FGFR2-INA,,,,0.133333333,FGFR2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Intrahepatic Cholangiocarcinoma,,,,,,,,0.133333333,FGFR2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.233333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Liver Hepatocellular Carcinoma,,,Unknown,,,,1295228.0,0.266666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Liver Hepatocellular Carcinoma,,,Unknown,,,,1295228.0,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Liver Hepatocellular Carcinoma,,,Unknown,,,,1295228.0,0.133333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Liver Hepatocellular Carcinoma,,,,,A>T,,,,BRD9,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.4,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Liver Hepatocellular Carcinoma,,,Unknown,,A>T,Male,,0.266666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Liver Hepatocellular Carcinoma,,,Unknown,,,,1295228.0,0.233333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Liver Hepatocellular Carcinoma,,,Unknown,,,,1295228.0,0.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.233333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Liver Hepatocellular Carcinoma,,,Unknown,,,,1295228.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Liver Hepatocellular Carcinoma,,,Unknown,,,,1295228.0,0.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Liver Hepatocellular Carcinoma,,,Unknown,,,,1295228.0,0.166666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,,,,,T>A,,,0.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.2,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,,,,,,Male,,,TSC2,,,,,,,TSC2,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.1,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,Unknown,,G>T,Male,,0.2,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,,,T>A,,,,,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,Unknown,,,,,,BRD9,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,Unknown,,A>T,Male,,0.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,,,T>A,,,0.466666667,,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,,,,,,0.466666667,,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,agG/agT,,,,C>A,Male,,0.3,,,,,7577534.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,Unknown,,A>T,Male,,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,,,,,1295228.0,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.133333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.166666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,,,,,,0.266666667,TSC2,,,,,41-50,,TSC2,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.533333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,A>T,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,1295228.0,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,A>T,Male,,0.3,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.266666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.233333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,A>T,Male,,0.466666667,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.233333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,,TSC2,,,,,,,TSC2,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>C,Male,,0.333333333,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.333333333,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,A>T,Male,,0.233333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,A>T,Male,,0.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,A>G,Male,,0.266666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.666666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,,Male,,0.133333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.2,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,CTNNB1,,,A>G,,41266098.0,,,32.0,,03/15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Liver Hepatocellular Carcinoma,,,Unknown,,T>A,Male,,0.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,146
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.166666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,107
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,104
+Non Small Cell Lung Cancer,,,Smoker,,G>T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,101
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.766666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,98
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.133333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,93
+Non Small Cell Lung Cancer,,,Smoker,,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,87
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,85
+Non Small Cell Lung Cancer,,,Nonsmoker,,C>A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,69
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,68
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,59
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,57
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,56
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.566666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,55
+Non Small Cell Lung Cancer,,,Nonsmoker,,,Male,,1.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,44
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,1.366666667,NKAIN2,,,,,,,FANCE,,,,,,,,,,,,,,,,,,,,,,,,,,,44
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,43
+Non Small Cell Lung Cancer,,,Smoker,,,Male,,1.566666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,41
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.233333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,39
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,STK11,,,,,,,,,,,,,,,,,,,,,,,,,,,38
+Non Small Cell Lung Cancer,,,Nonsmoker,,G>T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,37
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,36
+Non Small Cell Lung Cancer,,,Smoker,,,,,1.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,36
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.266666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,35
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,34
+Non Small Cell Lung Cancer,,,Smoker,,G>C,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,32
+Non Small Cell Lung Cancer,,,Smoker,,,,,,LRP1B,,,,,,,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,30
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.966666667,,,,,,,,SORCS3,,,,,,,,,,,,,,,,,,,,,,,,,,,29
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.866666667,LRP1B,,,,,,,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,27
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.9,FOXP2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,27
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.866666667,,,,,,,,CDKN2A,,,,,,,,,,,,,,,,,,,,,,,,,,,27
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,27
+Non Small Cell Lung Cancer,,,Nonsmoker,,G>C,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,26
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.9,,,,,,,,FOXL2,,,,,,,,,,,,,,,,,,,,,,,,,,,26
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,0.133333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,26
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.866666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,25
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.833333333,ANKS3,,,,,,,CREBBP,,,,,,,,,,,,,,,,,,,,,,,,,,,24
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,23
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,21
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.7,,,,,,,,GALNT1,,,,,,,,,,,,,,,,,,,,,,,,,,,21
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.933333333,LRP1B,,,,,,,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,20
+Non Small Cell Lung Cancer,,,Smoker,,,,,,CFTR,,,,,,,CFTR,,,,,,,,,,,,,,,,,,,,,,,,,,,20
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,APC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,20
+Non Small Cell Lung Cancer,,,Smoker,,T>A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,19
+Non Small Cell Lung Cancer,,,Smoker,,,,,,NF1,,,,,,,SLC47A1,,,,,,,,,,,,,,,,,,,,,,,,,,,19
+Non Small Cell Lung Cancer,,,Smoker,,,,,,ARID1A,,,,,,,ARID1A,,,,,,,,,,,,,,,,,,,,,,,,,,,17
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,0.166666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,17
+Non Small Cell Lung Cancer,,,Smoker,,,,,,SLIT2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,17
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.966666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,17
+Non Small Cell Lung Cancer,,,Smoker,,C>G,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,16
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.1,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,16
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,SS18,,,,,,,,,,,,,,,,,,,,,,,,,,,15
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,NF1,,,,,,,ITGA2,,,,,,,,,,,,,,,,,,,,,,,,,,,15
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,15
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.533333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,14
+Non Small Cell Lung Cancer,,,Smoker,,,,,,FGFR3,,,,,,,TACC3,,,,,,,,,,,,,,,,,,,,,,,,,,,14
+Non Small Cell Lung Cancer,,,Smoker,,,,,,CDKN2A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,NOTCH1,,,,,,,NOTCH1,,,,,,,,,,,,,,,,,,,,,,,,,,,13
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13
+Non Small Cell Lung Cancer,,EGFR,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13
+Non Small Cell Lung Cancer,,,Smoker,,C>-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,,EGFR,Smoker,,,,,,,,,21/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,TP53,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.6,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.7,,,,,,,,CDKN2B,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,,,858.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,,,,,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,X,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,,TP53,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,,,Nonsmoker,,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.666666667,PTEN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.166666667,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,,,Smoker,,,,,,POLE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,STK11,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.066666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Non Small Cell Lung Cancer,,,Nonsmoker,,C>G,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,,,Smoker,,,,,,PTEN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,,,Smoker,,,,,,DICER1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,0.766666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,LRP1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,Gag/Aag,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,,,Smoker,,G>T,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.133333333,CD74,,,,,,,ROS1,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,,,Smoker,,,Male,,0.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Non Small Cell Lung Cancer,,,Nonsmoker,RARA-TUBG2,,,,,RARA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,MEN1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,NEK11,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,,,Nonsmoker,,T>A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.133333333,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,tCa/tGa,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.166666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,80+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,0.966666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,CD74,,,,,,,ROS1,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,AXIN2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Smoker,,,,,,CHD2,,,,,71-80,,CHD2,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.566666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,,,,,,0.133333333,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,EGFR,Smoker,,,,,,,,,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.066666667,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.033333333,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Non Small Cell Lung Cancer,,,Nonsmoker,,C>-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,0.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,,,746.0,,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,X,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Smoker,,,,,,ATAD1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Smoker,,,,,,PRKDC,,,,,,,PRKDC,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.466666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.166666667,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Smoker,,G>C,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,CIC,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,,,,,20/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.2,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,Gag/Aag,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.033333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,,,745.0,,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.933333333,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,,,,,SDC4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Nonsmoker,,C>A,Male,,1.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,,,,,NCOA2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.133333333,SDC4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,C>A,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Gag/Cag,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,,,,,RB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,,,,,ANKRD33B,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.1,,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,tCa/tGa,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,,,,,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,NFATC3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Cag/Tag,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,Gaa/Aaa,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,SMARCA4,,,,,,,,,,,,,,,,,,,,,,,,,,,5
+Non Small Cell Lung Cancer,,,Smoker,,,,,,EGFR,,,,,,,EGFR,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.7,,,,,,,,FAT1,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,EGFR,Smoker,,,,,,,,,20/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,CTNNA1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,POLE,,,,,,,POLE,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,EGFR,,,T>G,,,0.133333333,,858.0,7,21/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,DICER1,,,,,,,DICER1,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,,,C>A,Male,,0.533333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,0.7,,,,,,,,CDKN2B,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,EGFR,,,T>G,,,,,858.0,7,21/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.133333333,SLC4A1AP,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,NF1,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,PRDM1,,,,,,,PRDM1,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,03/06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,37.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,A>T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,CHD2,,,,,,,CHD2,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,SPTA1,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,tCa/tTa,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,0.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,CDKN2B,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,RAD51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,34.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,tCc/tTc,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,,,C>A,Male,,0.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Non Small Cell Lung Cancer,,,Smoker,,,,,,NTRK3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,GOPC,,,,,,,ROS1,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.1,CDKN2A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.6,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,G>T,Male,,1.566666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.1,EZR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,DAXX,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,KIF5B,,,,,,,RET,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.1,EML6,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,MICAL3,,,,,,,PDGFB,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,,,,9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,44.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,NFE2L2,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,02/03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,Female,,,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.766666667,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,03/06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,,,858.0,7,21/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,SDHA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,EGFR,Smoker,,,,,,,745.0,,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.533333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,,,,,,0.066666667,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,,,,03/03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,SPTA1,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,TSC2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,CTNNA1,,,,,,,FBXO38,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,G>T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,34.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,02/07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,CD47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,0.066666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.033333333,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,C>A,,,,,,,,,,,CIC,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.133333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,PMS2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,,603.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,ARID1A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Smoker,,,,,,FAT3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,Cag/Tag,,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.1,CD74,,,,,,,ROS1,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,0.2,CHD4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,CHD4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,EGFR,Smoker,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,EGFR,Nonsmoker,,,,,0.233333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Non Small Cell Lung Cancer,,,Nonsmoker,,,,,,EPHB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Pancreatic Cancer,,,,,,,25398284.0,0.133333333,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,15
+Pancreatic Cancer,gGt/gTt,,,,,,25398284.0,0.133333333,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
+Pancreatic Cancer,gGt/gTt,,,,,,25398284.0,0.1,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
+Pancreatic Cancer,,,,,,,25398284.0,0.166666667,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7
+Pancreatic Cancer,gGt/gTt,,,,,,25398284.0,0.166666667,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Pancreatic Cancer,,,,,,,25398284.0,0.1,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Pancreatic Cancer,Ggt/Cgt,,,,,,25398285.0,0.133333333,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Pancreatic Cancer,gGt/gTt,,,,,,25398284.0,0.233333333,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Pancreatic Cancer,Ggt/Cgt,,,,,,,0.166666667,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Pancreatic Cancer,,,,,,,25398284.0,0.233333333,,12.0,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Small Cell Lung Cancer,,,Smoker,,,,,1.033333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,24
+Small Cell Lung Cancer,,,Smoker,,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Small Cell Lung Cancer,,RB1,Smoker,,,,,,,,13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Small Cell Lung Cancer,,RB1,Smoker,,,Male,,,,,13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,,,,,,,ASPSCR1,,,,,31-40,,TFE3,,,,,,,,,,,,,,,,,,,,,,,,,,,17
+Soft Tissue Sarcoma,,,,PRKDC-KCNV1,,,,0.333333333,,,,,,41-50,,KCNV1,,,,,,,,,,,,,,,,,,,,,,,,,,,10
+Soft Tissue Sarcoma,,,,,,,,0.066666667,,,,,,0-10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6
+Soft Tissue Sarcoma,,KIT,,,,,,0.033333333,,,,11/21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4
+Soft Tissue Sarcoma,,,,FUS-DDIT3,,,,0.1,,,,,,,,DDIT3,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,,FUS-DDIT3,,,,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,,FUBP1-Intragenic,,,,0.1,,,,,,21-30,,FUBP1,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,,,,,,0.066666667,,,,,,11-20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,,EWSR1-WT1,,,,,,,,,,11-20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,,FUS-DDIT3,,,,0.066666667,,,,,,31-40,,DDIT3,,,,,,,,,,,,,,,,,,,,,,,,,,,3
+Soft Tissue Sarcoma,,,,FUS-DDIT3,,,,0.066666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3

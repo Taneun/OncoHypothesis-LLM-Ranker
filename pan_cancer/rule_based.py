@@ -318,15 +318,3 @@ def convert_rules_to_readable(rules_dict, mapping):
             print(rule)
 
     return converted_rules
-
-
-# plot_multiclass(label_dictionary.values(),
-#                 label_dictionary,
-#                 f"Skope Rules (n = {len(y_pred)})",
-#                 show_auc=True,
-#                 show_cm=True,
-#                 show_precision_recall=True,
-#                 y_pred=y_pred,
-#                 y_proba=y_proba,
-#                 y_test=y_test,
-#                 y_test_bin=y_test_bin)

@@ -51,49 +51,47 @@ if __name__ == "__main__":
     all_cancers = "all_cancers_data.csv"
     partial_cancers = "narrowed_cancers_data.csv"
     data_for_rules = "data_for_rules.csv"
-    X, y, label_dict, mapping = load_data(data_for_rules)
+    X, y, label_dict, mapping = load_data(all_cancers)
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
-    # xtra_cheese = xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
-    #                                 tree_method='hist', enable_categorical=True)
-    # rand_forest = RandomForestClassifier(random_state=39)
-    # decision_tree = DecisionTreeClassifier(random_state=39)
-    # model_dict = {"XGBoost": xtra_cheese, "Random Forest": rand_forest, "Decision Tree": decision_tree}
-    # for model_type, model in model_dict.items():
-    #     # time model and explainer run time
-    #     start_time = time.time()
-    #     # fancy print the model type
-    #     print(f"\n\n{'*' * 10} {model_type} {'*' * 10}\n")
-    #     # Fit and evaluate the model
-    #     model, y_pred = fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_dict,
-    #                                      show_auc=True, show_cm=True, show_precision_recall=True)
-    #     classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
-    #     explainer = shap.TreeExplainer(model)
-    #
-    #     # Save the model
-    #     # pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
-    #     # pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
-    #
-    #     # load the model
-    #     # model = pickle.load(open(f"models_and_explainers/{model_type}_model.pkl", "rb"))
-    #     # explainer = pickle.load(open(f"models_and_explainers/{model_type}_explainer.pkl", "rb"))
-    #
-    #     # feature_importance = shap_analysis(explainer, X_test, y_test, y_pred, label_dict)
-    #     # Generate hypotheses database
-    #     initial_db = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict)
-    #     hypotheses = apply_category_mappings(initial_db, mapping)
-    #     sorted_hypotheses = hypotheses.sort_values(["cancer_type", 'support'], ascending=[True, False])
-    #     sorted_hypotheses.to_csv(f"models_hypotheses/{model_type}_hypotheses.csv", index=False)
-    #
-    #     # Print the run time
-    #     print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")
+    xtra_cheese = xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
+                                    tree_method='hist', enable_categorical=True)
+    rand_forest = RandomForestClassifier(random_state=39)
+    decision_tree = DecisionTreeClassifier(random_state=39)
+    model_dict = {"XGBoost": xtra_cheese}#, "Random Forest": rand_forest, "Decision Tree": decision_tree}
+    for model_type, model in model_dict.items():
+        # time model and explainer run time
+        start_time = time.time()
+        # fancy print the model type
+        print(f"\n\n{'*' * 10} {model_type} {'*' * 10}\n")
+        # Fit and evaluate the model
+        # model, y_pred = fit_and_evaluate(model_type, model, X_train, X_test, y_train, y_test, label_dict,
+        #                                  show_auc=True, show_cm=True, show_precision_recall=True)
+        # classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
+        # explainer = shap.TreeExplainer(model)
+
+        # Save the model
+        # pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
+        # pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
+
+        # load the model
+        model = pickle.load(open(f"models_and_explainers/{model_type}_model.pkl", "rb"))
+        explainer = pickle.load(open(f"models_and_explainers/{model_type}_explainer.pkl", "rb"))
+
+        # feature_importance = shap_analysis(explainer, X_test, y_test, y_pred, label_dict)
+        # Generate hypotheses database
+        hypotheses = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict, mapping)
+        hypotheses.to_csv(f"models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
+
+        # Print the run time
+        print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")
 
     # optimize_skope_rules(X_train, X_test, y_train, y_test)
-    plot_only = True
-    rules = rule_based(X_train, X_test, y_train, y_test, label_dict, is_plot_run=True)
-    if not plot_only:
-        rules = convert_rules_to_readable(rules, mapping)
-        rules_df = create_rules_dataframe(rules)
-        rules_df.to_csv("models_hypotheses/rules_df_nonsmoker_fixed.csv", index=False)
+    # plot_only = True
+    # rules = rule_based(X_train, X_test, y_train, y_test, label_dict, is_plot_run=True)
+    # if not plot_only:
+    #     rules = convert_rules_to_readable(rules, mapping)
+    #     rules_df = create_rules_dataframe(rules)
+    #     rules_df.to_csv("models_hypotheses/rules_df_nonsmoker_fixed.csv", index=False)
 
     # get_shap_interactions(explainer, X, y, label_dict) # very slow currently
 

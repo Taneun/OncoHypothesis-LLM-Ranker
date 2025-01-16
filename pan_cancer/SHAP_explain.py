@@ -35,7 +35,7 @@ def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
     return feature_importance_correct
 
 
-def extract_top_features(shap_values, correct_X, print_table=True, num_to_print=10):
+def extract_top_features(shap_values, correct_X, print_table=False, num_to_print=10):
     """
     Compute the top features for correct predictions based on SHAP values.
     """
@@ -95,8 +95,10 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict, mapping,
     hypotheses_db = generate_raw_df(X, explainer, label_dict, min_features, min_support, model,
                                     relative_threshold_percent, y_true)
     hypotheses_db = apply_category_mappings(hypotheses_db, mapping)
+    hypotheses_db = hypotheses_db.sort_values(["cancer_type", 'support'], ascending=[True, False])
+    hypotheses_db = generate_sentences(hypotheses_db)
 
-    return hypotheses_db.sort_values(by="support", ascending=False)
+    return hypotheses_db
 
 
 def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, relative_threshold_percent, y_true):
@@ -151,3 +153,36 @@ def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, 
         hypothesis_counts[frozenset(hypo.items())] for hypo in filtered_hypotheses
     ]
     return hypotheses_db
+
+
+def generate_sentences(df):
+    """
+    Generate sentences from a DataFrame of hypotheses.
+    """
+    sentences = []
+    df = df.drop(columns=["support"])
+    hypotheses_df = df[["cancer_type"]].copy()
+
+    for _, row in df.iterrows():
+        sentence_parts = []
+        for col in df.columns:
+            if col == "cancer_type":
+                continue
+
+            value = row[col]
+            if pd.isna(value) or value == "" or value is None:
+                # Skip NaN values
+                continue
+            elif value in [0, 1]:
+                sentence_parts.append(f"{'is' if value == 1 else 'is NOT'} {col}")
+            else:
+                sentence_parts.append(f"{col} value is {value}")
+
+        sentence = " AND ".join(sentence_parts).replace("_", " ")
+        sentences.append(sentence)
+        print(sentence)
+
+    # hypotheses_df['hypothesis'] = sentences
+    # return hypotheses_df
+    df['hypothesis'] = sentences
+    return df

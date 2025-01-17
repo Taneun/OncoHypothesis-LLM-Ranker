@@ -13,6 +13,46 @@ from rule_based import *
 
 
 def main():
+    """
+    Main entry point for the cancer classification program. Handles command-line argument parsing
+    and orchestrates the execution of either rules-based or model-based classification.
+
+    Command Line Arguments:
+    For rules mode:
+        rules
+            --save_df (bool): Whether to save the rules dataframe to CSV
+            --is_plot_run (bool): Whether to generate and display plots
+
+    For regular mode:
+        regular
+            --model_name (str): Type of model to use ('forest', 'tree', 'xgb')
+            --use_pickled (bool): Whether to use a previously saved model
+            --show_plots (bool): Whether to display performance plots
+            --print_eval (bool): Whether to print evaluation metrics
+            --generate_hypotheses_db (bool): Whether to generate hypotheses database
+            --get_shap_interactions (bool): Whether to calculate SHAP interactions
+
+    Examples:
+        Rules mode:
+        $ python script.py rules --save_df True --is_plot_run True
+
+        Regular mode:
+        $ python script.py regular --model_name forest --show_plots True --print_eval True
+
+    Returns:
+        None
+
+    Raises:
+        FileNotFoundError: If required data files are not found
+        ValueError: If invalid model_name is provided
+
+    Dependencies:
+        - argparse: For command-line argument parsing
+        - Required data files:
+            - all_cancers_data.csv
+            - narrowed_cancers_data.csv
+            - data_for_rules.csv
+    """
     parser = argparse.ArgumentParser(description='Cancer Classification Model')
     subparsers = parser.add_subparsers(dest='mode', help='Choose mode: rules or regular')
 

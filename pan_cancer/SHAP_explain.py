@@ -59,8 +59,6 @@ def get_shap_interactions(explainer, X, y, label_dict):
     Get SHAP interaction values for a multiclass classification model.
     """
     reversed_label_dict = {v: k for k, v in label_dict.items()}
-    # Initialize SHAP TreeExplainer
-    # explainer = shap.TreeExplainer(model)
 
     # Compute SHAP interaction values for multiclass (shape: [n_samples, n_features, n_features, n_classes])
     shap_interaction_values = explainer.shap_interaction_values(X, y)  # (n_samples, n_features, n_features, n_classes)

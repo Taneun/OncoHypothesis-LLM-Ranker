@@ -48,7 +48,6 @@ def calculate_lift(data_for_lift, cancer_probabilities, feature_combinations):
 
             # Store results as a list of tuples
             lifts.append((cancer_type, feature, lift))
-
     # Return lifts as a DataFrame
     lift_data = []
     for cancer_type, feature, lift in lifts:

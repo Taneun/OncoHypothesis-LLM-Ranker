@@ -18,8 +18,11 @@ def calculate_lift(data_for_lift, cancer_probabilities, feature_combinations):
 
     for cancer_type, P_B in tqdm(cancer_probabilities.items(), desc="Cancer Types", unit="type"):
         for feature in tqdm(feature_combinations, desc="Feature Combinations", unit="comb", leave=False):
+
             # Combine the selected features into a single feature
             combined_feature = data_for_lift[list(feature)].astype(str).agg('_'.join, axis=1)
+
+            combined_feature.drop_duplicates(inplace=True)
 
             # Compute value counts for the combined feature
             combined_counts = combined_feature.value_counts()

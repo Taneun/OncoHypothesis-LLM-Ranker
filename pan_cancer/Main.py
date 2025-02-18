@@ -27,6 +27,7 @@ def main():
         regular
             --model_name (str): Type of model to use ('forest', 'tree', 'xgb')
             --use_pickled (bool): Whether to use a previously saved model
+            --gpu (bool): Whether the model should use GPU acceleration
             --show_plots (bool): Whether to display performance plots
             --print_eval (bool): Whether to print evaluation metrics
             --generate_db (bool): Whether to generate hypotheses database
@@ -77,6 +78,8 @@ def main():
                                 help='Generate hypotheses database flag')
     regular_parser.add_argument('--get_shap_interactions', type=bool, default=False,
                                 help='Get SHAP interactions flag')
+    regular_parser.add_argument('--gpu', type=bool, default=False,
+                                help='Use GPU flag')
     args = parser.parse_args()
 
     # Load the data
@@ -123,18 +126,22 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
             show_precision_recall=args.show_plots
         )
         classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
-        explainer = shap.TreeExplainer(model)
+        if args.gpu:
+            explainer = shap.explainers.GPUTreeExplainer(model)
+            pickle.dump(explainer, open(f"pan_cancer/models_and_explainers/{model_type}_gpu_explainer.pkl", "wb"))
+        else:
+            explainer = shap.TreeExplainer(model)
+            pickle.dump(explainer, open(f"pan_cancer/models_and_explainers/{model_type}_explainer.pkl", "wb"))
 
-        # Save the model
         pickle.dump(model, open(f"pan_cancer/models_and_explainers/{model_type}_model.pkl", "wb"))
-        pickle.dump(explainer, open(f"pan_cancer/models_and_explainers/{model_type}_explainer.pkl", "wb"))
 
     if args.generate_db:
         hypotheses = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict, mapping)
         hypotheses.to_csv(f"pan_cancer/models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
 
     if args.get_shap_interactions:
-        get_shap_interactions(explainer, X, y, label_dict)
+        interation_vals = get_shap_interactions(explainer, X, y, label_dict)
+        pickle.dump(interation_vals, open(f"pan_cancer/models_and_explainers/{model_type}_shap_interactions.pkl", "wb"))
 
     print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")
 

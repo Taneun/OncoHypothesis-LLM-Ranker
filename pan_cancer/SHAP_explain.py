@@ -71,7 +71,10 @@ def get_shap_interactions(explainer, X, y, label_dict):
     for i in range(shap_interaction_values.shape[3]):  # Iterate over classes
         shap.summary_plot(shap_interaction_values[:, :, :, i], X, show=False)
         plt.title(f"SHAP Interaction Summary for Class {reversed_label_dict[i]}")
-        plt.show()
+        plt.savefig(f"figures/shap_interaction_summary_class_{reversed_label_dict[i]}.png")
+
+    return shap_interaction_values
+
 
 
 def generate_hypotheses_db(explainer, model, X, y_true, label_dict, mapping,

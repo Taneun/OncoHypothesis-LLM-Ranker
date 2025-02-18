@@ -63,7 +63,7 @@ def calculate_lift(data_for_lift, cancer_probabilities, feature_combinations):
 
 
 if __name__ == "__main__":
-    data_for_lift = pd.read_csv("/data_for_lift.csv", index_col=0)
+    data_for_lift = pd.read_csv("data_for_lift.csv", index_col=0)
     cancer_prob, features_comb = data_prep_lift(data_for_lift)
     lifts_df = calculate_lift(data_for_lift, cancer_prob, features_comb)
     lifts_df.to_csv("lifts.csv", index=False)

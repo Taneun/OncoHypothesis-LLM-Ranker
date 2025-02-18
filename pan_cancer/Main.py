@@ -29,7 +29,7 @@ def main():
             --use_pickled (bool): Whether to use a previously saved model
             --show_plots (bool): Whether to display performance plots
             --print_eval (bool): Whether to print evaluation metrics
-            --generate_hypotheses_db (bool): Whether to generate hypotheses database
+            --generate_db (bool): Whether to generate hypotheses database
             --get_shap_interactions (bool): Whether to calculate SHAP interactions
 
     Examples:
@@ -73,7 +73,7 @@ def main():
                                 help='Show plots flag')
     regular_parser.add_argument('--print_eval', type=bool, default=False,
                                 help='Print evaluation flag')
-    regular_parser.add_argument('--generate_hypotheses_db', type=bool, default=False,
+    regular_parser.add_argument('--generate_db', type=bool, default=False,
                                 help='Generate hypotheses database flag')
     regular_parser.add_argument('--get_shap_interactions', type=bool, default=False,
                                 help='Get SHAP interactions flag')
@@ -81,9 +81,12 @@ def main():
 
     # Load the data
     all_cancers = "all_cancers_data.csv"
-    partial_cancers = "narrowed_cancers_data.csv"
-    data_for_rules = "data_for_rules.csv"
-    X, y, label_dict, mapping = load_data(partial_cancers)
+    partial_cancers = "pan_cancer/narrowed_cancers_data.csv"
+    data_for_rules = "pan_cancer/data_for_rules.csv"
+    if args.mode == 'rules':
+        X, y, label_dict, mapping = load_data(data_for_rules)
+    else:
+        X, y, label_dict, mapping = load_data(partial_cancers)
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
 
     if args.mode == 'rules':
@@ -102,14 +105,14 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
     }
 
     model = model_dict[args.model_name]
-    model_type = {"xgb": "XGBoost", "forest": "Random Forest", "tree": "Decision Tree"}[args.model_name]
+    model_type = {"xgb": "XGBoost", "forest": "Random_Forest", "tree": "Decision_Tree"}[args.model_name]
 
     start_time = time.time()
     print(f"\n\n{'*' * 10} {model_type} {'*' * 10}\n")
 
     if args.use_pickled:
-        model = pickle.load(open(f"models_and_explainers/{model_type}_model.pkl", "rb"))
-        explainer = pickle.load(open(f"models_and_explainers/{model_type}_explainer.pkl", "rb"))
+        model = pickle.load(open(f"pan_cancer/models_and_explainers/{model_type}_model.pkl", "rb"))
+        explainer = pickle.load(open(f"pan_cancer/models_and_explainers/{model_type}_explainer.pkl", "rb"))
     else:
         # Fit and evaluate the model
         model, y_pred = fit_and_evaluate(
@@ -123,12 +126,12 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
         explainer = shap.TreeExplainer(model)
 
         # Save the model
-        pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
-        pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
+        pickle.dump(model, open(f"pan_cancer/models_and_explainers/{model_type}_model.pkl", "wb"))
+        pickle.dump(explainer, open(f"pan_cancer/models_and_explainers/{model_type}_explainer.pkl", "wb"))
 
-    if args.generate_hypotheses_db:
+    if args.generate_db:
         hypotheses = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict, mapping)
-        hypotheses.to_csv(f"models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
+        hypotheses.to_csv(f"pan_cancer/models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
 
     if args.get_shap_interactions:
         get_shap_interactions(explainer, X, y, label_dict)
@@ -142,7 +145,7 @@ def run_rules(X_train, X_test, y_train, y_test, label_dict, mapping, args):
     if args.save_df:
         rules = convert_rules_to_readable(rules, mapping)
         rules_df = create_rules_dataframe(rules)
-        rules_df.to_csv("models_hypotheses/rules_df.csv", index=False)
+        rules_df.to_csv("pan_cancer/models_hypotheses/rules_df.csv", index=False)
 
 
 if __name__ == "__main__":

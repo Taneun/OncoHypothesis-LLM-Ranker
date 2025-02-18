@@ -4,7 +4,7 @@ import pandas as pd
 from tqdm import tqdm
 from matplotlib import pyplot as plt
 from collections import Counter
-from pan_cancer.XGBoost_Model import apply_category_mappings
+from XGBoost_Model import apply_category_mappings
 
 
 def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
@@ -196,7 +196,6 @@ def generate_sentences(df):
     """
     sentences = []
     df = df.drop(columns=["support"])
-    hypotheses_df = df[["cancer_type"]].copy()
 
     for _, row in df.iterrows():
         sentence_parts = []
@@ -215,9 +214,6 @@ def generate_sentences(df):
 
         sentence = " AND ".join(sentence_parts).replace("_", " ")
         sentences.append(sentence)
-        # print(sentence)
 
-    # hypotheses_df['hypothesis'] = sentences
-    # return hypotheses_df
     df['hypothesis'] = sentences
     return df

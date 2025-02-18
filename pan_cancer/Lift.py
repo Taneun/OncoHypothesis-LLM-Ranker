@@ -21,12 +21,11 @@ def calculate_lift(data_for_lift, cancer_probabilities, feature_combinations):
 
             # Combine the selected features into a single feature
             combined_feature = data_for_lift[list(feature)].astype(str).agg('_'.join, axis=1)
-
-            combined_feature.drop_duplicates(inplace=True)
+            combined_feature.reset_index().drop_duplicates().set_index("PATIENT_ID", inplace=True)
 
             # Compute value counts for the combined feature
             combined_counts = combined_feature.value_counts()
-            valid_features = combined_counts[combined_counts >= 100].index
+            valid_features = combined_counts[combined_counts >= 50].index
 
             if len(valid_features) == 0:  # Skip if no valid combined features
                 continue

@@ -1,9 +1,11 @@
 import shap
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
 from matplotlib import pyplot as plt
 from collections import Counter
-from pan_cancer.XGBoost_Model import apply_category_mappings
+from XGBoost_Model import apply_category_mappings
+import torch
 
 
 def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
@@ -54,23 +56,63 @@ def extract_top_features(shap_values, correct_X, print_table=False, num_to_print
     return feature_importance_correct
 
 
-def get_shap_interactions(explainer, X, y, label_dict):
+def get_shap_interactions(explainer, X, y, label_dict, batch_size=100):
     """
-    Get SHAP interaction values for a multiclass classification model.
+    Get SHAP interaction values for a multiclass classification model using batching.
+    Shows progress with tqdm.
     """
-    reversed_label_dict = {v: k for k, v in label_dict.items()}
+    from tqdm import tqdm
 
-    # Compute SHAP interaction values for multiclass (shape: [n_samples, n_features, n_features, n_classes])
-    shap_interaction_values = explainer.shap_interaction_values(X, y)  # (n_samples, n_features, n_features, n_classes)
+    reversed_label_dict = {v: k for k, v in label_dict.items()}
+    n_samples = len(X)
+    n_classes = len(label_dict)
+    n_batches = (n_samples + batch_size - 1) // batch_size  # Ceiling division
+
+    # Process data in batches
+    all_interactions = []
+
+    # Create tqdm progress bar
+    for start_idx in tqdm(range(0, n_samples, batch_size),
+                          total=n_batches,
+                          desc="Computing SHAP interactions"):
+        # Clear GPU memory before each batch
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
+
+        end_idx = min(start_idx + batch_size, n_samples)
+        X_batch = X[start_idx:end_idx]
+        y_batch = y[start_idx:end_idx]
+
+        try:
+            # Compute SHAP interaction values for the batch
+            batch_interactions = explainer.shap_interaction_values(X_batch, y_batch)
+            all_interactions.append(batch_interactions)
+        except Exception as e:
+            print(f"Error processing batch {start_idx // batch_size}: {str(e)}")
+            continue
+
+    # Combine all batches
+    try:
+        shap_interaction_values = np.concatenate(all_interactions, axis=0)
+    except Exception as e:
+        raise ValueError(f"Failed to combine interaction values: {str(e)}")
 
     if len(shap_interaction_values.shape) != 4:
-        raise ValueError("Expected SHAP interaction values to have 4 dimensions (samples, features, features, classes).")
+        raise ValueError(
+            "Expected SHAP interaction values to have 4 dimensions (samples, features, features, classes).")
 
-    # Generate a SHAP interaction summary plot for each class
-    for i in range(shap_interaction_values.shape[3]):  # Iterate over classes
+    # Generate plots with memory cleanup between classes
+    for i in range(n_classes):
+        # Clear memory before each plot
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
+
+        plt.figure(figsize=(10, 8))
         shap.summary_plot(shap_interaction_values[:, :, :, i], X, show=False)
         plt.title(f"SHAP Interaction Summary for Class {reversed_label_dict[i]}")
-        plt.show()
+        plt.savefig(f"figures/shap_interaction_summary_class_{reversed_label_dict[i]}.png")
+        plt.close()  # Explicitly close the figure to free memory
+
+    return shap_interaction_values
+
 
 
 def generate_hypotheses_db(explainer, model, X, y_true, label_dict, mapping,
@@ -98,6 +140,37 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict, mapping,
     return hypotheses_db
 
 
+def calculate_shap_in_batches(explainer, X, batch_size=256):
+    """
+    Calculate SHAP values in batches with a progress bar.
+
+    Parameters:
+    explainer: SHAP explainer object
+    X: Input data
+    batch_size: Size of each batch
+
+    Returns:
+    numpy array: Concatenated SHAP values
+    """
+    shap_list = []
+
+    # Calculate number of batches
+    n_samples = X.shape[0]
+    n_batches = int(np.ceil(n_samples / batch_size))
+
+    # Create batches
+    for i in tqdm(range(n_batches), desc="Calculating SHAP values", unit="batch", colour='blue'):
+        start_idx = i * batch_size
+        end_idx = min((i + 1) * batch_size, n_samples)
+
+        # Calculate SHAP values for batch
+        batch_shap = explainer.shap_values(X[start_idx:end_idx])
+        shap_list.append(batch_shap)
+
+    # Concatenate all batches
+    return np.concatenate(shap_list, axis=0)
+
+
 def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, relative_threshold_percent, y_true):
     # Reverse label dictionary
     reversed_label_dict = {v: k for k, v in label_dict.items()}
@@ -108,13 +181,15 @@ def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, 
     correct_X = X[correct_indices]
     correct_y = y_true[correct_indices]
     # Compute SHAP values for correct predictions
-    shap_values = explainer.shap_values(correct_X)
+    shap_values = calculate_shap_in_batches(explainer, correct_X)
     extract_top_features(shap_values, correct_X)
     # Store hypotheses
     hypotheses = []
     top_feat = set()
     # Iterate over correct predictions
-    for i, sample_idx in enumerate(correct_X.index):
+    for i, sample_idx in tqdm(enumerate(correct_X.index),
+                              desc="Generating hypotheses from correct predictions"
+                              , unit="sample", colour='green'):
         cancer_type = reversed_label_dict[correct_y[i]]
         sample_shap = shap_values[i, :, :]  # Extract SHAP values for the i-th sample across all features and classes
         sample_shap = sample_shap.transpose()[correct_y[i]]
@@ -144,11 +219,15 @@ def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, 
     filtered_hypotheses = [
         dict(hypo) for hypo, count in hypothesis_counts.items() if count >= min_support
     ]
+    # for i, fh in enumerate(filtered_hypotheses):
+    #     if len(fh) < 2:
+    #         print(f"{i}: {fh}")
     # Create hypotheses database
     hypotheses_db = pd.DataFrame(filtered_hypotheses).fillna("")
     hypotheses_db["support"] = [
         hypothesis_counts[frozenset(hypo.items())] for hypo in filtered_hypotheses
     ]
+    print(hypotheses_db.to_string())
     return hypotheses_db
 
 
@@ -158,7 +237,6 @@ def generate_sentences(df):
     """
     sentences = []
     df = df.drop(columns=["support"])
-    hypotheses_df = df[["cancer_type"]].copy()
 
     for _, row in df.iterrows():
         sentence_parts = []
@@ -177,9 +255,6 @@ def generate_sentences(df):
 
         sentence = " AND ".join(sentence_parts).replace("_", " ")
         sentences.append(sentence)
-        print(sentence)
 
-    # hypotheses_df['hypothesis'] = sentences
-    # return hypotheses_df
     df['hypothesis'] = sentences
     return df

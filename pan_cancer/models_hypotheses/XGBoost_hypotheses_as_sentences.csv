@@ -1,0 +1,446 @@
+Hugo_Symbol,cancer_type,Smoke Status,Codons,SNP_event,Event_Info,Sex,Start_Position,TMB (nonsynonymous),Site1_Hugo_Symbol,Chromosome,Protein_position,Exon_Number,End_Position,Diagnosis Age,VAR_TYPE_SX,Site2_Hugo_Symbol,synonymous_variant,Variant_Type,5_prime_UTR_variant,3_prime_UTR_variant,non_coding_transcript_variant,protein_altering_variant,intron_variant,splice_acceptor_variant,splice_donor_variant,frameshift_variant,mature_miRNA_variant,upstream_gene_variant,NMD_transcript_variant,downstream_gene_variant,start_lost,stop_gained,missense_variant,inframe_insertion,start_retained_variant,coding_sequence_variant,non_coding_transcript_exon_variant,inframe_deletion,splice_region_variant,stop_retained_variant,intergenic_variant,stop_lost,hypothesis
+,Breast Carcinoma,,,,BRAF-Intragenic,Female,,,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is BRAF-Intragenic AND Sex value is Female AND Diagnosis Age value is 41-50
+,Breast Carcinoma,,,,ATR-Intragenic,Female,,,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is ATR-Intragenic AND Sex value is Female AND Diagnosis Age value is 41-50
+,Breast Carcinoma,,,,POLR1D-ERBB2,Female,,,POLR1D,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is POLR1D-ERBB2 AND Sex value is Female AND Site1 Hugo Symbol value is POLR1D
+,Breast Carcinoma,,,,CACNB1-RARA,Female,,,,,,,,,,RARA,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is CACNB1-RARA AND Sex value is Female AND Site2 Hugo Symbol value is RARA
+,Breast Carcinoma,,,,MAPRE3-PTEN,Female,,,,,,,,41-50,,PTEN,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is MAPRE3-PTEN AND Sex value is Female AND Diagnosis Age value is 41-50 AND Site2 Hugo Symbol value is PTEN
+,Breast Carcinoma,,,,CASC21-RARA,Female,,,,,,,,,,RARA,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is CASC21-RARA AND Sex value is Female AND Site2 Hugo Symbol value is RARA
+,Colorectal Carcinoma,,,,,Male,,10.63333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND TMB (nonsynonymous) value is 10.63333333
+,Colorectal Carcinoma,,,,,,,8.766666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 8.766666667 AND Diagnosis Age value is 41-50
+,Colorectal Carcinoma,,,,,,,8.533333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 8.533333333 AND Diagnosis Age value is 41-50
+,Colorectal Carcinoma,,,,,Male,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND TMB (nonsynonymous) value is 10.93333333
+,Colorectal Carcinoma,,,,,Male,,5.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND TMB (nonsynonymous) value is 5.933333333
+,Colorectal Carcinoma,,,,,,,4.9,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 4.9 AND Diagnosis Age value is 41-50
+,Colorectal Carcinoma,,,,,,,4.366666667,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 4.366666667 AND Diagnosis Age value is 31-40
+,Colorectal Carcinoma,,,,,,,4.0,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 4.0 AND Diagnosis Age value is 31-40
+,Colorectal Carcinoma,,,,,Female,,3.333333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Female AND TMB (nonsynonymous) value is 3.333333333 AND Diagnosis Age value is 41-50
+APC,Colorectal Carcinoma,Unknown,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown
+,Colorectal Carcinoma,,,,,,,2.766666667,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 2.766666667 AND Diagnosis Age value is 31-40
+,Colorectal Carcinoma,,,,,Female,,2.8,FGFR2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Female AND TMB (nonsynonymous) value is 2.8 AND Site1 Hugo Symbol value is FGFR2
+,Colorectal Carcinoma,,,,,,,3.1,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 3.1 AND Diagnosis Age value is 31-40
+,Colorectal Carcinoma,,,,,,,2.633333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 2.633333333 AND Diagnosis Age value is 31-40
+,Colorectal Carcinoma,,,,TRIM24-BRAF,Female,,2.333333333,TRIM24,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is TRIM24-BRAF AND Sex value is Female AND TMB (nonsynonymous) value is 2.333333333 AND Site1 Hugo Symbol value is TRIM24
+,Colorectal Carcinoma,,,,,Male,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,,,,,,2.3,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 2.3 AND Diagnosis Age value is 41-50
+APC,Colorectal Carcinoma,Unknown,,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown AND VAR TYPE SX value is Truncation
+,Colorectal Carcinoma,Unknown,,,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 3.0
+,Colorectal Carcinoma,Unknown,,,,,,2.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 2.933333333
+,Colorectal Carcinoma,,,,,,,1.733333333,,,,,,21-30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 1.733333333 AND Diagnosis Age value is 21-30
+,Colorectal Carcinoma,,,,,,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 1.866666667 AND Diagnosis Age value is 41-50
+,Colorectal Carcinoma,,,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,,,,Female,,3.1,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Female AND TMB (nonsynonymous) value is 3.1 AND Diagnosis Age value is 31-40
+,Colorectal Carcinoma,,,,,Male,,1.733333333,,,,,,21-30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND TMB (nonsynonymous) value is 1.733333333 AND Diagnosis Age value is 21-30
+APC,Colorectal Carcinoma,Unknown,Cga/Tga,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown AND Codons value is Cga/Tga
+,Colorectal Carcinoma,,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 10.93333333
+,Colorectal Carcinoma,,,,,,,5.733333333,ETV6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 5.733333333 AND Site1 Hugo Symbol value is ETV6
+,Colorectal Carcinoma,Unknown,,,,,,3.066666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 3.066666667
+KRAS,Colorectal Carcinoma,Unknown,,C>T,,,25398281.0,,,12,13.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KRAS AND Smoke Status value is Unknown AND SNP event value is C>T AND Start Position value is 25398281.0 AND Chromosome value is 12 AND Protein position value is 13.0
+APC,Colorectal Carcinoma,,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND TMB (nonsynonymous) value is 10.93333333
+,Colorectal Carcinoma,,,,,,,2.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 2.933333333
+AMER1,Colorectal Carcinoma,Unknown,Cga/Tga,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is AMER1 AND Smoke Status value is Unknown AND Codons value is Cga/Tga AND VAR TYPE SX value is Truncation
+,Colorectal Carcinoma,,,,,Male,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND TMB (nonsynonymous) value is 1.866666667 AND Diagnosis Age value is 41-50
+,Colorectal Carcinoma,,,,,,,2.933333333,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 2.933333333 AND Diagnosis Age value is 51-60
+KRAS,Colorectal Carcinoma,Unknown,,C>T,,Female,,,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KRAS AND Smoke Status value is Unknown AND SNP event value is C>T AND Sex value is Female AND Protein position value is 12.0
+,Colorectal Carcinoma,,,,,,,5.733333333,,,,,,,,NTRK3,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 5.733333333 AND Site2 Hugo Symbol value is NTRK3
+,Colorectal Carcinoma,,cGc/cAc,,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is cGc/cAc AND TMB (nonsynonymous) value is 3.0
+,Colorectal Carcinoma,,,A>C,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is A>C AND TMB (nonsynonymous) value is 10.93333333
+,Colorectal Carcinoma,,,T>G,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is T>G AND TMB (nonsynonymous) value is 10.93333333
+APC,Colorectal Carcinoma,Unknown,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown
+APC,Colorectal Carcinoma,Unknown,Cga/Tga,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown AND Codons value is Cga/Tga AND VAR TYPE SX value is Truncation
+,Colorectal Carcinoma,,,A>-,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is A>- AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,,,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 3.0
+,Colorectal Carcinoma,Unknown,,,,Male,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 1.866666667 AND Diagnosis Age value is 41-50
+APC,Colorectal Carcinoma,Unknown,,->A,,,,,,,,,112175952.0,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown AND SNP event value is ->A AND End Position value is 112175952.0 AND VAR TYPE SX value is Truncation
+,Colorectal Carcinoma,Unknown,,,TMPRSS2-Intergenic,,,,TMPRSS2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is TMPRSS2-Intergenic AND Site1 Hugo Symbol value is TMPRSS2
+KRAS,Colorectal Carcinoma,Unknown,,,,,25398281.0,,,,13.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KRAS AND Smoke Status value is Unknown AND Start Position value is 25398281.0 AND Protein position value is 13.0
+KRAS,Colorectal Carcinoma,Unknown,,C>T,,Female,25398284.0,,,12,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KRAS AND Smoke Status value is Unknown AND SNP event value is C>T AND Sex value is Female AND Start Position value is 25398284.0 AND Chromosome value is 12 AND Protein position value is 12.0
+FAT4,Colorectal Carcinoma,,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is FAT4 AND TMB (nonsynonymous) value is 10.93333333
+FBXW7,Colorectal Carcinoma,,,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is FBXW7 AND TMB (nonsynonymous) value is 10.93333333
+,Colorectal Carcinoma,,gCg/gTg,,,,,10.93333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is gCg/gTg AND TMB (nonsynonymous) value is 10.93333333
+,Colorectal Carcinoma,,,,TRIM24-BRAF,Female,,2.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is TRIM24-BRAF AND Sex value is Female AND TMB (nonsynonymous) value is 2.333333333
+APC,Colorectal Carcinoma,Unknown,,,,,,0.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown AND TMB (nonsynonymous) value is 0.333333333
+,Colorectal Carcinoma,,cGg/cAg,,,,,2.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is cGg/cAg AND TMB (nonsynonymous) value is 2.933333333
+,Colorectal Carcinoma,,,T>-,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is T>- AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,Unknown,,,,,,3.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 3.333333333
+,Colorectal Carcinoma,,cCg/cTg,,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is cCg/cTg AND TMB (nonsynonymous) value is 3.0
+,Colorectal Carcinoma,,,,,,,3.0,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 3.0 AND Diagnosis Age value is 51-60
+KRAS,Colorectal Carcinoma,Unknown,,,,,25398281.0,,,12,13.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KRAS AND Smoke Status value is Unknown AND Start Position value is 25398281.0 AND Chromosome value is 12 AND Protein position value is 13.0
+KRAS,Colorectal Carcinoma,Unknown,,C>T,,Female,25398284.0,,,,12.0,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KRAS AND Smoke Status value is Unknown AND SNP event value is C>T AND Sex value is Female AND Start Position value is 25398284.0 AND Protein position value is 12.0 AND Diagnosis Age value is 41-50
+,Colorectal Carcinoma,Unknown,cGc/cAc,C>T,,,7578406.0,,,17,175.0,05/11,7578406.0,,Substitution/Indel,,0.0,SNP,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Smoke Status value is Unknown AND Codons value is cGc/cAc AND SNP event value is C>T AND Start Position value is 7578406.0 AND Chromosome value is 17 AND Protein position value is 175.0 AND Exon Number value is 05/11 AND End Position value is 7578406.0 AND VAR TYPE SX value is Substitution/Indel AND is NOT synonymous variant AND Variant Type value is SNP AND is NOT 5 prime UTR variant AND is NOT 3 prime UTR variant AND is NOT non coding transcript variant AND is NOT protein altering variant AND is NOT intron variant AND is NOT splice acceptor variant AND is NOT splice donor variant AND is NOT frameshift variant AND is NOT mature miRNA variant AND is NOT upstream gene variant AND is NOT NMD transcript variant AND is NOT downstream gene variant AND is NOT start lost AND is NOT stop gained AND is missense variant AND is NOT inframe insertion AND is NOT start retained variant AND is NOT coding sequence variant AND is NOT non coding transcript exon variant AND is NOT inframe deletion AND is NOT splice region variant AND is NOT stop retained variant AND is NOT intergenic variant AND is NOT stop lost
+,Colorectal Carcinoma,,,A>-,,,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is A>- AND TMB (nonsynonymous) value is 1.866666667 AND Diagnosis Age value is 41-50
+,Colorectal Carcinoma,,,->A,,,,1.866666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is ->A AND TMB (nonsynonymous) value is 1.866666667 AND Diagnosis Age value is 41-50
+APC,Colorectal Carcinoma,Unknown,,T>-,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown AND SNP event value is T>- AND VAR TYPE SX value is Truncation
+KRAS,Colorectal Carcinoma,Unknown,gGt/gAt,C>T,,,25398284.0,,,12,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KRAS AND Smoke Status value is Unknown AND Codons value is gGt/gAt AND SNP event value is C>T AND Start Position value is 25398284.0 AND Chromosome value is 12 AND Protein position value is 12.0
+,Colorectal Carcinoma,Unknown,,C>T,,,,,,,12.0,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is C>T AND Protein position value is 12.0 AND Diagnosis Age value is 31-40
+KRAS,Colorectal Carcinoma,Unknown,,,,,,,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KRAS AND Smoke Status value is Unknown AND Protein position value is 12.0
+APC,Colorectal Carcinoma,Unknown,,->A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown AND SNP event value is ->A
+BRAF,Colorectal Carcinoma,Unknown,gTg/gAg,,,,,,,7,600.0,15/18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is BRAF AND Smoke Status value is Unknown AND Codons value is gTg/gAg AND Chromosome value is 7 AND Protein position value is 600.0 AND Exon Number value is 15/18
+,Colorectal Carcinoma,,,A>-,,,,2.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is A>- AND TMB (nonsynonymous) value is 2.933333333
+AMER1,Colorectal Carcinoma,Unknown,,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is AMER1 AND Smoke Status value is Unknown AND VAR TYPE SX value is Truncation
+APC,Colorectal Carcinoma,Unknown,,,,,112175576.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Smoke Status value is Unknown AND Start Position value is 112175576.0
+BRAF,Colorectal Carcinoma,Unknown,gTg/gAg,,,,,,,7,600.0,15/18,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is BRAF AND Smoke Status value is Unknown AND Codons value is gTg/gAg AND Chromosome value is 7 AND Protein position value is 600.0 AND Exon Number value is 15/18 AND Diagnosis Age value is 41-50
+,Colorectal Carcinoma,,,,,,,0.333333333,,,,,,21-30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.333333333 AND Diagnosis Age value is 21-30
+,Colorectal Carcinoma,,Cgc/Tgc,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is Cgc/Tgc AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,cGt/cAt,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is cGt/cAt AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,gCg/gTg,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is gCg/gTg AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,,->G,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is ->G AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,Cgg/Tgg,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is Cgg/Tgg AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,cGc/cAc,,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is cGc/cAc AND TMB (nonsynonymous) value is 5.733333333
+,Colorectal Carcinoma,,,->A,,,,5.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is ->A AND TMB (nonsynonymous) value is 5.733333333
+APC,Colorectal Carcinoma,,,,,Male,,10.63333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is APC AND Sex value is Male AND TMB (nonsynonymous) value is 10.63333333
+,Colorectal Carcinoma,,,G>A,,,,3.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is G>A AND TMB (nonsynonymous) value is 3.0
+,Esophageal Carcinoma,,,,,,,0.433333333,,,,,,61-70,,KDM6A,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.433333333 AND Diagnosis Age value is 61-70 AND Site2 Hugo Symbol value is KDM6A
+,Esophageal Carcinoma,,,,Intergenic-PTCH1,,,,,,,,,,,PTCH1,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is Intergenic-PTCH1 AND Site2 Hugo Symbol value is PTCH1
+,Esophageal Carcinoma,Unknown,,,Intergenic-SMARCA4,Male,,,,,,,,61-70,,SMARCA4,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is Intergenic-SMARCA4 AND Sex value is Male AND Diagnosis Age value is 61-70 AND Site2 Hugo Symbol value is SMARCA4
+,Esophageal Carcinoma,Unknown,,,,,,0.8,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 0.8 AND Diagnosis Age value is 51-60
+,Esophageal Carcinoma,,,,,,,0.366666667,LRP1B,,,,,,,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.366666667 AND Site1 Hugo Symbol value is LRP1B AND Site2 Hugo Symbol value is LRP1B
+ZNF750,Esophageal Carcinoma,,,,,,,,,,,,,,Truncation,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is ZNF750 AND VAR TYPE SX value is Truncation
+,Esophageal Carcinoma,,,,SPEN-Intragenic,Male,,,,,,,,,,SPEN,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is SPEN-Intragenic AND Sex value is Male AND Site2 Hugo Symbol value is SPEN
+,Esophageal Carcinoma,Unknown,,,,Male,,0.466666667,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.466666667 AND Diagnosis Age value is 61-70
+TP53,Esophageal Carcinoma,Unknown,,,,Male,,0.466666667,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is TP53 AND Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.466666667 AND Diagnosis Age value is 61-70
+,Esophageal Carcinoma,Unknown,,,,Male,,0.366666667,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.366666667 AND Diagnosis Age value is 61-70
+,Esophageal Carcinoma,,,,,,,,PTCH1,,,,,61-70,,ZSCAN22,,,,,,,,,,,,,,,,,,,,,,,,,,,Site1 Hugo Symbol value is PTCH1 AND Diagnosis Age value is 61-70 AND Site2 Hugo Symbol value is ZSCAN22
+,Esophageal Carcinoma,Unknown,,,,Male,,0.5,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.5 AND Diagnosis Age value is 61-70
+,Esophageal Carcinoma,Unknown,,,,,,0.433333333,CDKN2A,,,,,61-70,,CDKN2A,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 0.433333333 AND Site1 Hugo Symbol value is CDKN2A AND Diagnosis Age value is 61-70 AND Site2 Hugo Symbol value is CDKN2A
+,Gallbladder Carcinoma,,,,,Female,,0.366666667,,,,,,,,CDKN2B,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Female AND TMB (nonsynonymous) value is 0.366666667 AND Site2 Hugo Symbol value is CDKN2B
+,Gallbladder Carcinoma,,,,,Female,,1.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Female AND TMB (nonsynonymous) value is 1.4
+,Gallbladder Carcinoma,,,,,Female,,0.233333333,,,,,,,,MTAP,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Female AND TMB (nonsynonymous) value is 0.233333333 AND Site2 Hugo Symbol value is MTAP
+,Gastric Cancer,,,,,Male,,2.9,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND TMB (nonsynonymous) value is 2.9 AND Diagnosis Age value is 71-80
+,Gastric Cancer,,,,,Male,,2.833333333,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND TMB (nonsynonymous) value is 2.833333333 AND Diagnosis Age value is 61-70
+,Gastric Cancer,,,,,,,2.833333333,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 2.833333333 AND Diagnosis Age value is 61-70
+,Gastric Cancer,Unknown,,,,,,2.233333333,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 2.233333333 AND Diagnosis Age value is 61-70
+,Gastric Cancer,,,,PIK3R1-Intragenic,,,0.4,PIK3R1,,,,,,,PIK3R1,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is PIK3R1-Intragenic AND TMB (nonsynonymous) value is 0.4 AND Site1 Hugo Symbol value is PIK3R1 AND Site2 Hugo Symbol value is PIK3R1
+,Gastric Cancer,,,,RAD54B-KIAA1429,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is RAD54B-KIAA1429 AND TMB (nonsynonymous) value is 0.433333333
+,Gastric Cancer,,,,,,,2.233333333,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 2.233333333 AND Diagnosis Age value is 61-70
+,Gastric Cancer,Unknown,,,,,,0.9,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 0.9 AND Diagnosis Age value is 51-60
+,Gastric Cancer,Unknown,,,RNF43-Intragenic,,,,,,,,,71-80,,RNF43,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is RNF43-Intragenic AND Diagnosis Age value is 71-80 AND Site2 Hugo Symbol value is RNF43
+,Gastric Cancer,Unknown,,,CTNNA1-Intragenic,,,,,,,,,,,CTNNA1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is CTNNA1-Intragenic AND Site2 Hugo Symbol value is CTNNA1
+,Gastric Cancer,Unknown,,,VPS13D-TMPRSS2,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is VPS13D-TMPRSS2 AND TMB (nonsynonymous) value is 0.433333333
+,Gastric Cancer,,,,TNFRSF14-TMOD1,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is TNFRSF14-TMOD1 AND TMB (nonsynonymous) value is 0.433333333
+,Gastric Cancer,,,,VPS13D-TMPRSS2,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is VPS13D-TMPRSS2 AND TMB (nonsynonymous) value is 0.433333333
+,Gastric Cancer,Unknown,,,SLC24A2-NTRK2,,,0.433333333,,,,,,,,NTRK2,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is SLC24A2-NTRK2 AND TMB (nonsynonymous) value is 0.433333333 AND Site2 Hugo Symbol value is NTRK2
+,Gastric Cancer,Unknown,,,,Male,,2.9,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 2.9 AND Diagnosis Age value is 71-80
+,Gastric Cancer,Unknown,,,RUNX1-Intragenic,,,0.233333333,,,,,,61-70,,RUNX1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is RUNX1-Intragenic AND TMB (nonsynonymous) value is 0.233333333 AND Diagnosis Age value is 61-70 AND Site2 Hugo Symbol value is RUNX1
+,Gastric Cancer,Unknown,,,USP31-PALB2,,,,,,,,,,,PALB2,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is USP31-PALB2 AND Site2 Hugo Symbol value is PALB2
+,Gastric Cancer,,,A>-,,Male,,2.9,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is A>- AND Sex value is Male AND TMB (nonsynonymous) value is 2.9 AND Diagnosis Age value is 71-80
+,Gastric Cancer,,,,,,,2.9,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 2.9 AND Diagnosis Age value is 71-80
+,Gastric Cancer,,,,KIAA1549-BRAF,,,0.233333333,,,,,,,,BRAF,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is KIAA1549-BRAF AND TMB (nonsynonymous) value is 0.233333333 AND Site2 Hugo Symbol value is BRAF
+,Gastric Cancer,Unknown,,,TNFRSF14-TMOD1,,,0.433333333,,,,,,,,TMOD1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Event Info value is TNFRSF14-TMOD1 AND TMB (nonsynonymous) value is 0.433333333 AND Site2 Hugo Symbol value is TMOD1
+,Gastric Cancer,Unknown,,,,Male,,0.9,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.9 AND Diagnosis Age value is 51-60
+,Intrahepatic Cholangiocarcinoma,Unknown,,,,,,1.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 1.433333333
+,Intrahepatic Cholangiocarcinoma,,,,,,,1.433333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 1.433333333 AND Diagnosis Age value is 41-50
+,Intrahepatic Cholangiocarcinoma,,,,,,,0.166666667,FGFR2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.166666667 AND Site1 Hugo Symbol value is FGFR2
+,Intrahepatic Cholangiocarcinoma,Unknown,,,,,,1.433333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND TMB (nonsynonymous) value is 1.433333333 AND Diagnosis Age value is 41-50
+,Intrahepatic Cholangiocarcinoma,,,,,,,0.133333333,FGFR2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.133333333 AND Site1 Hugo Symbol value is FGFR2
+,Intrahepatic Cholangiocarcinoma,,,,FGFR2-INA,,,0.133333333,FGFR2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is FGFR2-INA AND TMB (nonsynonymous) value is 0.133333333 AND Site1 Hugo Symbol value is FGFR2
+,Liver Hepatocellular Carcinoma,Unknown,,,,,1295228.0,0.266666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.266666667
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.233333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.233333333 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,,,,1295228.0,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.2
+,Liver Hepatocellular Carcinoma,Unknown,,,,,1295228.0,0.133333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.133333333
+,Liver Hepatocellular Carcinoma,,,A>T,,,,,BRD9,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is A>T AND Site1 Hugo Symbol value is BRD9 AND Site2 Hugo Symbol value is TERT
+,Liver Hepatocellular Carcinoma,Unknown,,A>T,,Male,,0.266666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>T AND Sex value is Male AND TMB (nonsynonymous) value is 0.266666667
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.4,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.4 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,,,,1295228.0,0.166666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.166666667
+,Liver Hepatocellular Carcinoma,Unknown,,,,,1295228.0,0.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.3
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.233333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.233333333 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,,,,1295228.0,0.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.333333333
+,Liver Hepatocellular Carcinoma,Unknown,,,,,1295228.0,0.233333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.233333333
+,Liver Hepatocellular Carcinoma,Unknown,,,,,1295228.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Start Position value is 1295228.0
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.2,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.2 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,,,T>A,,,,0.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is T>A AND TMB (nonsynonymous) value is 0.4
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male
+,Liver Hepatocellular Carcinoma,,,,,Male,,,TSC2,,,,,,,TSC2,,,,,,,,,,,,,,,,,,,,,,,,,,,Sex value is Male AND Site1 Hugo Symbol value is TSC2 AND Site2 Hugo Symbol value is TSC2
+,Liver Hepatocellular Carcinoma,,agG/agT,C>A,,Male,,0.3,,,,,7577534.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is agG/agT AND SNP event value is C>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.3 AND End Position value is 7577534.0
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.1,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.1 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,,,,,,,0.266666667,TSC2,,,,,41-50,,TSC2,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.266666667 AND Site1 Hugo Symbol value is TSC2 AND Diagnosis Age value is 41-50 AND Site2 Hugo Symbol value is TSC2
+,Liver Hepatocellular Carcinoma,,,,,,1295228.0,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.133333333 AND Diagnosis Age value is 31-40
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.166666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.166666667 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.133333333 AND Diagnosis Age value is 31-40
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.133333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.133333333 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,G>T,,Male,,0.2,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is G>T AND Sex value is Male AND TMB (nonsynonymous) value is 0.2 AND Diagnosis Age value is 51-60
+,Liver Hepatocellular Carcinoma,Unknown,,A>T,,Male,,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>T AND Sex value is Male AND TMB (nonsynonymous) value is 0.2
+,Liver Hepatocellular Carcinoma,Unknown,,A>T,,Male,,0.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>T AND Sex value is Male AND TMB (nonsynonymous) value is 0.333333333
+,Liver Hepatocellular Carcinoma,Unknown,,,,,,,BRD9,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Site1 Hugo Symbol value is BRD9 AND Site2 Hugo Symbol value is TERT
+,Liver Hepatocellular Carcinoma,,,T>A,,,,,,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is T>A AND Site2 Hugo Symbol value is TERT
+,Liver Hepatocellular Carcinoma,,,T>A,,,,0.466666667,,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is T>A AND TMB (nonsynonymous) value is 0.466666667 AND Site2 Hugo Symbol value is TERT
+,Liver Hepatocellular Carcinoma,,,,,,,0.466666667,,,,,,,,TERT,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.466666667 AND Site2 Hugo Symbol value is TERT
+,Liver Hepatocellular Carcinoma,Unknown,,A>T,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>T AND Sex value is Male
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.266666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.266666667
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.233333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.233333333
+,Liver Hepatocellular Carcinoma,Unknown,,A>G,,Male,,0.266666667,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>G AND Sex value is Male AND TMB (nonsynonymous) value is 0.266666667 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.4
+,Liver Hepatocellular Carcinoma,Unknown,,A>T,,Male,,0.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>T AND Sex value is Male AND TMB (nonsynonymous) value is 0.4
+,Liver Hepatocellular Carcinoma,Unknown,,T>C,,Male,,0.333333333,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>C AND Sex value is Male AND TMB (nonsynonymous) value is 0.333333333 AND Diagnosis Age value is 51-60
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.333333333,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.333333333 AND Diagnosis Age value is 51-60
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.133333333 AND Diagnosis Age value is 31-40
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.133333333 AND Diagnosis Age value is 31-40
+,Liver Hepatocellular Carcinoma,Unknown,,A>T,,Male,,0.233333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>T AND Sex value is Male AND TMB (nonsynonymous) value is 0.233333333 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.333333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.333333333
+CTNNB1,Liver Hepatocellular Carcinoma,,,A>G,,,41266098.0,,,,32.0,03/15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is CTNNB1 AND SNP event value is A>G AND Start Position value is 41266098.0 AND Protein position value is 32.0 AND Exon Number value is 03/15
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.2,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.2 AND Diagnosis Age value is 51-60
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.133333333,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.133333333 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND Diagnosis Age value is 51-60
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.666666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.666666667
+,Liver Hepatocellular Carcinoma,Unknown,,T>A,,Male,,0.533333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is T>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.533333333
+,Liver Hepatocellular Carcinoma,Unknown,,A>T,,Male,,0.3,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>T AND Sex value is Male AND TMB (nonsynonymous) value is 0.3 AND Diagnosis Age value is 41-50
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,1295228.0,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND Start Position value is 1295228.0 AND TMB (nonsynonymous) value is 0.2
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,,TSC2,,,,,,,TSC2,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND Site1 Hugo Symbol value is TSC2 AND Site2 Hugo Symbol value is TSC2
+,Liver Hepatocellular Carcinoma,Unknown,,,,Male,,0.233333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND Sex value is Male AND TMB (nonsynonymous) value is 0.233333333 AND Diagnosis Age value is 31-40
+,Liver Hepatocellular Carcinoma,Unknown,,A>T,,Male,,0.466666667,,,,,,51-60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Unknown AND SNP event value is A>T AND Sex value is Male AND TMB (nonsynonymous) value is 0.466666667 AND Diagnosis Age value is 51-60
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.166666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.166666667
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Diagnosis Age value is 61-70
+,Non Small Cell Lung Cancer,Smoker,,G>T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is G>T
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.766666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.766666667
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.133333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.133333333
+,Non Small Cell Lung Cancer,Smoker,,,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Sex value is Male
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Diagnosis Age value is 71-80
+,Non Small Cell Lung Cancer,Nonsmoker,,C>A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND SNP event value is C>A
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.7
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Diagnosis Age value is 61-70
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.2
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.566666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.566666667
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,1.366666667,NKAIN2,,,,,,,FANCE,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 1.366666667 AND Site1 Hugo Symbol value is NKAIN2 AND Site2 Hugo Symbol value is FANCE
+,Non Small Cell Lung Cancer,Nonsmoker,,,,Male,,1.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Sex value is Male AND TMB (nonsynonymous) value is 1.6
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.1
+,Non Small Cell Lung Cancer,Smoker,,,,Male,,1.566666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Sex value is Male AND TMB (nonsynonymous) value is 1.566666667
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.233333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.233333333
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,STK11,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site2 Hugo Symbol value is STK11
+,Non Small Cell Lung Cancer,Nonsmoker,,G>T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND SNP event value is G>T
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Diagnosis Age value is 71-80
+,Non Small Cell Lung Cancer,Smoker,,,,,,1.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 1.2
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.266666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.266666667
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker
+,Non Small Cell Lung Cancer,Smoker,,G>C,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is G>C
+,Non Small Cell Lung Cancer,Smoker,,,,,,,LRP1B,,,,,,,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is LRP1B AND Site2 Hugo Symbol value is LRP1B
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.966666667,,,,,,,,SORCS3,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.966666667 AND Site2 Hugo Symbol value is SORCS3
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.9
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.9,FOXP2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.9 AND Site1 Hugo Symbol value is FOXP2
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.866666667,,,,,,,,CDKN2A,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.866666667 AND Site2 Hugo Symbol value is CDKN2A
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.866666667,LRP1B,,,,,,,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.866666667 AND Site1 Hugo Symbol value is LRP1B AND Site2 Hugo Symbol value is LRP1B
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.133333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.133333333
+,Non Small Cell Lung Cancer,Nonsmoker,,G>C,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND SNP event value is G>C
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.9,,,,,,,,FOXL2,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.9 AND Site2 Hugo Symbol value is FOXL2
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.866666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.866666667
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.833333333,ANKS3,,,,,,,CREBBP,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.833333333 AND Site1 Hugo Symbol value is ANKS3 AND Site2 Hugo Symbol value is CREBBP
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.6
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.7,,,,,,,,GALNT1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.7 AND Site2 Hugo Symbol value is GALNT1
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.733333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.733333333
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,APC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is APC
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.933333333,LRP1B,,,,,,,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.933333333 AND Site1 Hugo Symbol value is LRP1B AND Site2 Hugo Symbol value is LRP1B
+,Non Small Cell Lung Cancer,Smoker,,,,,,,CFTR,,,,,,,CFTR,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is CFTR AND Site2 Hugo Symbol value is CFTR
+,Non Small Cell Lung Cancer,Smoker,,,,,,,NF1,,,,,,,SLC47A1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is NF1 AND Site2 Hugo Symbol value is SLC47A1
+,Non Small Cell Lung Cancer,Smoker,,T>A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is T>A
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.166666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.166666667
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.966666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.966666667
+,Non Small Cell Lung Cancer,Smoker,,,,,,,ARID1A,,,,,,,ARID1A,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is ARID1A AND Site2 Hugo Symbol value is ARID1A
+,Non Small Cell Lung Cancer,Smoker,,,,,,,SLIT2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is SLIT2
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.1,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.1 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,C>G,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>G
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,NF1,,,,,,,ITGA2,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is NF1 AND Site2 Hugo Symbol value is ITGA2
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,SS18,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site2 Hugo Symbol value is SS18
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.533333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.533333333
+,Non Small Cell Lung Cancer,Smoker,,,,,,,FGFR3,,,,,,,TACC3,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is FGFR3 AND Site2 Hugo Symbol value is TACC3
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker
+EGFR,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Smoker
+,Non Small Cell Lung Cancer,Smoker,,,,,,,CDKN2A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is CDKN2A
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,NOTCH1,,,,,,,NOTCH1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is NOTCH1 AND Site2 Hugo Symbol value is NOTCH1
+EGFR,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,21/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Smoker AND Exon Number value is 21/28
+,Non Small Cell Lung Cancer,Smoker,,C>-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>-
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND is splice acceptor variant
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,858.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND Protein position value is 858.0
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,TP53,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is TP53
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.7,,,,,,,,CDKN2B,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.7 AND Site2 Hugo Symbol value is CDKN2B
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.6,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.6 AND Diagnosis Age value is 71-80
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker
+,Non Small Cell Lung Cancer,Nonsmoker,,,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Sex value is Male
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Chromosome value is 7
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND Exon Number value is 19/28
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,X,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Chromosome value is X
+TP53,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is TP53 AND Smoke Status value is Smoker
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.666666667,PTEN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.666666667 AND Site1 Hugo Symbol value is PTEN
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.066666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.066666667
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.1
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.5
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.166666667,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.166666667 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,STK11,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site2 Hugo Symbol value is STK11
+,Non Small Cell Lung Cancer,Smoker,,,,,,,POLE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is POLE
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,LRP1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is LRP1
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,0.766666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND TMB (nonsynonymous) value is 0.766666667
+,Non Small Cell Lung Cancer,Smoker,,,,Male,,0.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Sex value is Male AND TMB (nonsynonymous) value is 0.9
+,Non Small Cell Lung Cancer,Nonsmoker,,C>G,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND SNP event value is C>G
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.133333333,CD74,,,,,,,ROS1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.133333333 AND Site1 Hugo Symbol value is CD74 AND Site2 Hugo Symbol value is ROS1
+,Non Small Cell Lung Cancer,Smoker,Gag/Aag,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Codons value is Gag/Aag
+,Non Small Cell Lung Cancer,Smoker,,G>T,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is G>T AND Sex value is Male
+,Non Small Cell Lung Cancer,Smoker,,,,,,,DICER1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is DICER1
+,Non Small Cell Lung Cancer,Smoker,,,,,,,PTEN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is PTEN
+,Non Small Cell Lung Cancer,Nonsmoker,tCa/tGa,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Codons value is tCa/tGa
+,Non Small Cell Lung Cancer,Nonsmoker,,T>A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND SNP event value is T>A
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.166666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.166666667
+,Non Small Cell Lung Cancer,Nonsmoker,,,RARA-TUBG2,,,,RARA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Event Info value is RARA-TUBG2 AND Site1 Hugo Symbol value is RARA
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.133333333,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.133333333 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,NEK11,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site2 Hugo Symbol value is NEK11
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,MEN1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is MEN1
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,41-50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Diagnosis Age value is 41-50
+,Non Small Cell Lung Cancer,,,,,,,0.133333333,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.133333333 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.2
+EGFR,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Smoker AND Exon Number value is 19/28
+,Non Small Cell Lung Cancer,Smoker,,,,,,,CHD2,,,,,71-80,,CHD2,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is CHD2 AND Diagnosis Age value is 71-80 AND Site2 Hugo Symbol value is CHD2
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.033333333,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.033333333 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.566666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.566666667
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.066666667,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.066666667 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,0.966666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND TMB (nonsynonymous) value is 0.966666667
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,CD74,,,,,,,ROS1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is CD74 AND Site2 Hugo Symbol value is ROS1
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,80+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Diagnosis Age value is 80+
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,AXIN2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is AXIN2
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,745.0,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND Protein position value is 745.0 AND Exon Number value is 19/28
+,Non Small Cell Lung Cancer,Nonsmoker,Gag/Aag,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Codons value is Gag/Aag
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.033333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.033333333
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,746.0,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND Protein position value is 746.0 AND Exon Number value is 19/28
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,0.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND TMB (nonsynonymous) value is 0.9
+,Non Small Cell Lung Cancer,Smoker,,,,,,,ATAD1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is ATAD1
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.466666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.466666667
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Chromosome value is 8
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Chromosome value is 7
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND is splice acceptor variant
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.2,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.2 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,20/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND Exon Number value is 20/28
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.433333333
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,X,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Chromosome value is X
+,Non Small Cell Lung Cancer,Nonsmoker,,C>-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND SNP event value is C>-
+,Non Small Cell Lung Cancer,Smoker,,G>C,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is G>C AND Sex value is Male
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,CIC,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site2 Hugo Symbol value is CIC
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.166666667,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.166666667 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,,,,,,PRKDC,,,,,,,PRKDC,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is PRKDC AND Site2 Hugo Symbol value is PRKDC
+,Non Small Cell Lung Cancer,Smoker,tCa/tGa,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Codons value is tCa/tGa
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.1,,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.1 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,Cag/Tag,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Codons value is Cag/Tag
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker
+,Non Small Cell Lung Cancer,Smoker,Gaa/Aaa,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Codons value is Gaa/Aaa
+,Non Small Cell Lung Cancer,Smoker,Gag/Cag,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Codons value is Gag/Cag
+,Non Small Cell Lung Cancer,Smoker,,C>A,,Male,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND Sex value is Male
+,Non Small Cell Lung Cancer,Nonsmoker,,C>A,,Male,,1.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND SNP event value is C>A AND Sex value is Male AND TMB (nonsynonymous) value is 1.6
+,Non Small Cell Lung Cancer,Smoker,,,,,,,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,SMARCA4,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site2 Hugo Symbol value is SMARCA4
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.933333333,LRP1B,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.933333333 AND Site1 Hugo Symbol value is LRP1B
+,Non Small Cell Lung Cancer,Smoker,,,,,,,ANKRD33B,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is ANKRD33B
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.133333333,SDC4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.133333333 AND Site1 Hugo Symbol value is SDC4
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,NFATC3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is NFATC3
+,Non Small Cell Lung Cancer,Smoker,,,,,,,SDC4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is SDC4
+,Non Small Cell Lung Cancer,Smoker,,,,,,,RB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is RB1
+,Non Small Cell Lung Cancer,Smoker,,,,,,,NCOA2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is NCOA2
+EGFR,Non Small Cell Lung Cancer,,,T>G,,,,0.133333333,,7,858.0,21/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND SNP event value is T>G AND TMB (nonsynonymous) value is 0.133333333 AND Chromosome value is 7 AND Protein position value is 858.0 AND Exon Number value is 21/28
+EGFR,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,20/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Smoker AND Exon Number value is 20/28
+,Non Small Cell Lung Cancer,,,C>A,,Male,,0.533333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is C>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.533333333
+EGFR,Non Small Cell Lung Cancer,,,T>G,,,,,,7,858.0,21/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND SNP event value is T>G AND Chromosome value is 7 AND Protein position value is 858.0 AND Exon Number value is 21/28
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND Diagnosis Age value is 71-80
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,37.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Protein position value is 37.0
+SPTA1,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is SPTA1 AND Smoke Status value is Smoker
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,0.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND TMB (nonsynonymous) value is 0.6
+,Non Small Cell Lung Cancer,Smoker,,,,,,,CHD2,,,,,,,CHD2,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is CHD2 AND Site2 Hugo Symbol value is CHD2
+,Non Small Cell Lung Cancer,Nonsmoker,tCc/tTc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Codons value is tCc/tTc
+,Non Small Cell Lung Cancer,,,C>A,,Male,,0.933333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SNP event value is C>A AND Sex value is Male AND TMB (nonsynonymous) value is 0.933333333
+,Non Small Cell Lung Cancer,Smoker,,,,,,,PRDM1,,,,,,,PRDM1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is PRDM1 AND Site2 Hugo Symbol value is PRDM1
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,03/06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Exon Number value is 03/06
+,Non Small Cell Lung Cancer,Smoker,,A>T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is A>T
+,Non Small Cell Lung Cancer,Nonsmoker,tCa/tTa,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Codons value is tCa/tTa
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Chromosome value is 9
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Chromosome value is 8
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,RAD51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is RAD51
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,NF1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site2 Hugo Symbol value is NF1
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.133333333,SLC4A1AP,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.133333333 AND Site1 Hugo Symbol value is SLC4A1AP AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,0.7,,,,,,,,CDKN2B,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND TMB (nonsynonymous) value is 0.7 AND Site2 Hugo Symbol value is CDKN2B
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,CDKN2B,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site2 Hugo Symbol value is CDKN2B
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,34.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Protein position value is 34.0
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.6
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.7,,,,,,,,FAT1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.7 AND Site2 Hugo Symbol value is FAT1
+,Non Small Cell Lung Cancer,Smoker,,,,,,,CTNNA1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is CTNNA1
+,Non Small Cell Lung Cancer,Smoker,,,,,,,POLE,,,,,,,POLE,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is POLE AND Site2 Hugo Symbol value is POLE
+,Non Small Cell Lung Cancer,Smoker,,,,,,,EGFR,,,,,,,EGFR,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is EGFR AND Site2 Hugo Symbol value is EGFR
+,Non Small Cell Lung Cancer,Smoker,,,,,,,DICER1,,,,,,,DICER1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is DICER1 AND Site2 Hugo Symbol value is DICER1
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.766666667,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.766666667 AND Diagnosis Age value is 61-70
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,03/06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Exon Number value is 03/06
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,KIF5B,,,,,,,RET,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is KIF5B AND Site2 Hugo Symbol value is RET
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.1,EML6,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.1 AND Site1 Hugo Symbol value is EML6 AND Site2 Hugo Symbol value is ALK
+EGFR,Non Small Cell Lung Cancer,Smoker,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Smoker AND Chromosome value is 7
+SPTA1,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is SPTA1 AND Smoke Status value is Nonsmoker
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,03/03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Exon Number value is 03/03
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.066666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.066666667
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND is 5 prime UTR variant
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.433333333
+,Non Small Cell Lung Cancer,Nonsmoker,Cag/Tag,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Codons value is Cag/Tag
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.233333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.233333333
+EGFR,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,7,858.0,21/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Nonsmoker AND Chromosome value is 7 AND Protein position value is 858.0 AND Exon Number value is 21/28
+NFE2L2,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is NFE2L2 AND Smoke Status value is Smoker
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,,,9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND Chromosome value is 9
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,Smoke Status value is Nonsmoker AND is inframe insertion
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Protein position value is 12.0
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Protein position value is 12.0
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,MICAL3,,,,,,,PDGFB,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is MICAL3 AND Site2 Hugo Symbol value is PDGFB
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,44.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Protein position value is 44.0
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,02/03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Exon Number value is 02/03
+,Non Small Cell Lung Cancer,Nonsmoker,,,,Female,,,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Sex value is Female AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,,,Smoke Status value is Nonsmoker AND is stop gained
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,SDHA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is SDHA
+EGFR,Non Small Cell Lung Cancer,Smoker,,,,,,,,,745.0,19/28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is EGFR AND Smoke Status value is Smoker AND Protein position value is 745.0 AND Exon Number value is 19/28
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.533333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.533333333
+,Non Small Cell Lung Cancer,Smoker,,,,,,,NTRK3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is NTRK3
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.1,EZR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.1 AND Site1 Hugo Symbol value is EZR
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,DAXX,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is DAXX
+,Non Small Cell Lung Cancer,Smoker,,,,,,,FAT3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is FAT3
+,Non Small Cell Lung Cancer,Smoker,,,,,,,ARID1A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is ARID1A
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,34.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Protein position value is 34.0
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND Chromosome value is 7
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,TSC2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is TSC2
+,Non Small Cell Lung Cancer,,,,,,,0.066666667,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.066666667 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,02/07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Exon Number value is 02/07
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,603.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Protein position value is 603.0
+,Non Small Cell Lung Cancer,Smoker,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,,,,,,,,,Smoke Status value is Smoker AND is inframe insertion
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.033333333,EML4,,,,,,,ALK,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.033333333 AND Site1 Hugo Symbol value is EML4 AND Site2 Hugo Symbol value is ALK
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,,,,,,,,,CIC,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND Site2 Hugo Symbol value is CIC
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.133333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.133333333
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,CD47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is CD47
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,PMS2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is PMS2
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,EPHB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is EPHB1
+,Non Small Cell Lung Cancer,Nonsmoker,,G>T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND SNP event value is G>T
+,Non Small Cell Lung Cancer,Smoker,,,,,,,CTNNA1,,,,,,,FBXO38,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND Site1 Hugo Symbol value is CTNNA1 AND Site2 Hugo Symbol value is FBXO38
+,Non Small Cell Lung Cancer,Smoker,,C>A,,,,,,,,,,61-70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is C>A AND Diagnosis Age value is 61-70
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,CHD4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is CHD4
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.2,CHD4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.2 AND Site1 Hugo Symbol value is CHD4
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.1,CD74,,,,,,,ROS1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.1 AND Site1 Hugo Symbol value is CD74 AND Site2 Hugo Symbol value is ROS1
+,Non Small Cell Lung Cancer,Smoker,,G>T,,Male,,1.566666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND SNP event value is G>T AND Sex value is Male AND TMB (nonsynonymous) value is 1.566666667
+,Non Small Cell Lung Cancer,Smoker,,,,,,0.6,,,,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.6 AND Diagnosis Age value is 71-80
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,0.1,CDKN2A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND TMB (nonsynonymous) value is 0.1 AND Site1 Hugo Symbol value is CDKN2A
+,Non Small Cell Lung Cancer,Nonsmoker,,,,,,,GOPC,,,,,,,ROS1,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Nonsmoker AND Site1 Hugo Symbol value is GOPC AND Site2 Hugo Symbol value is ROS1
+,Pancreatic Cancer,,,,,,25398284.0,0.133333333,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Start Position value is 25398284.0 AND TMB (nonsynonymous) value is 0.133333333 AND Protein position value is 12.0
+,Pancreatic Cancer,,gGt/gTt,,,,25398284.0,0.133333333,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is gGt/gTt AND Start Position value is 25398284.0 AND TMB (nonsynonymous) value is 0.133333333 AND Protein position value is 12.0
+,Pancreatic Cancer,,gGt/gTt,,,,25398284.0,0.1,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is gGt/gTt AND Start Position value is 25398284.0 AND TMB (nonsynonymous) value is 0.1 AND Protein position value is 12.0
+,Pancreatic Cancer,,,,,,25398284.0,0.166666667,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Start Position value is 25398284.0 AND TMB (nonsynonymous) value is 0.166666667 AND Protein position value is 12.0
+,Pancreatic Cancer,,gGt/gTt,,,,25398284.0,0.166666667,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is gGt/gTt AND Start Position value is 25398284.0 AND TMB (nonsynonymous) value is 0.166666667 AND Protein position value is 12.0
+,Pancreatic Cancer,,,,,,25398284.0,0.1,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Start Position value is 25398284.0 AND TMB (nonsynonymous) value is 0.1 AND Protein position value is 12.0
+,Pancreatic Cancer,,Ggt/Cgt,,,,25398285.0,0.133333333,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is Ggt/Cgt AND Start Position value is 25398285.0 AND TMB (nonsynonymous) value is 0.133333333 AND Protein position value is 12.0
+,Pancreatic Cancer,,Ggt/Cgt,,,,,0.166666667,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is Ggt/Cgt AND TMB (nonsynonymous) value is 0.166666667 AND Protein position value is 12.0
+,Pancreatic Cancer,,gGt/gTt,,,,25398284.0,0.233333333,,,12.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Codons value is gGt/gTt AND Start Position value is 25398284.0 AND TMB (nonsynonymous) value is 0.233333333 AND Protein position value is 12.0
+,Pancreatic Cancer,,,,,,25398284.0,0.233333333,,,12.0,,,71-80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Start Position value is 25398284.0 AND TMB (nonsynonymous) value is 0.233333333 AND Protein position value is 12.0 AND Diagnosis Age value is 71-80
+,Small Cell Lung Cancer,Smoker,,,,,,1.033333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 1.033333333
+,Small Cell Lung Cancer,Smoker,,,,,,0.433333333,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Smoke Status value is Smoker AND TMB (nonsynonymous) value is 0.433333333
+RB1,Small Cell Lung Cancer,Smoker,,,,,,,,13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is RB1 AND Smoke Status value is Smoker AND Chromosome value is 13
+RB1,Small Cell Lung Cancer,Smoker,,,,Male,,,,13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is RB1 AND Smoke Status value is Smoker AND Sex value is Male AND Chromosome value is 13
+,Soft Tissue Sarcoma,,,,,,,,ASPSCR1,,,,,31-40,,TFE3,,,,,,,,,,,,,,,,,,,,,,,,,,,Site1 Hugo Symbol value is ASPSCR1 AND Diagnosis Age value is 31-40 AND Site2 Hugo Symbol value is TFE3
+,Soft Tissue Sarcoma,,,,PRKDC-KCNV1,,,0.333333333,,,,,,41-50,,KCNV1,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is PRKDC-KCNV1 AND TMB (nonsynonymous) value is 0.333333333 AND Diagnosis Age value is 41-50 AND Site2 Hugo Symbol value is KCNV1
+,Soft Tissue Sarcoma,,,,,,,0.066666667,,,,,,0-10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.066666667 AND Diagnosis Age value is 0-10
+KIT,Soft Tissue Sarcoma,,,,,,,0.033333333,,,,11/21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hugo Symbol value is KIT AND TMB (nonsynonymous) value is 0.033333333 AND Exon Number value is 11/21
+,Soft Tissue Sarcoma,,,,EWSR1-WT1,,,,,,,,,11-20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is EWSR1-WT1 AND Diagnosis Age value is 11-20
+,Soft Tissue Sarcoma,,,,FUBP1-Intragenic,,,0.1,,,,,,21-30,,FUBP1,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is FUBP1-Intragenic AND TMB (nonsynonymous) value is 0.1 AND Diagnosis Age value is 21-30 AND Site2 Hugo Symbol value is FUBP1
+,Soft Tissue Sarcoma,,,,FUS-DDIT3,,,0.133333333,,,,,,31-40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is FUS-DDIT3 AND TMB (nonsynonymous) value is 0.133333333 AND Diagnosis Age value is 31-40
+,Soft Tissue Sarcoma,,,,FUS-DDIT3,,,0.1,,,,,,,,DDIT3,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is FUS-DDIT3 AND TMB (nonsynonymous) value is 0.1 AND Site2 Hugo Symbol value is DDIT3
+,Soft Tissue Sarcoma,,,,,,,0.066666667,,,,,,11-20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TMB (nonsynonymous) value is 0.066666667 AND Diagnosis Age value is 11-20
+,Soft Tissue Sarcoma,,,,FUS-DDIT3,,,0.066666667,,,,,,31-40,,DDIT3,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is FUS-DDIT3 AND TMB (nonsynonymous) value is 0.066666667 AND Diagnosis Age value is 31-40 AND Site2 Hugo Symbol value is DDIT3
+,Soft Tissue Sarcoma,,,,FUS-DDIT3,,,0.066666667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Event Info value is FUS-DDIT3 AND TMB (nonsynonymous) value is 0.066666667

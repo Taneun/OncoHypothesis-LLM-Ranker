@@ -86,8 +86,8 @@ def main():
 
     # Load the data
     all_cancers = "all_cancers_data.csv"
-    partial_cancers = "pan_cancer/narrowed_cancers_data.csv"
-    data_for_rules = "pan_cancer/data_for_rules.csv"
+    partial_cancers = "narrowed_cancers_data.csv"
+    data_for_rules = "data_for_rules.csv"
     if args.mode == 'rules':
         X, y, label_dict, mapping = load_data(data_for_rules)
     else:
@@ -116,8 +116,8 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
     print(f"\n\n{'*' * 10} {model_type} {'*' * 10}\n")
 
     if args.use_pickled:
-        model = pickle.load(open(f"pan_cancer/models_and_explainers/{model_type}_model.pkl", "rb"))
-        explainer = pickle.load(open(f"pan_cancer/models_and_explainers/{model_type}_explainer.pkl", "rb"))
+        model = pickle.load(open(f"models_and_explainers/{model_type}_model.pkl", "rb"))
+        explainer = pickle.load(open(f"models_and_explainers/{model_type}_explainer.pkl", "rb"))
     else:
         # Fit and evaluate the model
         model, y_pred = fit_and_evaluate(
@@ -131,20 +131,20 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
             classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
         if args.gpu:
             explainer = shap.explainers.GPUTreeExplainer(model)
-            pickle.dump(explainer, open(f"pan_cancer/models_and_explainers/{model_type}_gpu_explainer.pkl", "wb"))
+            pickle.dump(explainer, open(f"models_and_explainers/{model_type}_gpu_explainer.pkl", "wb"))
         else:
             explainer = shap.TreeExplainer(model)
-            pickle.dump(explainer, open(f"pan_cancer/models_and_explainers/{model_type}_explainer.pkl", "wb"))
+            pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
 
-        pickle.dump(model, open(f"pan_cancer/models_and_explainers/{model_type}_model.pkl", "wb"))
+        pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
 
     if args.generate_db:
         hypotheses = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict, mapping)
-        hypotheses.to_csv(f"pan_cancer/models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
+        hypotheses.to_csv(f"models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
 
     if args.get_shap_interactions:
         interation_vals = get_shap_interactions(explainer, X, y, label_dict)
-        pickle.dump(interation_vals, open(f"pan_cancer/models_and_explainers/{model_type}_shap_interactions.pkl", "wb"))
+        pickle.dump(interation_vals, open(f"models_and_explainers/{model_type}_shap_interactions.pkl", "wb"))
 
     print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")
 
@@ -155,7 +155,7 @@ def run_rules(X_train, X_test, y_train, y_test, label_dict, mapping, args):
     if args.save_df:
         rules = convert_rules_to_readable(rules, mapping)
         rules_df = create_rules_dataframe(rules)
-        rules_df.to_csv("pan_cancer/models_hypotheses/rules_df.csv", index=False)
+        rules_df.to_csv("models_hypotheses/rules_df.csv", index=False)
 
 
 if __name__ == "__main__":

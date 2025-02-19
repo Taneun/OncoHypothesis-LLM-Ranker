@@ -116,7 +116,7 @@ def get_shap_interactions(explainer, X, y, label_dict, batch_size=100):
 
 
 def generate_hypotheses_db(explainer, model, X, y_true, label_dict, mapping,
-                           min_features=2, relative_threshold_percent=10, min_support=3):
+                           min_features=3, relative_threshold_percent=10, min_support=3):
     """
     Generate a hypotheses database from an XGBoost model's correct predictions.
 
@@ -133,10 +133,9 @@ def generate_hypotheses_db(explainer, model, X, y_true, label_dict, mapping,
     """
     hypotheses_db = generate_raw_df(X, explainer, label_dict, min_features, min_support, model,
                                     relative_threshold_percent, y_true)
-    hypotheses_db = apply_category_mappings(hypotheses_db, mapping)
+    hypotheses_db = apply_category_mappings(hypotheses_db, mapping) # here
     hypotheses_db = hypotheses_db.sort_values(["cancer_type", 'support'], ascending=[True, False])
     hypotheses_db = generate_sentences(hypotheses_db)
-
     return hypotheses_db
 
 
@@ -202,10 +201,15 @@ def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, 
             top_k_features = min_features
         else:
             top_k_features = len(significant_indices)
-
-        # Get top K features contributing to the prediction
-        top_features_indices = sample_shap.argsort()[-top_k_features:][::-1]
+        # Get top K features contributing to the prediction, adding 1 to handle smoke status
+        top_features_indices = sample_shap.argsort()[-(top_k_features + 1):][::-1]
         top_features = [(X.columns[idx], correct_X.iloc[i, idx]) for idx in top_features_indices]
+        # Remove the feature Smoke Status ifs its unknown and add another in its place if it exists
+        if ("Smoke Status", 2) in top_features:
+            top_features.remove(("Smoke Status", 2))
+        else:
+            # if Smoke Status is not in the top features, remove the extra feature
+            top_features = top_features[:-1]
         for f in top_features:
             top_feat.add(f[0])
 
@@ -219,15 +223,10 @@ def generate_raw_df(X, explainer, label_dict, min_features, min_support, model, 
     filtered_hypotheses = [
         dict(hypo) for hypo, count in hypothesis_counts.items() if count >= min_support
     ]
-    # for i, fh in enumerate(filtered_hypotheses):
-    #     if len(fh) < 2:
-    #         print(f"{i}: {fh}")
-    # Create hypotheses database
     hypotheses_db = pd.DataFrame(filtered_hypotheses).fillna("")
     hypotheses_db["support"] = [
         hypothesis_counts[frozenset(hypo.items())] for hypo in filtered_hypotheses
     ]
-    print(hypotheses_db.to_string())
     return hypotheses_db
 
 

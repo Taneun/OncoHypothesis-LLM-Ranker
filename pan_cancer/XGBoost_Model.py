@@ -27,7 +27,7 @@ def load_data(filepath):
     X = data.drop(features_to_drop, axis=1)
     y, uniques = pd.factorize(data['Cancer Type'])
     label_dict = {cancer: idx for idx, cancer in enumerate(cancer_types)}
-
+    X.replace(-1, np.nan, inplace=True)
     return X, y, label_dict, mapping
 
 

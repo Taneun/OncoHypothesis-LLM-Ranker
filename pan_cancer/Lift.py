@@ -158,7 +158,7 @@ def calculate_lift(data_for_lift, cancer_probabilities, feature_combinations):
     return pd.DataFrame(lift_data)
 
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     # Add error handling
     try:
         data_for_lift = pd.read_csv("data_for_lift.csv", index_col=0)

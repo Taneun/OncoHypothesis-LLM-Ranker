@@ -13,6 +13,47 @@ from rule_based import *
 
 
 def main():
+    """
+    Main entry point for the cancer classification program. Handles command-line argument parsing
+    and orchestrates the execution of either rules-based or model-based classification.
+
+    Command Line Arguments:
+    For rules mode:
+        rules
+            --save_df (bool): Whether to save the rules dataframe to CSV
+            --is_plot_run (bool): Whether to generate and display plots
+
+    For regular mode:
+        regular
+            --model_name (str): Type of model to use ('forest', 'tree', 'xgb')
+            --use_pickled (bool): Whether to use a previously saved model
+            --gpu (bool): Whether the model should use GPU acceleration
+            --show_plots (bool): Whether to display performance plots
+            --print_eval (bool): Whether to print evaluation metrics
+            --generate_db (bool): Whether to generate hypotheses database
+            --get_shap_interactions (bool): Whether to calculate SHAP interactions
+
+    Examples:
+        Rules mode:
+        $ python script.py rules --save_df True --is_plot_run True
+
+        Regular mode:
+        $ python script.py regular --model_name forest --show_plots True --print_eval True
+
+    Returns:
+        None
+
+    Raises:
+        FileNotFoundError: If required data files are not found
+        ValueError: If invalid model_name is provided
+
+    Dependencies:
+        - argparse: For command-line argument parsing
+        - Required data files:
+            - all_cancers_data.csv
+            - narrowed_cancers_data.csv
+            - data_for_rules.csv
+    """
     parser = argparse.ArgumentParser(description='Cancer Classification Model')
     subparsers = parser.add_subparsers(dest='mode', help='Choose mode: rules or regular')
 
@@ -33,17 +74,24 @@ def main():
                                 help='Show plots flag')
     regular_parser.add_argument('--print_eval', type=bool, default=False,
                                 help='Print evaluation flag')
-    regular_parser.add_argument('--generate_hypotheses_db', type=bool, default=False,
+    regular_parser.add_argument('--generate_db', type=bool, default=False,
                                 help='Generate hypotheses database flag')
     regular_parser.add_argument('--get_shap_interactions', type=bool, default=False,
                                 help='Get SHAP interactions flag')
+    regular_parser.add_argument('--by_id', type=bool, default=False,
+                                help='Get predictions by patient ID flag')
+    regular_parser.add_argument('--gpu', type=bool, default=False,
+                                help='Use GPU flag')
     args = parser.parse_args()
 
     # Load the data
     all_cancers = "all_cancers_data.csv"
     partial_cancers = "narrowed_cancers_data.csv"
     data_for_rules = "data_for_rules.csv"
-    X, y, label_dict, mapping = load_data(partial_cancers)
+    if args.mode == 'rules':
+        X, y, label_dict, mapping = load_data(data_for_rules)
+    else:
+        X, y, label_dict, mapping = load_data(partial_cancers)
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
 
     if args.mode == 'rules':
@@ -62,7 +110,7 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
     }
 
     model = model_dict[args.model_name]
-    model_type = {"xgb": "XGBoost", "forest": "Random Forest", "tree": "Decision Tree"}[args.model_name]
+    model_type = {"xgb": "XGBoost", "forest": "Random_Forest", "tree": "Decision_Tree"}[args.model_name]
 
     start_time = time.time()
     print(f"\n\n{'*' * 10} {model_type} {'*' * 10}\n")
@@ -79,19 +127,24 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
             show_cm=args.show_plots,
             show_precision_recall=args.show_plots
         )
-        classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
-        explainer = shap.TreeExplainer(model)
+        if args.by_id:
+            classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
+        if args.gpu:
+            explainer = shap.explainers.GPUTreeExplainer(model)
+            pickle.dump(explainer, open(f"models_and_explainers/{model_type}_gpu_explainer.pkl", "wb"))
+        else:
+            explainer = shap.TreeExplainer(model)
+            pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
 
-        # Save the model
         pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
-        pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
 
-    if args.generate_hypotheses_db:
+    if args.generate_db:
         hypotheses = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict, mapping)
         hypotheses.to_csv(f"models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
 
     if args.get_shap_interactions:
-        get_shap_interactions(explainer, X, y, label_dict)
+        interation_vals = get_shap_interactions(explainer, X, y, label_dict)
+        pickle.dump(interation_vals, open(f"models_and_explainers/{model_type}_shap_interactions.pkl", "wb"))
 
     print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")
 

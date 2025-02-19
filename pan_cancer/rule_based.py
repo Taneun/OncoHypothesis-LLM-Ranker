@@ -36,9 +36,6 @@ def rule_based(X_train, X_test, y_train, y_test, label_dictionary, is_plot_run=F
                                                    one_vs_all_y_train, one_vs_all_y_test, label_dictionary,
                                                    is_multiclass=False, print_eval=True)
 
-        mask = y_proba[:, 1] > 0
-        print(y_proba[mask].shape)
-        print(y_proba[mask][:5])
         if fitted.rules_:
             rules_dict[cancer_type] = fitted.rules_
             rules_count[cancer_type] = len(fitted.rules_)

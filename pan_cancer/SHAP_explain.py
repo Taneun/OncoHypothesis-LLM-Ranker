@@ -5,6 +5,7 @@ from tqdm import tqdm
 from matplotlib import pyplot as plt
 from collections import Counter
 from XGBoost_Model import apply_category_mappings
+import torch
 
 
 def shap_analysis(explainer, X_val, y_val, y_pred, label_dict):
@@ -55,23 +56,60 @@ def extract_top_features(shap_values, correct_X, print_table=False, num_to_print
     return feature_importance_correct
 
 
-def get_shap_interactions(explainer, X, y, label_dict):
+def get_shap_interactions(explainer, X, y, label_dict, batch_size=100):
     """
-    Get SHAP interaction values for a multiclass classification model.
+    Get SHAP interaction values for a multiclass classification model using batching.
+    Shows progress with tqdm.
     """
-    reversed_label_dict = {v: k for k, v in label_dict.items()}
+    from tqdm import tqdm
 
-    # Compute SHAP interaction values for multiclass (shape: [n_samples, n_features, n_features, n_classes])
-    shap_interaction_values = explainer.shap_interaction_values(X, y)  # (n_samples, n_features, n_features, n_classes)
+    reversed_label_dict = {v: k for k, v in label_dict.items()}
+    n_samples = len(X)
+    n_classes = len(label_dict)
+    n_batches = (n_samples + batch_size - 1) // batch_size  # Ceiling division
+
+    # Process data in batches
+    all_interactions = []
+
+    # Create tqdm progress bar
+    for start_idx in tqdm(range(0, n_samples, batch_size),
+                          total=n_batches,
+                          desc="Computing SHAP interactions"):
+        # Clear GPU memory before each batch
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
+
+        end_idx = min(start_idx + batch_size, n_samples)
+        X_batch = X[start_idx:end_idx]
+        y_batch = y[start_idx:end_idx]
+
+        try:
+            # Compute SHAP interaction values for the batch
+            batch_interactions = explainer.shap_interaction_values(X_batch, y_batch)
+            all_interactions.append(batch_interactions)
+        except Exception as e:
+            print(f"Error processing batch {start_idx // batch_size}: {str(e)}")
+            continue
+
+    # Combine all batches
+    try:
+        shap_interaction_values = np.concatenate(all_interactions, axis=0)
+    except Exception as e:
+        raise ValueError(f"Failed to combine interaction values: {str(e)}")
 
     if len(shap_interaction_values.shape) != 4:
-        raise ValueError("Expected SHAP interaction values to have 4 dimensions (samples, features, features, classes).")
+        raise ValueError(
+            "Expected SHAP interaction values to have 4 dimensions (samples, features, features, classes).")
 
-    # Generate a SHAP interaction summary plot for each class
-    for i in range(shap_interaction_values.shape[3]):  # Iterate over classes
+    # Generate plots with memory cleanup between classes
+    for i in range(n_classes):
+        # Clear memory before each plot
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
+
+        plt.figure(figsize=(10, 8))
         shap.summary_plot(shap_interaction_values[:, :, :, i], X, show=False)
         plt.title(f"SHAP Interaction Summary for Class {reversed_label_dict[i]}")
         plt.savefig(f"figures/shap_interaction_summary_class_{reversed_label_dict[i]}.png")
+        plt.close()  # Explicitly close the figure to free memory
 
     return shap_interaction_values
 

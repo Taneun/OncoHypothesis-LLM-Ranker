@@ -78,6 +78,8 @@ def main():
                                 help='Generate hypotheses database flag')
     regular_parser.add_argument('--get_shap_interactions', type=bool, default=False,
                                 help='Get SHAP interactions flag')
+    regular_parser.add_argument('--by_id', type=bool, default=False,
+                                help='Get predictions by patient ID flag')
     regular_parser.add_argument('--gpu', type=bool, default=False,
                                 help='Use GPU flag')
     args = parser.parse_args()
@@ -125,7 +127,8 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
             show_cm=args.show_plots,
             show_precision_recall=args.show_plots
         )
-        classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
+        if args.by_id:
+            classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
         if args.gpu:
             explainer = shap.explainers.GPUTreeExplainer(model)
             pickle.dump(explainer, open(f"pan_cancer/models_and_explainers/{model_type}_gpu_explainer.pkl", "wb"))

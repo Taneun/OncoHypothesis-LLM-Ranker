@@ -100,18 +100,27 @@ def data_prep_lift(data_for_lift):
 def process_combination(args):
     data_for_lift, cancer_type, P_B, feature = args
 
-    # Combine features efficiently
+    # Count the number of unique PATIENT_IDs per feature combination
+    feature_counts = (
+        data_for_lift.reset_index()
+        .groupby(list(feature))['PATIENT_ID']
+        .nunique()
+        .reset_index(name='patient_count')
+    )
+
+    # Create the feature combination column
+    feature_counts["feature_combination"] = feature_counts[list(feature)].fillna('missing').astype(str).agg('_'.join,
+                                                                                                            axis=1)
+
+    feature_counts = feature_counts[feature_counts["patient_count"] >= 50]
+    # Filter valid feature combinations with at least 50 unique patients
+    valid_features = set(feature_counts["feature_combination"].astype(str).unique())
+
+    # Combine features in the original dataset
     combined_feature = data_for_lift[list(feature)].fillna('missing').astype(str).agg('_'.join, axis=1)
 
-    # Filter features with sufficient occurrences
-    feature_counts = combined_feature.value_counts()
-    valid_features = feature_counts[feature_counts >= 50].index
-
-    if len(valid_features) == 0:
-        return None
-
-    # Create mask for valid features
-    valid_mask = combined_feature.isin(valid_features)
+    # Apply mask for valid features
+    valid_mask = combined_feature.astype(str).isin(valid_features)
     filtered_data = combined_feature[valid_mask]
     cancer_data = data_for_lift.loc[valid_mask, cancer_type]
 

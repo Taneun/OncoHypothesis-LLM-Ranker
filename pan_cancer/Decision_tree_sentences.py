@@ -1,8 +1,5 @@
 from XGBoost_Model import *
 from sklearn.tree import DecisionTreeClassifier, _tree
-from sklearn.tree import export_text
-from sklearn.tree import plot_tree
-from rule_based import *
 import numpy as np
 from sklearn.tree import _tree
 
@@ -22,7 +19,41 @@ def get_readable_rules(tree, feature_names, class_names):
             threshold = np.round(tree_.threshold[node], 2)
             p1, p2 = list(path), list(path)
 
-            if threshold == 0.5:
+            # Handle dummy variables
+            dummy_vars = ['3_prime_UTR_variant', '5_prime_UTR_variant', 'NMD_transcript_variant',
+                          'coding_sequence_variant', 'downstream_gene_variant', 'frameshift_variant',
+                          'inframe_deletion', 'inframe_insertion', 'intergenic_variant', 'intron_variant',
+                          'mature_miRNA_variant', 'missense_variant', 'non_coding_transcript_exon_variant',
+                          'non_coding_transcript_variant', 'protein_altering_variant', 'splice_acceptor_variant',
+                          'splice_donor_variant', 'splice_region_variant', 'start_lost', 'start_retained_variant',
+                          'stop_gained', 'stop_lost', 'stop_retained_variant', 'synonymous_variant',
+                          'upstream_gene_variant', 'chr_1', 'chr_10', 'chr_11', 'chr_12', 'chr_13', 'chr_14', 'chr_15',
+                          'chr_16', 'chr_17', 'chr_18', 'chr_19', 'chr_2', 'chr_20', 'chr_21',
+                          'chr_22', 'chr_3', 'chr_4', 'chr_5', 'chr_6', 'chr_7', 'chr_8', 'chr_9',
+                          'chr_X']
+
+            if name in dummy_vars:
+                if name.startswith('chr_'):
+                    p1.append((name, f"Chromosome is NOT {name[4:]}"))
+                    recurse(tree_.children_left[node], p1, paths)
+                    p2.append((name, f"AND Chromosome is {name[4:]}"))
+                    recurse(tree_.children_right[node], p2, paths)
+                else:
+                    p1.append((name, f"NOT {name}"))
+                    recurse(tree_.children_left[node], p1, paths)
+                    p2.append((name, f"{name}"))
+                    recurse(tree_.children_right[node], p2, paths)
+            elif name == "Sex":
+                p1.append((name, "Sex is Female"))
+                recurse(tree_.children_left[node], p1, paths)
+                p2.append((name, "Sex is Male"))
+                recurse(tree_.children_right[node], p2, paths)
+            elif name == "VAR_TYPE_SX":
+                p1.append((name, f"Variant type is Substitution/Indel"))
+                recurse(tree_.children_left[node], p1, paths)
+                p2.append((name, f"Variant type is Truncation"))
+                recurse(tree_.children_right[node], p2, paths)
+            elif threshold == 0.5:
                 p1.append((name, f"{name} is 0 (False)"))
                 recurse(tree_.children_left[node], p1, paths)
                 p2.append((name, f"{name} is 1 (True)"))
@@ -101,7 +132,7 @@ if __name__ == "__main__":
     reversed_label_dict = {v: k for k, v in label_dict.items()}
     class_names = [reversed_label_dict[cat] for cat in sorted(reversed_label_dict.keys())]
 
-    decision_tree = DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=5)
+    decision_tree = DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=10)
     decision_tree.fit(X_train, y_train)
 
     feature_names = list(X_train.columns)

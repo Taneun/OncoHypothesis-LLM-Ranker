@@ -101,7 +101,6 @@
 #     lifts_df = calculate_lift(data_for_lift, cancer_prob, features_comb)
 #     # lifts_df.to_csv("lifts.csv", index=False)
 
-
 import pandas as pd
 import numpy as np
 from itertools import combinations

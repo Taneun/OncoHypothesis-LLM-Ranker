@@ -30,6 +30,24 @@ def load_data(filepath):
     X.replace(-1, np.nan, inplace=True)
     return X, y, label_dict, mapping
 
+def load_data_non_categorical(filepath):
+    data = pd.read_csv(filepath)
+    features_to_drop = ['Cancer Type', 'Cancer Type Detailed', 'Tumor Stage', 'Sample Type']
+    y = data['Cancer_Type']
+    X = data.drop(features_to_drop, axis=1)
+    #
+    # for col in ['Sex', 'VAR_TYPE_SX']:
+    #     mapping[col] = dict(enumerate(data[col].astype('category').cat.categories))
+    # data[object_columns] = data[object_columns].astype('category')
+    #
+    # # Encode categorical columns using cat.codes
+    # for col in data.select_dtypes(include='category').columns:
+    #     data[col] = data[col].cat.codes
+
+    # Mapping for categorical features
+    label_dict = {col: data[col].dtype.name for col in X.columns}
+
+    return X, y, label_dict
 
 def apply_category_mappings(data, mappings):
     """

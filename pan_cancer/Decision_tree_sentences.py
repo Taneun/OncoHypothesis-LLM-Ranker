@@ -3,7 +3,7 @@ from sklearn.tree import DecisionTreeClassifier, _tree
 import numpy as np
 from sklearn.tree import _tree
 
-def get_readable_rules(tree, feature_names, class_names):
+def get_readable_sentences(tree, feature_names, class_names, mapping):
     tree_ = tree.tree_
     feature_name = [
         feature_names[i] if i != _tree.TREE_UNDEFINED else "undefined"
@@ -13,7 +13,10 @@ def get_readable_rules(tree, feature_names, class_names):
     paths = []
     path = []
 
-    def recurse(node, path, paths):
+    def recurse(node, path, paths, smoking_status_conditions=None):
+        if smoking_status_conditions is None:
+            smoking_status_conditions = []
+
         if tree_.feature[node] != _tree.TREE_UNDEFINED:
             name = feature_name[node]
             threshold = np.round(tree_.threshold[node], 2)
@@ -30,39 +33,61 @@ def get_readable_rules(tree, feature_names, class_names):
                           'upstream_gene_variant', 'chr_1', 'chr_10', 'chr_11', 'chr_12', 'chr_13', 'chr_14', 'chr_15',
                           'chr_16', 'chr_17', 'chr_18', 'chr_19', 'chr_2', 'chr_20', 'chr_21',
                           'chr_22', 'chr_3', 'chr_4', 'chr_5', 'chr_6', 'chr_7', 'chr_8', 'chr_9',
-                          'chr_X']
+                          'chr_X', 'Unknown', 'Smoker', 'Nonsmoker']
 
             if name in dummy_vars:
                 if name.startswith('chr_'):
                     p1.append((name, f"Chromosome is NOT {name[4:]}"))
-                    recurse(tree_.children_left[node], p1, paths)
-                    p2.append((name, f"AND Chromosome is {name[4:]}"))
-                    recurse(tree_.children_right[node], p2, paths)
+                    recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
+                    p2.append((name, f"Chromosome is {name[4:]}"))
+                    recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
+                elif name in ['Unknown', 'Smoker', 'Nonsmoker']:
+                    if name == 'Unknown':
+                        smoking_status_conditions.append("Smoking status is Unknown")
+                        p1.append((name, f"Smoking status is Smoker or Nonsmoker"))
+                        recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
+                        p2.append((name, f"Smoking status is {name}"))
+                        recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
+                    elif name == 'Smoker':
+                        smoking_status_conditions.append("Smoking status is Smoker")
+                        p1.append((name, f"Smoking status is Nonsmoker or Unknown"))
+                        recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
+                        p2.append((name, f"Smoking status is {name}"))
+                        recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
+                    elif name == 'Nonsmoker':
+                        smoking_status_conditions.append("Smoking status is Nonsmoker")
+                        p1.append((name, f"Smoking status is Smoker or Unknown"))
+                        recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
+                        p2.append((name, f"Smoking status is {name}"))
+                        recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
                 else:
                     p1.append((name, f"NOT {name}"))
-                    recurse(tree_.children_left[node], p1, paths)
+                    recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
                     p2.append((name, f"{name}"))
-                    recurse(tree_.children_right[node], p2, paths)
+                    recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
             elif name == "Sex":
                 p1.append((name, "Sex is Female"))
-                recurse(tree_.children_left[node], p1, paths)
+                recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
                 p2.append((name, "Sex is Male"))
-                recurse(tree_.children_right[node], p2, paths)
+                recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
             elif name == "VAR_TYPE_SX":
                 p1.append((name, f"Variant type is Substitution/Indel"))
-                recurse(tree_.children_left[node], p1, paths)
+                recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
                 p2.append((name, f"Variant type is Truncation"))
-                recurse(tree_.children_right[node], p2, paths)
+                recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
             elif threshold == 0.5:
                 p1.append((name, f"{name} is 0 (False)"))
-                recurse(tree_.children_left[node], p1, paths)
+                recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
                 p2.append((name, f"{name} is 1 (True)"))
-                recurse(tree_.children_right[node], p2, paths)
+                recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
+            elif name in mapping:
+                p1.append(f"{name} is {mapping[name][threshold]}")
+                p2.append(f"{name} is not {mapping[name][threshold]}")
             else:
                 p1.append((name, f"{name} ≤ {threshold}"))
-                recurse(tree_.children_left[node], p1, paths)
+                recurse(tree_.children_left[node], p1, paths, smoking_status_conditions)
                 p2.append((name, f"{name} > {threshold}"))
-                recurse(tree_.children_right[node], p2, paths)
+                recurse(tree_.children_right[node], p2, paths, smoking_status_conditions)
         else:
             path.append((None, (tree_.value[node], tree_.n_node_samples[node])))
             paths.append(path)
@@ -72,7 +97,7 @@ def get_readable_rules(tree, feature_names, class_names):
     # Sort by sample count
     paths.sort(key=lambda x: x[-1][1][1], reverse=True)
 
-    readable_rules = []
+    readable_sentences = []
     for path in paths:
         feature_conditions = {}
 
@@ -104,6 +129,48 @@ def get_readable_rules(tree, feature_names, class_names):
                 elif upper is not None:
                     merged_conditions.append(f"{feature} ≤ {upper}")
 
+        # Handle the smoking status merging based on your updated conditions:
+        if "Smoking status is Unknown" in merged_conditions:
+            if "Smoking status is Smoker" in merged_conditions:
+                # Remove "Unknown" and only keep "Smoker"
+                merged_conditions = [cond for cond in merged_conditions if "Smoking status" not in cond]
+                merged_conditions.insert(0, "Smoking status is Smoker")
+            elif "Smoking status is Nonsmoker" in merged_conditions:
+                # Remove "Unknown" and only keep "Nonsmoker"
+                merged_conditions = [cond for cond in merged_conditions if "Smoking status" not in cond]
+                merged_conditions.insert(0, "Smoking status is Nonsmoker")
+        elif "Smoking status is Smoker" in merged_conditions and "Smoking status is Nonsmoker" in merged_conditions:
+            # Keep both Smoker or Nonsmoker
+            merged_conditions = [cond for cond in merged_conditions if "Smoking status" not in cond]
+            merged_conditions.insert(0, "Smoking status is Smoker or Nonsmoker")
+
+        # New logic to handle "Smoking status is X or Y" and "Smoking status is X"
+        if ("Smoking status is Smoker or Nonsmoker" in merged_conditions
+                or "Smoking status is Nonsmoker or Unknown" in merged_conditions
+                or "Smoking status is Smoker or Unknown" in merged_conditions):
+            if "Smoking status is Smoker" in merged_conditions:
+                # Keep only "Smoking status is Smoker"
+                merged_conditions = [cond for cond in merged_conditions if "Smoking status" not in cond]
+                merged_conditions.insert(0, "Smoking status is Smoker")
+            elif "Smoking status is Nonsmoker" in merged_conditions:
+                # Keep only "Smoking status is Nonsmoker"
+                merged_conditions = [cond for cond in merged_conditions if "Smoking status" not in cond]
+                merged_conditions.insert(0, "Smoking status is Nonsmoker")
+        if "Smoking status is Smoker or Nonsmoker" in merged_conditions:
+            if "Smoking status is Nonsmoker or Unknown" in merged_conditions:
+                merged_conditions = [cond for cond in merged_conditions if "Smoking status" not in cond]
+                merged_conditions.insert(0, "Smoking status is Nonsmoker")
+            if "Smoking status is Smoker or Unknown" in merged_conditions:
+                merged_conditions = [cond for cond in merged_conditions if "Smoking status" not in cond]
+                merged_conditions.insert(0, "Smoking status is Smoker")
+        if "Smoking status is Nonsmoker or Unknown" in merged_conditions:
+            if "Smoking status is Smoker or Unknown" in merged_conditions:
+                merged_conditions = [cond for cond in merged_conditions if "Smoking status" not in cond]
+                merged_conditions.insert(0, "Smoking status is Unknown")
+
+        # Handle removal of "Smoking status is Unknown"
+        merged_conditions = [cond for cond in merged_conditions if "Smoking status is Unknown" not in cond]
+
         # Extract class prediction and probability
         class_prediction = path[-1][1][0][0]
         total_samples = np.sum(class_prediction)
@@ -118,139 +185,7 @@ def get_readable_rules(tree, feature_names, class_names):
                 f", then the predicted class is **{predicted_class}** (Probability: {predicted_proba}%). " +
                 f"(Based on {path[-1][1][1]} samples)"
         )
-        readable_rules.append(rule_sentence)
+        readable_sentences.append(rule_sentence)
 
-    return readable_rules
+    return readable_sentences
 
-
-if __name__ == "__main__":
-    # Load the data
-    data_for_dt = "data_for_rules.csv"
-    X, y, label_dict, mapping = load_data(data_for_dt)
-    X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
-
-    reversed_label_dict = {v: k for k, v in label_dict.items()}
-    class_names = [reversed_label_dict[cat] for cat in sorted(reversed_label_dict.keys())]
-
-    decision_tree = DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=10)
-    decision_tree.fit(X_train, y_train)
-
-    feature_names = list(X_train.columns)
-
-    rules = get_readable_rules(decision_tree, feature_names, class_names)
-
-    for rule in rules:
-        print(rule)
-
-# def get_rules(tree, feature_names, class_names):
-#     tree_ = tree.tree_
-#     feature_name = [
-#         feature_names[i] if i != _tree.TREE_UNDEFINED else "undefined!"
-#         for i in tree_.feature
-#     ]
-#
-#     paths = []
-#     path = []
-#
-#     def recurse(node, path, paths):
-#
-#         if tree_.feature[node] != _tree.TREE_UNDEFINED:
-#             name = feature_name[node]
-#             threshold = tree_.threshold[node]
-#             p1, p2 = list(path), list(path)
-#             if threshold == 0.5:
-#                 p1 += [f"({name} == 0)"]
-#                 recurse(tree_.children_left[node], p1, paths)
-#                 p2 += [f"({name} == 1)"]
-#                 recurse(tree_.children_right[node], p2, paths)
-#             else:
-#                 p1 += [f"({name} <= {np.round(threshold, 3)})"]
-#                 recurse(tree_.children_left[node], p1, paths)
-#                 p2 += [f"({name} > {np.round(threshold, 3)})"]
-#                 recurse(tree_.children_right[node], p2, paths)
-#         else:
-#             path += [(tree_.value[node], tree_.n_node_samples[node])]
-#             paths += [path]
-#
-#     recurse(0, path, paths)
-#
-#     # sort by samples count
-#     samples_count = [p[-1][1] for p in paths]
-#     ii = list(np.argsort(samples_count))
-#     paths = [paths[i] for i in reversed(ii)]
-#
-#     rules = []
-#     for path in paths:
-#         rule = "if "
-#
-#         for p in path[:-1]:
-#             if rule != "if ":
-#                 rule += " and "
-#             rule += str(p)
-#         rule += " then "
-#         if class_names is None:
-#             rule += "response: " + str(np.round(path[-1][0][0][0], 3))
-#         else:
-#             classes = path[-1][0][0]
-#             l = np.argmax(classes)
-#             rule += f"class: {class_names[l]} (proba: {np.round(100.0 * classes[l] / np.sum(classes), 2)}%)"
-#         rule += f" | based on {path[-1][1]:,} samples"
-#         rules += [rule]
-#
-#     return rules
-
-# if __name__ == "__main__":
-#     # Load the data
-#     data_for_dt = "data_for_rules.csv"
-#     X, y, label_dict, mapping = load_data(data_for_dt)
-#     # print(mapping)
-#     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
-#
-#     reversed_label_dict = {v: k for k, v in label_dict.items()}
-#     class_names = [reversed_label_dict[cat] for cat in sorted(reversed_label_dict.keys())]
-#
-#     decision_tree = DecisionTreeClassifier(random_state=39)
-#     decision_tree.fit(X_train, y_train)
-#
-#     tree = decision_tree.tree_
-#     feature_names = list(X_train.columns)
-#     # results_df = tree_to_sentences(tree, feature_names, class_names, node_id=0, path_dict=None, results_df=None)
-#     #
-#     # for result in results_df["Sentence"]:
-#     #     print(result)
-#     # results_df.to_csv("decision_tree_sentences.csv", index=False)
-#
-#     rules = get_rules(decision_tree, feature_names, class_names)
-#     for r in rules:
-#         print(r)
-
-
-    # for label_name, label_value in label_dict.items():
-    #     print(f"Training tree for label: {label_name}")
-    #
-    #     # Create a binary target for the current label
-    #     binary_target = (y_train == label_value).astype(int)
-    #
-    #     # Train the decision tree for the current label
-    #     tree_model = DecisionTreeClassifier(random_state=42)
-    #     tree_model.fit(X_train, binary_target)
-    #
-    #     # tree = tree_model.tree_
-    #     feature_names = list(X_train.columns)
-    #
-    #     # Export rules for the decision tree
-    #     tree_rules = export_text(tree_model, feature_names=list(X_train.columns))
-    #     print(f"Rules for {label_name}:\n{tree_rules}\n")
-    #
-    #     # Plot the decision tree
-    #     plt.figure(figsize=(20, 10))
-    #     plot_tree(
-    #         decision_tree=tree_model,
-    #         feature_names=feature_names,
-    #         class_names=["Not " + label_name, label_name],
-    #         filled=True,
-    #         rounded=True
-    #     )
-    #     plt.title(f"Decision Tree for {label_name}")
-    #     plt.savefig(f"figures/decision_tree_{label_name.replace(' ', '_')}.png", dpi=300)
-    #     plt.close()

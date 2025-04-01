@@ -9,6 +9,8 @@ from model_metrics import *
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
+
+from Decision_tree_sentences import *
 from rule_based import *
 
 
@@ -88,8 +90,11 @@ def main():
     all_cancers = "all_cancers_data.csv"
     partial_cancers = "narrowed_cancers_data.csv"
     data_for_rules = "data_for_rules.csv"
+    data_for_decision = "data_for_decision.csv"
     if args.mode == 'rules':
         X, y, label_dict, mapping = load_data(data_for_rules)
+    elif args.model_name == "tree":
+        X, y, label_dict, mapping = load_data_non_categorical(data_for_decision)
     else:
         X, y, label_dict, mapping = load_data(partial_cancers)
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
@@ -106,7 +111,7 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
         "xgb": xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
                                  tree_method='hist', enable_categorical=True),
         "forest": RandomForestClassifier(random_state=39),
-        "tree": DecisionTreeClassifier(random_state=39)
+        "tree": DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=10)
     }
 
     model = model_dict[args.model_name]
@@ -115,7 +120,18 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
     start_time = time.time()
     print(f"\n\n{'*' * 10} {model_type} {'*' * 10}\n")
 
-    if args.use_pickled:
+    if args.model_name == "tree":
+        feature_names = list(X_train.columns)
+        model_dict["tree"].fit(X_train, y_train)
+        sentences = get_readable_sentences(model_dict["tree"], feature_names, label_dict, mapping)
+
+        for sentence in sentences:
+            print(sentence)
+
+        print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")
+        return
+
+    elif args.use_pickled:
         model = pickle.load(open(f"models_and_explainers/{model_type}_model.pkl", "rb"))
         explainer = pickle.load(open(f"models_and_explainers/{model_type}_explainer.pkl", "rb"))
     else:
@@ -156,7 +172,6 @@ def run_rules(X_train, X_test, y_train, y_test, label_dict, mapping, args):
         rules = convert_rules_to_readable(rules, mapping)
         rules_df = create_rules_dataframe(rules)
         rules_df.to_csv("models_hypotheses/rules_df.csv", index=False)
-
 
 if __name__ == "__main__":
     main()

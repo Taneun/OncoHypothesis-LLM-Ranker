@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.idea/llm-project.iml
 build/
 develop-eggs/
 dist/

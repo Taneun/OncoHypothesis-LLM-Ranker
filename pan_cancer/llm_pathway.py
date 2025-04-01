@@ -14,8 +14,8 @@ import xml.etree.ElementTree as ET
 
 # Configuration
 class Config:
-    RESULTS_DIR = Path("results")
-    LOGS_DIR = Path("logs")
+    RESULTS_DIR = Path("llm_results")
+    LOGS_DIR = Path("llm_logs")
     CSV_PATH = Path("models_hypotheses/combined_hypotheses.csv")
     MODELS = [
         "anthropic.claude-3-5-sonnet-latest",
@@ -93,7 +93,7 @@ class HypothesisEvaluator:
                     _model.api_key = os.getenv('ANTHROPIC_API_KEY')
                 elif model_name.startswith('openai'):
                     _model.api_key = os.getenv('OPENAI_API_KEY')
-                agents[model_name] = Agent(_model)
+                agents[model_name] = Agent(_model) # todo: maybe try to work with constant answer type
                 agents[model_name].system_prompt(self._sys_prompt)
                 self.logger.log(f"Initialized agent for model: {model_name}")
             except Exception as e:

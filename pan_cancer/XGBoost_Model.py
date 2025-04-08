@@ -358,10 +358,153 @@ def optimize_and_train_multiclass_model(X_train, y_train, X_test, y_test, n_tria
         'classification_report': report
     }
 
-# # Optimize:
+
+import optuna
+import xgboost as xgb
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+
+
+def optimize_and_train_multiclass_xgb_model(X_train, y_train, X_test, y_test, n_trials=50):
+    """
+    Optimize hyperparameters for a multiclass XGBoost model using Optuna,
+    then train the final model with best parameters and evaluate on test data.
+
+    Parameters:
+    -----------
+    X_train : array-like
+        Training features
+    y_train : array-like
+        Training labels
+    X_test : array-like
+        Test features
+    y_test : array-like
+        Test labels
+    n_trials : int, default=50
+        Number of Optuna optimization trials
+
+    Returns:
+    --------
+    dict
+        Dictionary containing the trained model, best parameters, and evaluation metrics
+    """
+
+    def objective(trial):
+        params = {
+            'objective': 'multi:softprob',
+            'eval_metric': 'mlogloss',
+            'booster': trial.suggest_categorical('booster', ['gbtree', 'dart']),
+            'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.3),
+            'n_estimators': trial.suggest_int('n_estimators', 50, 300),
+            'max_depth': trial.suggest_int('max_depth', 3, 15),
+            'max_leaves': trial.suggest_int('max_leaves', 0, 100),
+            'max_bin': trial.suggest_int('max_bin', 128, 512),
+            'min_child_weight': trial.suggest_float('min_child_weight', 1, 10),
+            'gamma': trial.suggest_float('gamma', 0, 5),
+            'subsample': trial.suggest_float('subsample', 0.5, 1.0),
+            'colsample_bytree': trial.suggest_float('colsample_bytree', 0.5, 1.0),
+            'colsample_bylevel': trial.suggest_float('colsample_bylevel', 0.5, 1.0),
+            'colsample_bynode': trial.suggest_float('colsample_bynode', 0.5, 1.0),
+            'reg_alpha': trial.suggest_float('reg_alpha', 0, 5),
+            'reg_lambda': trial.suggest_float('reg_lambda', 0, 5),
+            'num_class': len(np.unique(y_train)),
+            'tree_method': 'hist',  # Using histogram-based algorithm for speed
+            'random_state': 42
+        }
+
+        # Optional parameters based on booster
+        if params['booster'] == 'dart':
+            params['sample_type'] = trial.suggest_categorical('sample_type', ['uniform', 'weighted'])
+            params['normalize_type'] = trial.suggest_categorical('normalize_type', ['tree', 'forest'])
+            params['rate_drop'] = trial.suggest_float('rate_drop', 0.0, 0.5)
+            params['skip_drop'] = trial.suggest_float('skip_drop', 0.0, 0.5)
+
+        train_x, valid_x, train_y, valid_y = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
+
+        # Create DMatrix objects
+        dtrain = xgb.DMatrix(train_x, label=train_y)
+        dvalid = xgb.DMatrix(valid_x, label=valid_y)
+
+        # Train model with early stopping
+        n_estimators = params.pop('n_estimators')  # Remove from params since we use num_boost_round
+
+        # Create evaluation list
+        evals = [(dtrain, 'train'), (dvalid, 'valid')]
+
+        # Train the model
+        model = xgb.train(
+            params,
+            dtrain,
+            num_boost_round=n_estimators,
+            evals=evals,
+            early_stopping_rounds=20,
+            verbose_eval=False
+        )
+
+        # Get the best score
+        best_score = model.best_score
+        return best_score
+
+    # Run Optuna optimization
+    study = optuna.create_study(direction='minimize')
+    study.optimize(objective, n_trials=n_trials, show_progress_bar=True)
+
+    best_params = study.best_params
+    print("Best parameters:", best_params)
+
+    # Prepare final parameters
+    final_params = {
+        'objective': 'multi:softprob',
+        'eval_metric': 'mlogloss',
+        'num_class': len(np.unique(y_train)),
+        'tree_method': 'hist',
+        'random_state': 42,
+        **best_params  # Add all the optimized parameters
+    }
+
+    # Remove n_estimators from final_params if it exists
+    n_estimators = final_params.pop('n_estimators', 100) if 'n_estimators' in final_params else 100
+
+    # Create DMatrix for training and testing
+    dtrain = xgb.DMatrix(X_train, label=y_train)
+    dtest = xgb.DMatrix(X_test)
+
+    # Train the final model
+    final_model = xgb.train(final_params, dtrain, num_boost_round=n_estimators)
+    print(f"number boost round: {n_estimators}")
+
+    # Make predictions
+    y_pred_probs = final_model.predict(dtest)
+    y_pred_classes = np.argmax(y_pred_probs, axis=1)
+
+    # Evaluate model
+    accuracy = accuracy_score(y_test, y_pred_classes)
+    report = classification_report(y_test, y_pred_classes)
+
+    print("Accuracy:", accuracy)
+    print("Classification Report:")
+    print(report)
+
+    return {
+        'model': final_model,
+        'best_params': best_params,
+        'accuracy': accuracy,
+        'predictions': y_pred_probs,
+        'predicted_classes': y_pred_classes,
+        'classification_report': report
+    }
+
 partial_cancers = "narrowed_cancers_data.csv"
 X, y, label_dict, mapping = load_data(partial_cancers)
-# X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
+X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
+# Optimize:
+result = optimize_and_train_multiclass_xgb_model(X_train, y_train, X_test, y_test, n_trials=50)
+trained_model = result['model']
+predictions = result['predicted_classes']
+pickle.dump(trained_model, open(f"models_and_explainers/XGBoost_model.pkl", "wb"))
+
+# Optimize:
 # result = optimize_and_train_multiclass_model(X_train, y_train, X_test, y_test, n_trials=50)
 # trained_model = result['model']
 # pickle.dump(trained_model, open(f"models_and_explainers/LightGBM_model.pkl", "wb"))

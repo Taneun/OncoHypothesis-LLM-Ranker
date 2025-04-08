@@ -112,7 +112,7 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
                                  tree_method='hist', enable_categorical=True),
         "forest": RandomForestClassifier(random_state=39),
         "tree": DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=10),
-        "lgb": lgb.LGBMClassifier(n_estimators=250, objective='multiclass', learning_rate=0.05332631440912483,
+        "lgb": lgb.LGBMClassifier(n_estimators=250, objective='multiclass', metric='multi_logloss', learning_rate=0.05332631440912483,
                                   num_leaves=137, max_depth=20, min_child_samples=25, subsample=0.7645079558344258,
                                   colsample_bytree=0.8380036267505455)
     }

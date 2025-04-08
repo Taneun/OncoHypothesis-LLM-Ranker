@@ -282,9 +282,9 @@ def main():
     if not hypotheses:
         logger.log("No hypotheses to evaluate. Exiting.", level="ERROR")
         return
-
+    lift_hypo = [hypo for hypo in hypotheses if hypo["hypo_id"].startswith("LIFT")]
     # Process each hypothesis
-    for hypothesis in hypotheses[:3]:
+    for hypothesis in lift_hypo[:15]:
         hypothesis_id = hypothesis["hypo_id"]
         hypothesis_text = hypothesis["hypo_factors"]
         cancer_type = hypothesis["cancer_type"]

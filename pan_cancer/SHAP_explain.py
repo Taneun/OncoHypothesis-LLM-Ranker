@@ -235,12 +235,11 @@ def generate_sentences(df):
     Generate sentences from a DataFrame of hypotheses.
     """
     sentences = []
-    df = df.drop(columns=["support"])
 
     for _, row in df.iterrows():
         sentence_parts = []
         for col in df.columns:
-            if col == "cancer_type":
+            if col in ["cancer_type", "support"]:
                 continue
 
             value = row[col]

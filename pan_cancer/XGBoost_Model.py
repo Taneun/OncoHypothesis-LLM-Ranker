@@ -1,3 +1,6 @@
+import pickle
+
+import lightgbm
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
@@ -7,6 +10,9 @@ import xgboost as xgb
 from sklearn.metrics import accuracy_score, auc, roc_curve, confusion_matrix, precision_score, recall_score, f1_score
 import plotly.graph_objects as go
 from sklearn.preprocessing import label_binarize
+import optuna
+import lightgbm as lgb
+import matplotlib
 
 def load_data(filepath):
     features_to_drop = ['Cancer Type', 'Cancer Type Detailed', 'Tumor Stage', 'Sample Type']
@@ -261,3 +267,122 @@ def classify_patients(X, y_pred, y_true, label_dict, model_type):
     fig_cmat.write_image("figures/{}_confusion_matrix_per_patient.png".format(model_type), scale=2)
 
     return patient_predictions, conf_matrix
+
+
+import optuna
+import lightgbm as lgb
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+
+
+def optimize_and_train_multiclass_model(X_train, y_train, X_test, y_test, n_trials=50):
+    """
+    Optimize hyperparameters for a multiclass LightGBM model using Optuna,
+    then train the final model with best parameters and evaluate on test data.
+
+    Parameters:
+    -----------
+    X_train : array-like
+        Training features
+    y_train : array-like
+        Training labels
+    X_test : array-like
+        Test features
+    y_test : array-like
+        Test labels
+    n_trials : int, default=50
+        Number of Optuna optimization trials
+
+    Returns:
+    --------
+    dict
+        Dictionary containing the trained model, best parameters, and evaluation metrics
+    """
+
+    def objective(trial):
+        params = {
+            'objective': 'multiclass',
+            'metric': 'multi_logloss',
+            'boosting_type': 'gbdt',
+            'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.3),
+            'num_leaves': trial.suggest_int('num_leaves', 20, 150),
+            'max_depth': trial.suggest_int('max_depth', 3, 30),
+            'min_child_samples': trial.suggest_int('min_child_samples', 5, 100),
+            'subsample': trial.suggest_float('subsample', 0.5, 1.0),
+            'colsample_bytree': trial.suggest_float('colsample_bytree', 0.5, 1.0),
+            'num_class': len(set(y_train))
+        }
+
+        train_x, valid_x, train_y, valid_y = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
+        dtrain = lgb.Dataset(train_x, label=train_y)
+        dvalid = lgb.Dataset(valid_x, label=valid_y)
+
+        model = lgb.train(params, dtrain, valid_sets=[dvalid])
+
+        return model.best_score['valid_0']['multi_logloss']
+
+    # Run Optuna optimization
+    study = optuna.create_study(direction='minimize')
+    study.optimize(objective, n_trials=n_trials, show_progress_bar=True, gc_after_trial=True)
+
+    best_params = study.best_params
+    print("Best parameters:", best_params)
+
+    # Add necessary fixed parameters to best_params
+    best_params['objective'] = 'multiclass'
+    best_params['metric'] = 'multi_logloss'
+    best_params['num_class'] = len(set(y_train))
+
+    # Train the final model with the best parameters
+    dtrain = lgb.Dataset(X_train, label=y_train)
+    final_model = lgb.train(best_params, dtrain)
+
+    # Make predictions on the test set
+    y_pred = final_model.predict(X_test)
+    y_pred_classes = y_pred.argmax(axis=1)
+
+    # Evaluate the model performance
+    accuracy = accuracy_score(y_test, y_pred_classes)
+    report = classification_report(y_test, y_pred_classes)
+
+    print("Accuracy:", accuracy)
+    print("Classification Report:")
+    print(report)
+
+    return {
+        'model': final_model,
+        'best_params': best_params,
+        'accuracy': accuracy,
+        'predictions': y_pred,
+        'predicted_classes': y_pred_classes,
+        'classification_report': report
+    }
+
+# # Optimize:
+partial_cancers = "narrowed_cancers_data.csv"
+X, y, label_dict, mapping = load_data(partial_cancers)
+# X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
+# result = optimize_and_train_multiclass_model(X_train, y_train, X_test, y_test, n_trials=50)
+# trained_model = result['model']
+# pickle.dump(trained_model, open(f"models_and_explainers/LightGBM_model.pkl", "wb"))
+# model = pickle.load(open(f"models_and_explainers/LightGBM_model.pkl", "rb"))
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+# import warnings
+# warnings.simplefilter(action='ignore', category=FutureWarning)
+#
+# def plotImp(model, X , num = 20, fig_size = (40, 20)):
+#     X = X.drop(columns=['PATIENT_ID'])
+#     feature_imp = pd.DataFrame({'Value':model.feature_importance(),'Feature':X.columns})
+#     plt.figure(figsize=fig_size)
+#     sns.set(font_scale = 5)
+#     sns.barplot(x="Value", y="Feature", data=feature_imp.sort_values(by="Value",
+#                                                         ascending=False)[0:num])
+#     plt.title('LightGBM Features (avg over folds)')
+#     plt.tight_layout()
+#     # plt.savefig('lgbm_importances-01.png')
+#     plt.show()
+#
+# plotImp(model, X, num = 20, fig_size = (40, 20))
+
+

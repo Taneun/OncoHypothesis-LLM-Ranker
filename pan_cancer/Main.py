@@ -9,7 +9,7 @@ from model_metrics import *
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
-
+import lightgbm as lgb
 from Decision_tree_sentences import *
 from rule_based import *
 
@@ -37,10 +37,10 @@ def main():
 
     Examples:
         Rules mode:
-        $ python script.py rules --save_df True --is_plot_run True
+        $ python Main.py rules --save_df True --is_plot_run True
 
         Regular mode:
-        $ python script.py regular --model_name forest --show_plots True --print_eval True
+        $ python Main.py regular --model_name forest --show_plots True --print_eval True
 
     Returns:
         None
@@ -68,7 +68,7 @@ def main():
 
     # Regular parser
     regular_parser = subparsers.add_parser('regular')
-    regular_parser.add_argument('--model_name', choices=['forest', 'tree', 'xgb'],
+    regular_parser.add_argument('--model_name', choices=['forest', 'tree', 'xgb', 'lgb'],
                                 required=True, help='Model type to use')
     regular_parser.add_argument('--use_pickled', type=bool, default=False,
                                 help='Use pickled model flag')
@@ -111,11 +111,14 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
         "xgb": xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
                                  tree_method='hist', enable_categorical=True),
         "forest": RandomForestClassifier(random_state=39),
-        "tree": DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=10)
+        "tree": DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=10),
+        "lgb": lgb.LGBMClassifier(n_estimators=250, objective='multiclass', learning_rate=0.05332631440912483,
+                                  num_leaves=137, max_depth=20, min_child_samples=25, subsample=0.7645079558344258,
+                                  colsample_bytree=0.8380036267505455)
     }
 
     model = model_dict[args.model_name]
-    model_type = {"xgb": "XGBoost", "forest": "Random_Forest", "tree": "Decision_Tree"}[args.model_name]
+    model_type = {"xgb": "XGBoost", "forest": "Random_Forest", "tree": "Decision_Tree", "lgb": "LightGBM"}[args.model_name]
 
     start_time = time.time()
     print(f"\n\n{'*' * 10} {model_type} {'*' * 10}\n")

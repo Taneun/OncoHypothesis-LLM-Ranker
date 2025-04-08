@@ -495,14 +495,14 @@ def optimize_and_train_multiclass_xgb_model(X_train, y_train, X_test, y_test, n_
         'classification_report': report
     }
 
-partial_cancers = "narrowed_cancers_data.csv"
-X, y, label_dict, mapping = load_data(partial_cancers)
-X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
-# Optimize:
-result = optimize_and_train_multiclass_xgb_model(X_train, y_train, X_test, y_test, n_trials=50)
-trained_model = result['model']
-predictions = result['predicted_classes']
-pickle.dump(trained_model, open(f"models_and_explainers/XGBoost_model.pkl", "wb"))
+# partial_cancers = "narrowed_cancers_data.csv"
+# X, y, label_dict, mapping = load_data(partial_cancers)
+# X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
+# # Optimize:
+# result = optimize_and_train_multiclass_xgb_model(X_train, y_train, X_test, y_test, n_trials=50)
+# trained_model = result['model']
+# predictions = result['predicted_classes']
+# pickle.dump(trained_model, open(f"models_and_explainers/XGBoost_model.pkl", "wb"))
 
 # Optimize:
 # result = optimize_and_train_multiclass_model(X_train, y_train, X_test, y_test, n_trials=50)

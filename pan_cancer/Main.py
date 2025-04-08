@@ -108,8 +108,15 @@ def main():
 def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_dict, mapping, args):
     # Initialize models
     model_dict = {
-        "xgb": xgb.XGBClassifier(n_estimators=250, objective='multi:softmax',
-                                 tree_method='hist', enable_categorical=True),
+        "xgb": xgb.XGBClassifier(n_estimators=192, objective='multi:softmax',
+                                 tree_method='hist', enable_categorical=True, booster='dart',
+                                 learning_rate=0.08596994335468267, max_depth=12, max_leaves=80, max_bin=508,
+                                min_child_weight=2.89592834170114, gamma=0.6679875084005478,
+                                 subsample=0.9972816061667134, colsample_bytree=0.9104275817039963,
+                                 colsample_bylevel=0.5696232331004479, colsample_bynode=0.8743322819039548,
+                                reg_alpha=0.19962668333554703, reg_lambda=0.3945177492732007,
+                                 sample_type='weighted', normalize_type='tree', rate_drop=0.0004722716577317265,
+                                 skip_drop=0.32192704523754445),
         "forest": RandomForestClassifier(random_state=39),
         "tree": DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=10),
         "lgb": lgb.LGBMClassifier(n_estimators=250, objective='multiclass', metric='multi_logloss', learning_rate=0.05332631440912483,

@@ -160,9 +160,9 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
             pickle.dump(explainer, open(f"models_and_explainers/{model_type}_gpu_explainer.pkl", "wb"))
         else:
             explainer = shap.TreeExplainer(model)
-            pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
+            # pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
 
-        pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
+        # pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
 
     if args.generate_db:
         hypotheses = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict, mapping)
@@ -170,7 +170,7 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
 
     if args.get_shap_interactions:
         interation_vals = get_shap_interactions(explainer, X, y, label_dict)
-        pickle.dump(interation_vals, open(f"models_and_explainers/{model_type}_shap_interactions.pkl", "wb"))
+        # pickle.dump(interation_vals, open(f"models_and_explainers/{model_type}_shap_interactions.pkl", "wb"))
 
     print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")
 

@@ -18,9 +18,10 @@ class Config:
     LOGS_DIR = Path("llm_logs")
     CSV_PATH = Path("models_hypotheses/combined_hypotheses.csv")
     MODELS = [
-        "anthropic.claude-3-5-sonnet-latest",
-        # "anthropic.claude-3-opus-20240229",
-        # "openai.gpt-4-turbo"
+        "anthropic:claude-3-7-sonnet-latest",
+        "openai:gpt-4o",
+        "openai:o1",
+        "openai:o3-mini"
     ]
     RETRY_ATTEMPTS = 3
     RETRY_DELAY = 5  # seconds

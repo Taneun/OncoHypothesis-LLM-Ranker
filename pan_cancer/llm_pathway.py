@@ -19,9 +19,9 @@ class Config:
     CSV_PATH = Path("models_hypotheses/combined_hypotheses.csv")
     MODELS = [
         "anthropic:claude-3-7-sonnet-latest",
-        "openai:gpt-4o",
-        "openai:o1",
-        "openai:o3-mini"
+        # "openai:gpt-4o",
+        # "openai:o1-mini",
+        # "openai:o3-mini"
     ]
     RETRY_ATTEMPTS = 3
     RETRY_DELAY = 5  # seconds
@@ -283,9 +283,9 @@ def main():
     if not hypotheses:
         logger.log("No hypotheses to evaluate. Exiting.", level="ERROR")
         return
-    lift_hypo = [hypo for hypo in hypotheses if hypo["hypo_id"].startswith("LIFT")]
+
     # Process each hypothesis
-    for hypothesis in lift_hypo[:15]:
+    for hypothesis in hypotheses:
         hypothesis_id = hypothesis["hypo_id"]
         hypothesis_text = hypothesis["hypo_factors"]
         cancer_type = hypothesis["cancer_type"]

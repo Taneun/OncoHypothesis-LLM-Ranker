@@ -4,15 +4,9 @@ The main script for the pan_cancer project.
 import argparse
 import time
 from SHAP_explain import *
-from XGBoost_Model import *
-from model_metrics import *
 from sklearn.ensemble import RandomForestClassifier
-import pickle
-from sklearn.tree import DecisionTreeClassifier, export_graphviz
-import lightgbm as lgb
 from Decision_tree_sentences import *
 from rule_based import *
-
 
 def main():
     """
@@ -57,7 +51,7 @@ def main():
             - data_for_rules.csv
     """
     parser = argparse.ArgumentParser(description='Cancer Classification Model')
-    subparsers = parser.add_subparsers(dest='mode', help='Choose mode: rules or regular')
+    subparsers = parser.add_subparsers(dest='mode', help='Choose mode: rules or regular or TS_pred')
 
     # Rules parser
     rules_parser = subparsers.add_parser('rules')
@@ -84,6 +78,26 @@ def main():
                                 help='Get predictions by patient ID flag')
     regular_parser.add_argument('--gpu', type=bool, default=False,
                                 help='Use GPU flag')
+    # Tumor Stages parser
+    TS_parser = subparsers.add_parser('TS_pred')
+    TS_parser.add_argument('--model_name', choices=['forest', 'tree', 'xgb', 'lgb'],
+                                required=True, help='Model type to use')
+    TS_parser.add_argument('--use_pickled', type=bool, default=False,
+                                help='Use pickled model flag')
+    TS_parser.add_argument('--show_plots', type=bool, default=False,
+                                help='Show plots flag')
+    TS_parser.add_argument('--print_eval', type=bool, default=False,
+                                help='Print evaluation flag')
+    TS_parser.add_argument('--generate_db', type=bool, default=False,
+                                help='Generate hypotheses database flag')
+    TS_parser.add_argument('--get_shap_interactions', type=bool, default=False,
+                                help='Get SHAP interactions flag')
+    TS_parser.add_argument('--by_id', type=bool, default=False,
+                                help='Get predictions by patient ID flag')
+    TS_parser.add_argument('--gpu', type=bool, default=False,
+                                help='Use GPU flag')
+    # TS_parser.add_argument(type=bool, default=False)
+
     args = parser.parse_args()
 
     # Load the data
@@ -94,14 +108,16 @@ def main():
     if args.mode == 'rules':
         X, y, label_dict, mapping = load_data(data_for_rules)
     elif args.model_name == "tree":
-        X, y, label_dict, mapping = load_data_non_categorical(data_for_decision)
+        X, y, label_dict, mapping = load_data(data_for_decision)
+    elif args.mode == "TS_pred":
+        X, y, label_dict, mapping = load_data_alternative(partial_cancers)
     else:
         X, y, label_dict, mapping = load_data(partial_cancers)
     X_train, X_test, y_train, y_test, X_test_with_id = stratified_split_by_patient(X, y)
 
     if args.mode == 'rules':
         run_rules(X_train, X_test, y_train, y_test, label_dict, mapping, args)
-    elif args.mode == 'regular':
+    elif args.mode == 'regular' or args.mode == 'TS_pred':
         run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_dict, mapping, args)
 
 
@@ -119,9 +135,10 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
                                  skip_drop=0.32192704523754445),
         "forest": RandomForestClassifier(random_state=39),
         "tree": DecisionTreeClassifier(random_state=39, min_samples_leaf=10, max_depth=10),
-        "lgb": lgb.LGBMClassifier(n_estimators=250, objective='multiclass', metric='multi_logloss', learning_rate=0.05332631440912483,
-                                  num_leaves=137, max_depth=20, min_child_samples=25, subsample=0.7645079558344258,
-                                  colsample_bytree=0.8380036267505455)
+        "lgb": lgb.LGBMClassifier(n_estimators=250, objective='multiclass')
+                                  # , metric='multi_logloss', learning_rate=0.05332631440912483,
+                                  # num_leaves=137, max_depth=20, min_child_samples=25, subsample=0.7645079558344258,
+                                  # colsample_bytree=0.8380036267505455)
     }
 
     model = model_dict[args.model_name]
@@ -149,9 +166,7 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
         model, y_pred = fit_and_evaluate(
             model_type, model, X_train, X_test, y_train, y_test, label_dict,
             print_eval=args.print_eval,
-            show_auc=args.show_plots,
-            show_cm=args.show_plots,
-            show_precision_recall=args.show_plots
+
         )
         if args.by_id:
             classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
@@ -160,16 +175,29 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
             pickle.dump(explainer, open(f"models_and_explainers/{model_type}_gpu_explainer.pkl", "wb"))
         else:
             explainer = shap.TreeExplainer(model)
-            # pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
+            pickle.dump(explainer, open(f"models_and_explainers/{model_type}_explainer.pkl", "wb"))
 
-        # pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
+        pickle.dump(model, open(f"models_and_explainers/{model_type}_model.pkl", "wb"))
+
+    # If requested, generate plots based on the pickled model and explainer
+    if args.show_plots:
+        generate_performance_plots(model, X_test, y_test,label_dict, model_type, show_auc=args.show_plots,
+            show_cm=args.show_plots, show_precision_recall=args.show_plots)
 
     if args.generate_db:
         hypotheses = generate_hypotheses_db(explainer, model, X_test, y_test, label_dict, mapping)
         hypotheses.to_csv(f"models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
 
     if args.get_shap_interactions:
-        interation_vals = get_shap_interactions(explainer, X, y, label_dict)
+        shap_analysis(model, X, y, label_dict, batch_size=256)
+
+        # Add your custom SHAP interaction visualizations here:
+        # interaction_matrix_plot(interation_vals, X, label_dict, save_path=f"{model_type}_interaction_matrix.png")
+        # top_gene_interactions_plot(interation_vals, X, label_dict, save_path=f"{model_type}_top_interactions.png")
+        # summary_plot_with_interactions(interation_vals, X, label_dict, save_path=f"{model_type}_summary_plot.png")
+
+    # if args.get_shap_interactions:
+    #     interation_vals = get_shap_interactions(explainer, X, y, label_dict)
         # pickle.dump(interation_vals, open(f"models_and_explainers/{model_type}_shap_interactions.pkl", "wb"))
 
     print(f"{model_type} - Run time: {time.time() - start_time} seconds\n\n")

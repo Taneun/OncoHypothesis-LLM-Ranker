@@ -36,24 +36,29 @@ def load_data(filepath):
     X.replace(-1, np.nan, inplace=True)
     return X, y, label_dict, mapping
 
-def load_data_non_categorical(filepath):
+# only to predict Tumor Stage
+def load_data_alternative(filepath):
+    features_to_drop = ['Cancer Type', 'Tumor Stage', 'Sample Type']
     data = pd.read_csv(filepath)
-    features_to_drop = ['Cancer Type', 'Cancer Type Detailed', 'Tumor Stage', 'Sample Type']
-    y = data['Cancer_Type']
+    data = data[data['Tumor Stage'].isin(['III', 'IV', 'II', 'I'])]
+    cancer_stages = data["Tumor Stage"].unique()
+    mapping = {}
+    # Convert object columns to categorical
+    object_columns = data.select_dtypes(include=['object', 'bool']).columns
+    for col in object_columns:
+        mapping[col] = dict(enumerate(data[col].astype('category').cat.categories))
+    data[object_columns] = data[object_columns].astype('category')
+
+    # Encode categorical columns using cat.codes
+    for col in data.select_dtypes(include='category').columns:
+        data[col] = data[col].cat.codes
+
+    # Separate features and labels
     X = data.drop(features_to_drop, axis=1)
-    #
-    # for col in ['Sex', 'VAR_TYPE_SX']:
-    #     mapping[col] = dict(enumerate(data[col].astype('category').cat.categories))
-    # data[object_columns] = data[object_columns].astype('category')
-    #
-    # # Encode categorical columns using cat.codes
-    # for col in data.select_dtypes(include='category').columns:
-    #     data[col] = data[col].cat.codes
-
-    # Mapping for categorical features
-    label_dict = {col: data[col].dtype.name for col in X.columns}
-
-    return X, y, label_dict
+    y, uniques = pd.factorize(data['Tumor Stage'])
+    label_dict = {cancer: idx for idx, cancer in enumerate(cancer_stages)}
+    X.replace(-1, np.nan, inplace=True)
+    return X, y, label_dict, mapping
 
 def apply_category_mappings(data, mappings):
     """

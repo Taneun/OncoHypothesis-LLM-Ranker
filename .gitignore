@@ -1,6 +1,5 @@
 pan_cancer/figures
 pan_cancer/llm_logs
-pan_cancer/llm_results
 pan_cancer/models_and_explainers
 pan_cancer/novelty_results
 share

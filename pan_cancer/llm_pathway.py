@@ -19,9 +19,9 @@ class Config:
     CSV_PATH = Path("models_hypotheses/combined_hypotheses.csv")
     MODELS = [
         "anthropic:claude-3-7-sonnet-latest",
-        # "openai:gpt-4o",
+        "openai:gpt-4o",
         # "openai:o1-mini",
-        # "openai:o3-mini"
+        "openai:o3-mini"
     ]
     RETRY_ATTEMPTS = 3
     RETRY_DELAY = 5  # seconds
@@ -136,7 +136,7 @@ class HypothesisEvaluator:
             for attempt in range(Config.RETRY_ATTEMPTS):
                 try:
                     response = agent.run_sync(prepared_prompt)
-                    result = self._parse_evaluation(response.data)
+                    result = self._parse_evaluation(response.output)
 
                     if result:
                         # Store the result
@@ -145,7 +145,7 @@ class HypothesisEvaluator:
                             "model": model_name,
                             "novelty": result["novelty"],
                             "plausibility": result["plausibility"],
-                            "raw_response": response.data,
+                            "raw_response": response.output,
                             "timestamp": datetime.now().isoformat()
                         }
                         self.results.append(evaluation_result)

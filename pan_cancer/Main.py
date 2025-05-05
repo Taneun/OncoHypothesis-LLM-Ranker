@@ -164,10 +164,9 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
     else:
         # Fit and evaluate the model
         model, y_pred = fit_and_evaluate(
-            model_type, model, X_train, X_test, y_train, y_test, label_dict,
-            print_eval=args.print_eval,
+            model, X_train, X_test, y_train, y_test, #label_dict,
+            print_eval=args.print_eval)
 
-        )
         if args.by_id:
             classify_patients(X_test_with_id, y_pred, y_test, label_dict, model_type)
         if args.gpu:
@@ -189,7 +188,14 @@ def run_regular(X, y, X_train, X_test, y_train, y_test, X_test_with_id, label_di
         hypotheses.to_csv(f"models_hypotheses/{model_type}_hypotheses_as_sentences.csv", index=False)
 
     if args.get_shap_interactions:
-        shap_analysis(model, X, y, label_dict, batch_size=256)
+        # shap_analysis(model, X, y, label_dict, mapping, batch_size=256)
+        shap_analysis(
+            model=model,
+            X=X_test,
+            y_true=y_test,
+            label_dict=label_dict,
+            mapping=mapping
+        )
 
         # Add your custom SHAP interaction visualizations here:
         # interaction_matrix_plot(interation_vals, X, label_dict, save_path=f"{model_type}_interaction_matrix.png")

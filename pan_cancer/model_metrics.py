@@ -8,7 +8,6 @@ from sklearn.metrics import make_scorer
 from sklearn.inspection import permutation_importance
 import matplotlib.pyplot as plt
 
-
 def fit_and_evaluate(model, X_train, X_test, y_train, y_test, print_eval=True):
     """
     Fit the DecisionTree model to the training data and evaluate it on the validation data.

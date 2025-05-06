@@ -19,9 +19,9 @@ class Config:
     CSV_PATH = Path("models_hypotheses/combined_hypotheses.csv")
     MODELS = [
         "anthropic:claude-3-7-sonnet-latest",
-        "openai:gpt-4o",
         # "openai:o1-mini",
-        "openai:o3-mini"
+        "openai:o3-mini",
+        "openai:o4-mini"
     ]
     RETRY_ATTEMPTS = 3
     RETRY_DELAY = 5  # seconds

@@ -24,8 +24,8 @@ class Config:
         "openai:o4-mini"
     ]
     RETRY_ATTEMPTS = 5
-    RETRY_DELAY = 5  # seconds
-    MAX_CONCURRENT_EVALUATIONS = 10
+    RETRY_DELAY = 3  # seconds
+    MAX_CONCURRENT_EVALUATIONS = 5
 
 # Initialize directories
 Config.RESULTS_DIR.mkdir(exist_ok=True)

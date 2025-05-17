@@ -24,8 +24,8 @@ class Config:
         "openai:o4-mini"
     ]
     RETRY_ATTEMPTS = 5
-    RETRY_DELAY = 3  # seconds
-    MAX_CONCURRENT_EVALUATIONS = 5
+    RETRY_DELAY = 5  # seconds
+    MAX_CONCURRENT_EVALUATIONS = 7
 
 # Initialize directories
 Config.RESULTS_DIR.mkdir(exist_ok=True)
@@ -165,7 +165,7 @@ class HypothesisEvaluator:
             try:
                 # Use run instead of run_sync to get an awaitable
                 response = await agent.run(prepared_prompt)
-                result = self._parse_evaluation(response.data)
+                result = self._parse_evaluation(response.output)
 
                 if result:
                     # Store the result with thread safety
@@ -175,7 +175,7 @@ class HypothesisEvaluator:
                             "model": model_name,
                             "novelty": result["novelty"],
                             "plausibility": result["plausibility"],
-                            "raw_response": response.data,
+                            "raw_response": response.output,
                             "timestamp": datetime.now().isoformat()
                         }
                         self.results.append(evaluation_result)

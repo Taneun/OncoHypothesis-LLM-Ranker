@@ -17,13 +17,14 @@ import aiofiles
 class Config:
     RESULTS_DIR = Path("llm_results")
     LOGS_DIR = Path("llm_logs")
-    CSV_PATH = Path("models_hypotheses/combined_hypotheses.csv")
+    # CSV_PATH = Path("models_hypotheses/combined_hypotheses.csv")
+    CSV_PATH = Path("models_hypotheses/combined_hypotheses_lift_only.csv")
     MODELS = [
         "anthropic:claude-3-7-sonnet-latest",
         "openai:o3-mini",
         "openai:o4-mini"
     ]
-    RETRY_ATTEMPTS = 5
+    RETRY_ATTEMPTS = 7
     RETRY_DELAY = 5  # seconds
     MAX_CONCURRENT_EVALUATIONS = 7
 
@@ -159,7 +160,7 @@ class HypothesisEvaluator:
         """Evaluate a hypothesis with a single model."""
         prepared_prompt = self.prepare_prompt(hypothesis_text, cancer_type)
 
-        await self.logger.log(f"Evaluating hypothesis {hypothesis_id} with model {model_name}")
+        # await self.logger.log(f"Evaluating hypothesis {hypothesis_id} with model {model_name}")
 
         for attempt in range(Config.RETRY_ATTEMPTS):
             try:

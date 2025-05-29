@@ -110,4 +110,5 @@ if __name__ == "__main__":
     merged_df = pd.read_csv("data_for_lift_merged.csv", index_col=0)
     cancer_prob, features_comb = data_prep_lift(data_for_lift, merged_df)
     lifts_df = calculate_lift(data_for_lift, cancer_prob, features_comb)
-    lifts_df.to_csv("lifts_merged.csv", index=False)
+    lifts_df.to_csv("lifts_second_round.csv")
+    # lifts_df.to_csv("lifts_merged.csv", index=False)

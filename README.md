@@ -1,4 +1,5 @@
 # Cancer Hypothesis Generation And Ranking Pipeline
+<img width="2102" height="1042" alt="Screenshot 2025-08-04 at 12 58 25" src="https://github.com/user-attachments/assets/56b0c6c5-ab18-4aab-9e30-39d9d794aff9" />
 
 ## TL;DR
 By leveraging interpretable ML models and LLM evaluation, we aim to accelerate hypothesis discovery and reduce the manual bottleneck in biomedical research.

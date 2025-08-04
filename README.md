@@ -1,8 +1,7 @@
 # Cancer Hypothesis Generation And Ranking Pipeline
 
-## Overview
-
-This project presents an automated pipeline that combines machine learning and large language models (LLMs) to generate and prioritize biologically meaningful hypotheses in cancer genomics. By leveraging interpretable ML models and LLM evaluation, we aim to accelerate hypothesis discovery and reduce the manual bottleneck in biomedical research.
+## TL;DR
+By leveraging interpretable ML models and LLM evaluation, we aim to accelerate hypothesis discovery and reduce the manual bottleneck in biomedical research.
 
 ## Abstract
 
